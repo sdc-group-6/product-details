@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'adineue PRO Cyr Light Web';
+    src: url('fonts/adineuePRO/adineuePROCyr-LightWeb.eot');
+    src: url('fonts/adineuePRO/adineuePROCyr-LightWeb.eot?#iefix') format('embedded-opentype'),
+        url('fonts/adineuePRO/adineuePROCyr-LightWeb.woff') format('woff'),
+        url('fonts/adineuePRO/adineuePROCyr-LightWeb.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'adineue PRO Cyr Bold Web';
+    src: url('fonts/adineuePRO/adineuePROCyr-BoldWeb.eot');
+    src: url('fonts/adineuePRO/adineuePROCyr-BoldWeb.eot?#iefix') format('embedded-opentype'),
+        url('fonts/adineuePRO/adineuePROCyr-BoldWeb.woff') format('woff'),
+        url('fonts/adineuePRO/adineuePROCyr-BoldWeb.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+  font-family: 'adineue PRO Cyr Bold Web';
+}
+
+h4 {
+  font-family: 'adineue PRO Cyr Light Web';
+  margin-right: 35px;
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 24px;
+  letter-spacing: 2.5px;
+}
+
+h3 {
+  font-family: 'adineue PRO Cyr Bold Web';
+  letter-spacing: 1.5px;
+}
+
+.navbar {
+  padding: 0rem 8rem 2rem;
+  background-color: black;
+  height: 50px;
+}
+
+.topBar {
+  height: 30px;
+  font-family: 'adineue PRO Cyr Light Web';
+  font-size: 11px;
+  display: block;
+  background: linear-gradient(90deg,#000 30%,transparent 50%),linear-gradient(180deg,#000 0,#363738);
+}
+
+#app {
+  margin: 300px 25px;
+}

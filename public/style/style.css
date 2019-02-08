@@ -19,7 +19,7 @@
 }
 
 body {
-  font-family: 'adineue PRO Cyr Bold Web';
+  font-family: 'adineue PRO Cyr Light Web';
 }
 
 h4 {
@@ -29,11 +29,26 @@ h4 {
   font-size: 27px;
   line-height: 24px;
   letter-spacing: 2.5px;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 h3 {
   font-family: 'adineue PRO Cyr Bold Web';
   letter-spacing: 1.5px;
+  margin-left: 100px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+h1 {
+  font-family: 'adineue PRO Cyr Bold Web';
+  letter-spacing: 1.5px;
+  margin-right: 710px;
+  text-align: center;
+  /* margin-left: 5%; */
+  margin-bottom: 40px;
+  margin-top: 50px;
 }
 
 .navbar {
@@ -46,10 +61,67 @@ h3 {
   height: 30px;
   font-family: 'adineue PRO Cyr Light Web';
   font-size: 11px;
-  display: block;
   background: linear-gradient(90deg,#000 30%,transparent 50%),linear-gradient(180deg,#000 0,#363738);
+}
+
+.card {
+  width: 15rem;
+  outline: none;
 }
 
 #app {
   margin: 300px 25px;
+}
+
+#likes {
+  padding: 10px 10px 10px 10px;
+}
+
+.navbar-nav {
+  color: white;
+}
+
+.white {
+  color: white;
+}
+
+.details {
+  display: flex;
+  flex-grow: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail {
+  line-height: 45px;
+  text-align: center;
+  font-family: 'adineue PRO Cyr Bold Web';
+  font-size: 14px;
+  letter-spacing: 3px;
+  height: 45px;
+  width: 550px;
+}
+
+.selected {
+  outline-style: solid;
+  box-shadow: inset 0 -2px 0 #000;
+  outline-width: thin;
+  outline-color: black;
+  border-bottom-width: 10px;
+}
+
+.unselected {
+  color: #767677;
+  outline-style: solid;
+  outline-width: thin;
+  outline-color: gray;
+}
+
+.unselected:hover {
+  color: #004040;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
 }

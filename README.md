@@ -1,6 +1,8 @@
 # Project Name
 
-> Project description
+Abibas
+
+Abibas is a recreation of Adidas that designs and manufactures shoes, clothing, and accessories. Abibas is created using React, MySQL, Node, and Express.
 
 ## Related Projects
 

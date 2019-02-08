@@ -1,7 +1,43 @@
 const express = require('express');
 const app = express();
+const { db , Shoes, Looks} = require('../database');
+const mysql = require('mysql');
 
-const PORT = 8000;
+
+let randomId = () => {
+  return Math.floor(Math.random() * (101));
+}
+
+let randomImg = () => {
+  var arr = [];
+  for (var i = 0; i < 12; i++) {
+    arr.push(Math.floor(Math.random() * (101)))
+  }
+  return arr;
+}
+
+db.authenticate()
+  .then(() => {
+    console.log('Connection successful!');
+  })
+  .catch(err => {
+    console.error('Connection failed: ', err);
+  })
+
+app.get('/shoes', (req,res) => {
+  Shoes.sync()
+    .then(() => {
+      return Shoes.findAll();
+    })
+    .then(shoes => {
+      res.json(shoes);
+    })
+    .catch(err => {
+      console.log(err);
+    })
+})
+
+const PORT = 8001;
 
 app.use(express.static(__dirname + '/../public'));
 

@@ -244,3 +244,17 @@ input:focus {
 #fbold {
   font-family: 'adineue PRO Cyr Bold Web';
 }
+
+.col-sm li {
+  margin-bottom: 25px;
+}
+
+.first-col {
+  margin-right: 70px;
+  margin-left: 10px;
+}
+
+.sec-col {
+  margin-left: -90px;
+  margin-right: 30px;
+}

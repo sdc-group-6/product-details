@@ -10,8 +10,10 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      image: [],
+      looks: [],
       shoes: [],
+      shoe: {},
+      details: [],
       desc: true,
       spec: false
     }
@@ -21,10 +23,12 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.get();
+    // this.getAll(); 83, 35
+    let id = Math.floor(Math.random() * (101));
+    this.getOne(id);
   }
 
-  get () {
+  getAll () {
     $.ajax({
       url: `http://localhost:8001/shoes`,
       method: 'GET',
@@ -33,7 +37,36 @@ class App extends Component {
         this.setState({shoes})
       },
       error: err => {
-        console.log("ERROR", err);
+        console.log('ERROR: ', err);
+      }
+    })
+  }
+
+  getOne (id) {
+    $.ajax({
+      url: `http://localhost:8001/shoes/${id}`,
+      method: 'GET',
+      success: shoe => {
+        console.log("SUCCESS", shoe);
+        this.setState({details: shoe.details.split(';')});
+        this.setState({shoe});
+      },
+      error: err => {
+        console.log('ERROR: ', err);
+      }
+    })
+  }
+
+  getLooks () {
+    $.ajax({
+      url: 'http://localhost:8001/looks',
+      method: 'GET',
+      success: looks => {
+        console.log("SUCCESS", looks);
+        this.setState({looks})
+      },
+      error: err => {
+        console.log('ERROR: ', err);
       }
     })
   }
@@ -51,7 +84,8 @@ class App extends Component {
   render() {
     let descClass = this.state.desc ? 'detail selected' : 'detail unselected';
     let specClass = this.state.spec ? 'detail selected' : 'detail unselected';
-    // <Likes shoes={this.state.shoes} />
+    let showDesc = this.state.desc ? <Description shoe={this.state.shoe} /> : <Specification details={this.state.details} />;
+
     return (
       <div>
         <h4> COMPLETE THE LOOK </h4>
@@ -61,6 +95,7 @@ class App extends Component {
             <div className={descClass} onClick={this.descClick}>DESCRIPTION</div>
             <div className={specClass} onClick={this.specClick}>SPECIFICATIONS</div>
           </div>
+          {showDesc}
         </div>
         <h3> YOU MAY ALSO LIKE </h3>
       </div>

@@ -37,6 +37,33 @@ app.get('/shoes', (req,res) => {
     })
 })
 
+app.get('/shoes/:shoeId', (req,res) => {
+  let id = Number(req.params.shoeId);
+  console.log(typeof id)
+  Shoes.sync()
+  .then(() => {
+    console.log('hello im here')
+    return Shoes.findOne({where: {id: id}});
+  })
+  .then(shoe => {
+    res.json(shoe);
+  })
+  .catch(err => {
+    console.log('ERROR: ', err);
+  })
+})
+
+app.get('/looks', (req,res) => {
+  let id = randomId();
+  Shoes.sync()
+  .then(() => {
+    return Looks.findOne({where: {id: id}});
+  })
+  .catch(err => {
+    console.log('error', err);
+  })
+})
+
 const PORT = 8001;
 
 app.use(express.static(__dirname + '/../public'));

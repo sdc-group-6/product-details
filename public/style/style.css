@@ -14,6 +14,13 @@
     src: url('fonts/adineuePRO/adineuePROCyr-BoldWeb.eot?#iefix') format('embedded-opentype'),
         url('fonts/adineuePRO/adineuePROCyr-BoldWeb.woff') format('woff'),
         url('fonts/adineuePRO/adineuePROCyr-BoldWeb.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'adihaus';
+    src: url('fonts/AdihausDIN.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
@@ -64,6 +71,34 @@ h1 {
   background: linear-gradient(90deg,#000 30%,transparent 50%),linear-gradient(180deg,#000 0,#363738);
 }
 
+.bBar {
+  height: 50px;
+  font-family: 'adineue PRO Cyr Light Web';
+  font-size: 11px;
+  background: black;
+}
+
+.search {
+  font-family: 'adihaus';
+  float: right;
+  margin-top: -25px;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+.search input {
+  padding: 2px;
+  width: 100px;
+  font-size: 12px;
+  border: none;
+  text-decoration: none;
+}
+
+input:focus {
+  outline: none;
+}
+
 .card {
   width: 15rem;
   outline: none;
@@ -79,6 +114,45 @@ h1 {
 
 .navbar-nav {
   color: white;
+}
+
+.nav-logo {
+  margin-top: -30px;
+  margin-left: 4%;
+}
+
+.bBar li {
+  list-style-type: none;
+  font-family: 'adihaus';
+  margin-left: 8px;
+}
+
+.topBar li {
+  list-style-type: none;
+  font-family: 'adihaus';
+  font-size: 12px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+#search-box {
+  color: black;
+  background-color: white;
+}
+
+.help {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 30px;
+}
+
+.choices {
+  font-size: 15px;
+  margin-top: -30px;
+  margin-left: 140px;
+  display: flex;
+  flex-direction: row;
 }
 
 .white {
@@ -124,4 +198,49 @@ h1 {
 .product {
   display: flex;
   flex-direction: column;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.detail-name {
+  font-family: 'adineue PRO Cyr Bold Web';
+  font-size: 28px;
+}
+
+.short-desc {
+  font-family: 'adineue PRO Cyr Bold Web';
+  font-size: 18px;
+}
+
+.col-sm {
+  padding: 20px;
+  margin-right: -10%;
+}
+
+.shoe-desc {
+  margin-top: 5%;
+}
+
+.shoe-img {
+  margin-left: 17%;
+}
+
+.para {
+  font-family: 'adihaus', sans-serif;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.details {
+  font-family: 'adihaus', sans-serif;
+}
+
+#fbold {
+  font-family: 'adineue PRO Cyr Bold Web';
 }

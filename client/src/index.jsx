@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Likes from './components/Likes.jsx';
+import Looks from './components/Looks.jsx';
 import Description from './components/Description.jsx';
 import Specification from './components/Specification.jsx';
 import $ from 'jquery';
@@ -26,6 +27,7 @@ class App extends Component {
     // this.getAll(); 83, 35
     let id = Math.floor(Math.random() * (101));
     this.getOne(id);
+    this.getLooks();
   }
 
   getAll () {
@@ -88,7 +90,7 @@ class App extends Component {
 
     return (
       <div>
-        <h4> COMPLETE THE LOOK </h4>
+        <Looks looks={this.state.looks} />
         <div className="product">
           <h1> PRODUCT DETAILS </h1>
           <div className="details">

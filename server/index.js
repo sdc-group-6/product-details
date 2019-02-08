@@ -42,7 +42,6 @@ app.get('/shoes/:shoeId', (req,res) => {
   console.log(typeof id)
   Shoes.sync()
   .then(() => {
-    console.log('hello im here')
     return Shoes.findOne({where: {id: id}});
   })
   .then(shoe => {
@@ -55,9 +54,12 @@ app.get('/shoes/:shoeId', (req,res) => {
 
 app.get('/looks', (req,res) => {
   let id = randomId();
-  Shoes.sync()
+  Looks.sync()
   .then(() => {
     return Looks.findOne({where: {id: id}});
+  })
+  .then(look => {
+    res.json(look);
   })
   .catch(err => {
     console.log('error', err);

@@ -29,17 +29,6 @@ body {
   font-family: 'adineue PRO Cyr Light Web';
 }
 
-h4 {
-  font-family: 'adineue PRO Cyr Light Web';
-  margin-right: 35px;
-  font-weight: bold;
-  font-size: 27px;
-  line-height: 24px;
-  letter-spacing: 2.5px;
-  margin-bottom: 50px;
-  margin-top: 50px;
-}
-
 h3 {
   font-family: 'adineue PRO Cyr Bold Web';
   letter-spacing: 1.5px;
@@ -257,4 +246,46 @@ input:focus {
 .sec-col {
   margin-left: -90px;
   margin-right: 30px;
+}
+
+.looks {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.looks-title {
+  margin-left: 3%;
+  display: flex;
+  max-width: 200px;
+}
+
+.looks-title h4 {
+  font-family: 'adineue PRO Cyr Light Web';
+  margin-right: 40px;
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 24px;
+  letter-spacing: 3px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.looks-pics {
+  max-width: 300px;
+  min-width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.looks-pics img {
+  height: 65px;
+  width: 65px;
+}
+
+.looks-pics h6 {
+  font-family: 'adihaus';
+  margin-right: 20px;
 }

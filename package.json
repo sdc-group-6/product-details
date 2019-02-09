@@ -10,11 +10,13 @@
   "scripts": {
     "start": "nodemon server/index.js",
     "dev:react": "webpack -d --watch",
-    "db:setup": "node database/seed.js"
+    "db:setup": "node database/seed.js",
+    "test": "jest --watch --forceExit"
   },
   "dependencies": {
     "bootstrap": "^4.2.1",
     "express": "^4.16.4",
+    "jest-enzyme": "^7.0.1",
     "jquery": "^3.3.1",
     "mysql": "^2.16.0",
     "mysql2": "^1.6.4",
@@ -24,16 +26,18 @@
     "sequelize": "^4.42.0"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
     "babel-jest": "^24.1.0",
-    "babel-loader": "^7.1.5",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
+    "babel-loader": "^8.0.5",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.9.1",
     "enzyme-to-json": "^3.3.5",
+    "eslint-config-airbnb": "^17.1.0",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
     "jest": "^24.1.0",
+    "jsdom": "^13.2.0",
     "webpack": "^4.29.1",
     "webpack-cli": "^3.2.3"
   },
@@ -42,7 +46,15 @@
       "enzyme-to-json/serializer"
     ],
     "setupFiles": [
-      "./client/src/setupTests.js"
-    ]
+      "./test/setupTests.js"
+    ],
+    "setupFilesAfterEnv": [
+      "./node_modules/jest-enzyme/lib/index.js"
+    ],
+    "testPathIgnorePatterns": ["<rootDir>/tests"],
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "testEnvironment": "jsdom"
   }
 }

@@ -94,8 +94,8 @@ class App extends Component {
         <div className="product">
           <h1> PRODUCT DETAILS </h1>
           <div className="details">
-            <div className={descClass} onClick={this.descClick}>DESCRIPTION</div>
-            <div className={specClass} onClick={this.specClick}>SPECIFICATIONS</div>
+            <div className={descClass} id="desc" onClick={this.descClick}>DESCRIPTION</div>
+            <div className={specClass} id="spec" onClick={this.specClick}>SPECIFICATIONS</div>
           </div>
           {showDesc}
         </div>

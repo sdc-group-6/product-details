@@ -10,7 +10,7 @@ let randomId = () => {
 
 let randomImg = () => {
   var arr = [];
-  for (var i = 0; i < 12; i++) {
+  for (var i = 0; i < 18; i++) {
     arr.push(Math.floor(Math.random() * (101)))
   }
   return arr;
@@ -25,9 +25,10 @@ db.authenticate()
   })
 
 app.get('/shoes', (req,res) => {
+  let arr = randomImg()
   Shoes.sync()
     .then(() => {
-      return Shoes.findAll();
+      return Shoes.findAll({where : {id : [arr]}});
     })
     .then(shoes => {
       res.json(shoes);
@@ -39,7 +40,6 @@ app.get('/shoes', (req,res) => {
 
 app.get('/shoes/:shoeId', (req,res) => {
   let id = Number(req.params.shoeId);
-  console.log(typeof id)
   Shoes.sync()
   .then(() => {
     return Shoes.findOne({where: {id: id}});
@@ -52,8 +52,8 @@ app.get('/shoes/:shoeId', (req,res) => {
   })
 })
 
-app.get('/looks', (req,res) => {
-  let id = randomId();
+app.get('/looks/:id', (req,res) => {
+  let id = Number(req.params.id);
   Looks.sync()
   .then(() => {
     return Looks.findOne({where: {id: id}});

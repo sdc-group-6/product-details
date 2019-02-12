@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Navbar from 'react-bootstrap/Navbar';
+import Topbar from './components/Topbar.jsx';
 import Likes from './components/Likes.jsx';
 import Looks from './components/Looks.jsx';
 import Description from './components/Description.jsx';
@@ -24,10 +24,10 @@ class App extends Component {
   }
 
   componentDidMount() {
-    // this.getAll(); 83, 35
+    this.getAll();
     let id = Math.floor(Math.random() * (101));
     this.getOne(id);
-    this.getLooks();
+    this.getLooks(id);
   }
 
   getAll () {
@@ -59,9 +59,9 @@ class App extends Component {
     })
   }
 
-  getLooks () {
+  getLooks (id) {
     $.ajax({
-      url: 'http://localhost:8001/looks',
+      url: `http://localhost:8001/looks/${id}`,
       method: 'GET',
       success: looks => {
         console.log("SUCCESS", looks);
@@ -90,6 +90,7 @@ class App extends Component {
 
     return (
       <div>
+        <Topbar />
         <Looks looks={this.state.looks} />
         <div className="product">
           <h1> PRODUCT DETAILS </h1>
@@ -99,7 +100,8 @@ class App extends Component {
           </div>
           {showDesc}
         </div>
-        <h3> YOU MAY ALSO LIKE </h3>
+        <h1> YOU MAY ALSO LIKE </h1>
+        <Likes shoes={this.state.shoes} />
       </div>
     )
   }

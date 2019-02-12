@@ -27,6 +27,7 @@
 
 body {
   font-family: 'adineue PRO Cyr Light Web';
+  color: #000000;
 }
 
 h3 {
@@ -88,17 +89,52 @@ input:focus {
   outline: none;
 }
 
-.card {
-  width: 15rem;
+.btn:focus {
+   box-shadow: none;
+   border-radius: 0px;
+   border: 1px solid #000000;
+}
+
+button:focus {
   outline: none;
 }
 
-#app {
-  margin: 300px 25px;
+.card {
+  width: 15rem;
+  border: none;
+  margin: 5px 5px 5px 5px;
+}
+
+.card:hover {
+  border: 1px solid black;
+  border-radius: 0px;
+}
+
+.card-body {
+  margin-top: -15px;
+  margin-left: -10px;
 }
 
 #likes {
-  padding: 10px 10px 10px 10px;
+  /* padding: 5px 5px 5px 5px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: 'adihaus';
+  margin-bottom: 60px;
+}
+
+#like-type {
+  font-size: 11px;
+  color: gray;
+}
+
+#like-name {
+  font-size: 12px;
+}
+
+#like-price {
+  font-size: 12px;
 }
 
 .navbar-nav {
@@ -275,7 +311,6 @@ input:focus {
   max-width: 300px;
   min-width: 200px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin-top: 25px;
 }
@@ -288,4 +323,215 @@ input:focus {
 .looks-pics h6 {
   font-family: 'adihaus';
   margin-right: 20px;
+}
+
+.carousel-item img {
+  max-height: 237px;
+  max-width: 237px;
+}
+
+.carousel-control-prev-icon {
+ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+ border: 2px solid white;
+ background-color: white;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+  border: 2px solid white;
+  background-color: white;
+}
+
+.carousel-control-next-icon:hover{
+  background-color: black;
+  border: 2px solid black;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-prev-icon:hover{
+  background-color: black;
+  border: 2px solid black;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon:after {
+  color: #000;
+}
+
+.carousel-control-prev-icon:after {
+  color: #000;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 20px;
+    height: 1px;
+    margin: 3px;
+    text-indent: 0;
+    cursor: pointer;
+    /* border: none; */
+    background-color: #000;
+}
+.carousel-indicators .active {
+    width: 20px;
+    height: 5px;
+    background-color: #000000;
+}
+
+.carousel-indicators .inactive {
+    background-color: #000;
+}
+
+.select-size-menu {
+  font-family: 'adihaus', sans-serif;
+  display: flex;
+  flex-direction: row;
+  vertical-align: middle;
+  margin-top: 10px;
+}
+
+.select-size {
+  padding: 10px;
+  height: 40px;
+  width: 40px;
+  font-family: 'adihaus', sans-serif;
+  border: 1px solid #dddddd;
+  margin-right: 4px;
+  margin-left: 4px;
+  font-size: 12px;
+  vertical-align: bottom;
+  text-align: center;
+}
+
+.select-size-btn {
+  font-family: 'adineue PRO Cyr Bold Web' !important;
+  font-size: 13px;
+  height: 45px;
+  width: 240px;
+  outline: 1px solid black;
+}
+
+.select-size:hover {
+  border-bottom: 2px solid black;
+}
+
+.dropdown button {
+  font-family: 'adihaus', sans-serif;
+  letter-spacing: 2px;
+  border-radius: 0px;
+}
+
+.dropdown-menu {
+  border-radius: 0px;
+  border: 1px solid #767677;
+  width:240px;
+  height: 90px;
+  margin-top: -4px;
+  border-top-color: #dddddd;
+}
+
+.dropdown-menu:hover {
+  border: 1px solid #000000;
+}
+
+#look-shirt-name {
+  font-family: 'adineue PRO Cyr Bold Web';
+  letter-spacing: 2px;
+}
+
+#look-shirt-price {
+  font-family: 'adihaus', sans-serif;
+  margin-bottom: 20px;
+}
+
+#shirtView {
+  border-top: 1px solid #DCDCDC;
+}
+
+#jacketView {
+  border-top: 1px solid #DCDCDC;
+}
+
+#pantView {
+  border-top: 1px solid #DCDCDC;
+}
+
+.look-desc {
+  margin-left: -35px;
+}
+
+.look-img {
+  margin-left: -15px;
+}
+
+.look-card {
+  height: 130px;
+  border-bottom: 0px solid #000000;
+}
+
+.bottom-bold {
+  border-bottom: 3px solid #000000;
+}
+
+.fa-angle-down {
+  font-size: 25px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 4px;
+  float: right;
+  margin-right: 10px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 4px;
+}
+
+#arrow-right {
+  margin-left: 70px;
+  font-size: 25px;
+}
+
+.bag-text {
+  vertical-align: super;
+}
+
+.look-size {
+  margin-left: 10px;
+}
+
+#add-to-bag {
+  font-family: 'adineue PRO Cyr Bold Web';
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: white;
+  height: 45px;
+  width: 240px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 0 1px #767677;
+}
+
+.disabled {
+  cursor: no-drop;
+  background-color: #767677;
+}
+
+.enabled {
+  background-color: #000000;
+  cursor: pointer;
+}
+
+.enabled:hover {
+  color: #767677 !important;
 }

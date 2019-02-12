@@ -51,7 +51,9 @@
     "setupFilesAfterEnv": [
       "./node_modules/jest-enzyme/lib/index.js"
     ],
-    "testPathIgnorePatterns": ["<rootDir>/tests"],
+    "testPathIgnorePatterns": [
+      "<rootDir>/tests"
+    ],
     "transform": {
       "^.+\\.jsx?$": "babel-jest"
     },

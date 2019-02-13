@@ -16,11 +16,13 @@ class App extends Component {
       shoe: {},
       details: [],
       desc: true,
-      spec: false
+      spec: false,
+      cart: 0
     }
 
     this.descClick = this.descClick.bind(this);
     this.specClick = this.specClick.bind(this);
+    this.addToCart = this.addToCart.bind(this);
   }
 
   componentDidMount() {
@@ -83,6 +85,12 @@ class App extends Component {
     this.setState({spec : true});
   }
 
+  addToCart () {
+    console.log(this.state.cart++);
+    this.setState({cart: this.state.cart++})
+    console.log('after', this.state.cart);
+  }
+
   render() {
     let descClass = this.state.desc ? 'detail selected' : 'detail unselected';
     let specClass = this.state.spec ? 'detail selected' : 'detail unselected';
@@ -90,8 +98,8 @@ class App extends Component {
 
     return (
       <div>
-        <Topbar />
-        <Looks looks={this.state.looks} />
+        <Topbar cart={this.state.cart}/>
+        <Looks looks={this.state.looks} add={this.addToCart}/>
         <div className="product">
           <h1> PRODUCT DETAILS </h1>
           <div className="details">
@@ -102,6 +110,11 @@ class App extends Component {
         </div>
         <h1> YOU MAY ALSO LIKE </h1>
         <Likes shoes={this.state.shoes} />
+        <div className="row">
+          <h1> SHARE HOW YOU WEAR IT </h1>
+          <p className="share">Share a photo of your adidas favorite and appear in our showcase
+          below. Make sure to tag your image with @adidas </p>
+        </div>
       </div>
     )
   }

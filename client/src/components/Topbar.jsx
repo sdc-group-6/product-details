@@ -4,11 +4,14 @@ class Topbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      cart: ''
+      shop: false
     }
   }
 
   render() {
+    let cart = this.props.cart === 0 ? '' : this.props.cart;
+    let iconClass = this.props.cart === 0 ? 'material-icons md-light' : 'material-icons md-light cartIcon';
+    let cartClass = this.props.cart === 0 ? '' : 'cart';
     return (
       <div className="sticky-top">
         <div className="topBar">
@@ -37,8 +40,16 @@ class Topbar extends Component {
             <span id="search-box"><i className="material-icons">search</i></span>
             <input type="text" placeholder="search"></input>
             <li></li>
-            <i className="material-icons md-light">shopping_cart</i>
+            <div className={cartClass}><i className={iconClass}>shopping_cart</i><span className="cartNum">{cart}</span></div>
           </div>
+        </div>
+        <div className="shipping">
+          <h6>
+            <i className="material-icons delivery" height="24" width="24">local_shipping</i>
+            <span className="underline">FREE SHIPPING AND RETURNS</span>
+            <img className="creators"src="../images/adidas-icon-creator.png" width="24" height="24"></img>
+            <span className="underline">CREATORS GET REWARDED - JOIN THE NEW ADIDAS CREATOR CLUB</span>
+          </h6>
         </div>
       </div>
     )

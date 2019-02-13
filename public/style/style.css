@@ -41,9 +41,10 @@ h3 {
 h1 {
   font-family: 'adineue PRO Cyr Bold Web';
   letter-spacing: 1.5px;
-  margin-right: 710px;
-  text-align: center;
-  /* margin-left: 5%; */
+  /* margin-right: 710px; */
+  float: left;
+  /* text-align: center; */
+  margin-left: 8%;
   margin-bottom: 40px;
   margin-top: 50px;
 }
@@ -78,6 +79,7 @@ h1 {
 }
 
 .search input {
+  display: block;
   padding: 2px;
   width: 100px;
   font-size: 12px;
@@ -170,6 +172,24 @@ button:focus {
   flex-direction: row;
   justify-content: flex-end;
   margin-right: 30px;
+}
+
+.help li {
+  font-size: 11px;
+}
+
+.help li:hover {
+  cursor: pointer;
+}
+
+.choices li:hover {
+  cursor: pointer;
+}
+
+#fbold:hover {
+  cursor: pointer;
+  color: #000000 !important;
+  background-color: white !important;
 }
 
 .choices {
@@ -382,6 +402,113 @@ button:focus {
     background-color: #000;
 }
 
+.carousel-control-next {
+  position: absolute;
+  top: 7%;
+  right: 9%;
+  margin-top: -12px;
+  cursor: pointer;
+}
+
+.carousel-control-prev {
+  position: absolute;
+  top: 7%;
+  left: 9%;
+  margin-top: -12px;
+  cursor: pointer;
+  margin-left: -2px;
+}
+
+@media (max-width: 1430px) {
+  .carousel-control-next {
+    position: absolute;
+    top: 7%;
+    right: 7%;
+    margin-top: -12px;
+    cursor: pointer;
+  }
+
+  .carousel-control-prev {
+    position: absolute;
+    top: 7%;
+    left: 7%;
+    margin-top: -12px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1200px) {
+  .carousel-control-next {
+    float: right;
+    margin-right: -65px;
+    margin-top: -12px;
+    cursor: pointer;
+  }
+
+  .carousel-control-prev {
+    float: left;
+    margin-left: -65px;
+    margin-top: -12px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1160px) {
+  .carousel-control-next {
+    margin-right: -85px;
+    margin-top: -12px;
+    cursor: pointer;
+  }
+
+  .carousel-control-prev {
+    margin-left: -85px;
+    margin-top: -12px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1080px) {
+  .carousel-control-next {
+    margin-right: -105px;
+    margin-top: -12px;
+    cursor: pointer;
+  }
+
+  .carousel-control-prev {
+    margin-left: -105px;
+    margin-top: -12px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1005px) {
+  .carousel-control-next {
+    margin-right: -130px;
+    margin-top: -12px;
+    cursor: pointer;
+  }
+
+  .carousel-control-prev {
+    margin-left: -130px;
+    margin-top: -12px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 930px) {
+  .carousel-control-next {
+    margin-right: -100px;
+    margin-top: -12px;
+    cursor: pointer;
+  }
+
+  .carousel-control-prev {
+    margin-left: -100px;
+    margin-top: -12px;
+    cursor: pointer;
+  }
+}
+
 .select-size-menu {
   font-family: 'adihaus', sans-serif;
   display: flex;
@@ -423,15 +550,11 @@ button:focus {
 
 .dropdown-menu {
   border-radius: 0px;
-  border: 1px solid #767677;
+  border: 1px solid #000000;
   width:240px;
   height: 90px;
   margin-top: -4px;
   border-top-color: #dddddd;
-}
-
-.dropdown-menu:hover {
-  border: 1px solid #000000;
 }
 
 #look-shirt-name {
@@ -534,4 +657,64 @@ button:focus {
 
 .enabled:hover {
   color: #767677 !important;
+}
+
+.shipping {
+  text-align: center;
+  display: table;
+  font-family: 'adihaus', sans-serif;
+  background-color: white;
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid #c8cbcc;
+}
+
+.shipping h6 {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 12px;
+}
+
+.delivery {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 5px;
+}
+
+.creators {
+  margin-left: 10px;
+}
+
+.underline:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.cart {
+  background-color: #0071ae;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.cart:hover {
+  background-color: white;
+  color: #000000;
+}
+
+.cartIcon:hover {
+  color: #000000;
+}
+
+.cartNum {
+  font-size: 12px;
+}
+
+.material-icons {
+  cursor: pointer;
+}
+
+.share {
+  margin-left: 8%;
+  font-family: 'adihaus', sans-serif;
+  margin-top: -25px;
 }

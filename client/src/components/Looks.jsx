@@ -27,8 +27,8 @@ class Looks extends Component {
 
   selectSizeShirt(e) {
     this.setState({sizeShirt: e.target.textContent});
-    this.setState({bagClassShirt: 'enabled'});
-    this.setState({purchaseShirt: false});
+    this.setState({bagClassShirt: 'enabled', purchaseShirt: false});
+    console.log(this.state.purchaseShirt)
   }
 
   selectSizeJacket(e) {

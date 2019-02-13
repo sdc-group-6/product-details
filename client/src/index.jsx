@@ -25,6 +25,7 @@ class App extends Component {
     this.descClick = this.descClick.bind(this);
     this.specClick = this.specClick.bind(this);
     this.addToCart = this.addToCart.bind(this);
+    this.getOne = this.getOne.bind(this);
   }
 
   componentDidMount() {
@@ -54,8 +55,11 @@ class App extends Component {
       method: 'GET',
       success: shoe => {
         console.log("SUCCESS", shoe);
-        this.setState({details: shoe.details.split(';')});
-        this.setState({shoe});
+        this.setState({details: shoe.details.split(';'),
+                      shoe,
+                      desc: true,
+                      spec: false
+                      });
       },
       error: err => {
         console.log('ERROR: ', err);
@@ -78,19 +82,15 @@ class App extends Component {
   }
 
   descClick () {
-    this.setState({desc : true});
-    this.setState({spec : false});
+    this.setState({desc : true, spec : false});
   }
 
   specClick () {
-    this.setState({desc : false});
-    this.setState({spec : true});
+    this.setState({desc : false, spec : true});
   }
 
   addToCart () {
-    console.log(this.state.cart++);
-    this.setState({cart: this.state.cart++})
-    console.log('after', this.state.cart);
+    this.setState({cart: ++this.state.cart})
   }
 
   render() {
@@ -111,7 +111,7 @@ class App extends Component {
           {showDesc}
         </div>
         <h1> YOU MAY ALSO LIKE </h1>
-        <Likes shoes={this.state.shoes} />
+        <Likes shoes={this.state.shoes} handleClick={this.getOne}/>
         <Share shares={this.state.shares}/>
       </div>
     )

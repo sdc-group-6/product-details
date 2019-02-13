@@ -1,23 +1,10 @@
 import React from 'react';
-import $ from 'jquery';
 
-let Likes = (props) => {
+const Likes = (props) => {
   let shoes1 = props.shoes.slice(0,4);
   let shoes2 = props.shoes.slice(4,8);
   let shoes3 = props.shoes.slice(8,12);
   let shoes4 = props.shoes.slice(12,16);
-
-  $(document).ready(() => {
-    if($('.carousel-inner .carousel-item:first').hasClass('active')) {
-      $('#carouselLikes').children('carousel-control-prev').hide();
-      $('#carouselLikes').children('carousel-control-next').show();
-    } else if ($('.carousel-inner .carousel-item:last').hasClass('active')) {
-      $('#carouselLikes').children('carousel-control-next').hide();
-      $('#carouselLikes').children('carousel-control-prev').show();
-    } else {
-      $('#carouselLikes').children('carousel-control').show();
-    }
-  })
 
   return (
     <div id="carouselLikes" className="carousel slide" data-ride="carousel" data-interval="false" data-wrap="false">
@@ -32,7 +19,7 @@ let Likes = (props) => {
         <div id="likes">
             {shoes1.map((shoe, i) => {
               return (
-                <div className="card" key={i}>
+                <div className="card" onClick= {() => props.handleClick(shoe.id)} key={i}>
                   <img className="card-img-top likes d-block" src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"></img>
                   <div className="card-body">
                     <span id="like-type">{shoe.type}</span><br></br>
@@ -48,7 +35,7 @@ let Likes = (props) => {
         <div id="likes">
             {shoes2.map((shoe, i) => {
               return (
-                <div className="card" key={i}>
+                <div className="card" onClick= {() => props.handleClick(shoe.id)} key={i}>
                   <img className="card-img-top likes d-block" src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"></img>
                   <div className="card-body">
                     <span id="like-type">{shoe.type}</span><br></br>
@@ -64,7 +51,7 @@ let Likes = (props) => {
         <div id="likes">
             {shoes3.map((shoe, i) => {
               return (
-                <div className="card" key={i}>
+                <div className="card" onClick= {() => props.handleClick(shoe.id)} key={i}>
                   <img className="card-img-top likes d-block" src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"></img>
                   <div className="card-body">
                     <span id="like-type">{shoe.type}</span><br></br>
@@ -80,7 +67,7 @@ let Likes = (props) => {
         <div id="likes">
             {shoes4.map((shoe, i) => {
               return (
-                <div className="card" key={i}>
+                <div className="card" onClick= {() => props.handleClick(shoe.id)} key={i}>
                   <img className="card-img-top likes d-block" src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"></img>
                   <div className="card-body">
                     <span id="like-type">{shoe.type}</span><br></br>

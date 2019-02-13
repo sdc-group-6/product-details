@@ -5,6 +5,7 @@ import Likes from './components/Likes.jsx';
 import Looks from './components/Looks.jsx';
 import Description from './components/Description.jsx';
 import Specification from './components/Specification.jsx';
+import Share from './components/Share.jsx';
 import $ from 'jquery';
 
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
       shoes: [],
       shoe: {},
       details: [],
+      shares: [],
       desc: true,
       spec: false,
       cart: 0
@@ -110,11 +112,7 @@ class App extends Component {
         </div>
         <h1> YOU MAY ALSO LIKE </h1>
         <Likes shoes={this.state.shoes} />
-        <div className="row">
-          <h1> SHARE HOW YOU WEAR IT </h1>
-          <p className="share">Share a photo of your adidas favorite and appear in our showcase
-          below. Make sure to tag your image with @adidas </p>
-        </div>
+        <Share shares={this.state.shares}/>
       </div>
     )
   }

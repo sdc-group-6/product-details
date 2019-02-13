@@ -451,6 +451,18 @@ button:focus {
     margin-top: -12px;
     cursor: pointer;
   }
+
+  .shoe-desc {
+    margin-top: 5%;
+    margin-right: 0px;
+    margin-left: -80px;
+  }
+
+  .share-photo {
+    display: flex;
+    float:left;
+    margin-left: 40px !important;
+  }
 }
 
 @media (max-width: 1160px) {
@@ -465,6 +477,18 @@ button:focus {
     margin-top: -12px;
     cursor: pointer;
   }
+
+  .shoe-desc {
+    margin-top: 5%;
+    margin-right: 0px;
+    margin-left: -60px;
+  }
+
+  .share-photo {
+    display: flex;
+    float:left;
+    margin-left: 10px !important;
+  }
 }
 
 @media (max-width: 1080px) {
@@ -478,6 +502,12 @@ button:focus {
     margin-left: -105px;
     margin-top: -12px;
     cursor: pointer;
+  }
+
+  .shoe-desc {
+    margin-top: 5%;
+    margin-right: 0px;
+    margin-left: -40px;
   }
 }
 
@@ -717,4 +747,34 @@ button:focus {
   margin-left: 8%;
   font-family: 'adihaus', sans-serif;
   margin-top: -25px;
+}
+
+.share-photo {
+  display: flex;
+  float:left;
+  margin-left: 105px;
+}
+
+.share-photo li {
+  list-style-type: none;
+  margin-bottom: 1px;
+}
+
+.share-photo ul {
+  margin-right: -39px;
+}
+
+.sm-share {
+  height: 250px;
+  width: 250px;
+}
+
+.lrg-share {
+  height: 501px;
+  width: 501px;
+}
+
+.overlay-blk:hover {
+  opacity: 0.3;
+  text-content: "hello";
 }

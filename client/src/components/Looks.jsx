@@ -10,6 +10,9 @@ class Looks extends Component {
       bagClassShirt: 'disabled',
       bagClassJacket: 'disabled',
       bagClassPant: 'disabled',
+      purchaseShirt: true,
+      purchasePant: true,
+      purchaseJacket: true,
       shirt: false,
       pant: false,
       jacket: false
@@ -25,16 +28,19 @@ class Looks extends Component {
   selectSizeShirt(e) {
     this.setState({sizeShirt: e.target.textContent});
     this.setState({bagClassShirt: 'enabled'});
+    this.setState({purchaseShirt: false});
   }
 
   selectSizeJacket(e) {
     this.setState({sizeJacket: e.target.textContent});
     this.setState({bagClassJacket: 'enabled'});
+    this.setState({purchaseJacket: false});
   }
 
   selectSizePant(e) {
     this.setState({sizePant: e.target.textContent});
     this.setState({bagClassPant: 'enabled'});
+    this.setState({purchasePant: false});
   }
 
   selectShirt() {
@@ -54,9 +60,9 @@ class Looks extends Component {
   }
 
   render() {
-    let cardShirt = this.state.shirt ? 'look-card bottom-bold' : 'look-card'
-    let cardPant = this.state.pant ? 'look-card bottom-bold' : 'look-card'
-    let cardJacket = this.state.jacket ? 'look-card bottom-bold' : 'look-card'
+    let cardShirt = this.state.shirt ? 'look-card bottom-bold' : 'look-card';
+    let cardPant = this.state.pant ? 'look-card bottom-bold' : 'look-card';
+    let cardJacket = this.state.jacket ? 'look-card bottom-bold' : 'look-card';
     return (
       <div className="looks">
         <div className="looks-title">
@@ -90,7 +96,7 @@ class Looks extends Component {
                       <div className="select-size" onClick={this.selectSizeShirt}>2XL</div>
                     </div>
                   </div><br></br>
-                  <button className={this.state.bagClassShirt} id="add-to-bag"><span className="bag-text">ADD TO BAG</span><span id="arrow-right">&#8594;</span></button>
+                  <button className={this.state.bagClassShirt} disabled={this.state.purchaseShirt} id="add-to-bag" onClick={this.props.add}><span className="bag-text">ADD TO BAG</span><span id="arrow-right">&#8594;</span></button>
                 </div>
               </div>
             </div>
@@ -118,7 +124,7 @@ class Looks extends Component {
                       <div className="select-size" onClick={this.selectSizeJacket}>2XL</div>
                     </div>
                   </div><br></br>
-                  <button className={this.state.bagClassJacket} id="add-to-bag"><span className="bag-text">ADD TO BAG</span><span id="arrow-right">&#8594;</span></button>
+                  <button className={this.state.bagClassJacket} disabled={this.state.purchaseJacket} id="add-to-bag" onClick={this.props.add}><span className="bag-text">ADD TO BAG</span><span id="arrow-right">&#8594;</span></button>
                 </div>
               </div>
             </div>
@@ -146,7 +152,7 @@ class Looks extends Component {
                       <div className="select-size" onClick={this.selectSizePant}>2XL</div>
                     </div>
                   </div><br></br>
-                  <button className={this.state.bagClassPant} id="add-to-bag"><span className="bag-text">ADD TO BAG</span><span id="arrow-right">&#8594;</span></button>
+                  <button className={this.state.bagClassPant} disabled={this.state.purchasePant} id="add-to-bag" onClick={this.props.add}><span className="bag-text">ADD TO BAG</span><span id="arrow-right">&#8594;</span></button>
                 </div>
               </div>
             </div>

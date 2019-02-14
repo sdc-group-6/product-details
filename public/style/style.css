@@ -107,6 +107,7 @@ button:focus {
   width: 15rem;
   border: none;
   margin: 5px 5px 5px 5px;
+  border: 1px solid transparent;
 }
 
 .card:hover {

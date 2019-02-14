@@ -11,7 +11,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?/,
+        test: /\.(js|jsx)$/,
         include: SRC_DIR,
         loader: 'babel-loader',
         query: {
@@ -24,5 +24,8 @@ module.exports = {
         loader: 'style-loader!css-loader',
       }
     ]
-  }
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
 };

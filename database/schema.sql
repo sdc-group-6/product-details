@@ -5,6 +5,7 @@ USE adidas;
 
 DROP TABLE IF EXISTS shoes;
 DROP TABLE IF EXISTS looks;
+DROP TABLE IF EXISTS shares;
 
 CREATE TABLE shoes (
   id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -31,5 +32,19 @@ CREATE TABLE looks (
   jacket_url VARCHAR(200),
   jacket_price INT
 );
+
+CREATE TABLE shares (
+  id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  user1 VARCHAR(150),
+  img1 VARCHAR(300),
+  user2 VARCHAR(150),
+  img2 VARCHAR(300),
+  user3 VARCHAR(150),
+  img3 VARCHAR(300),
+  user4 VARCHAR(150),
+  img4 VARCHAR(300),
+  user5 VARCHAR(150),
+  img5 VARCHAR(300)
+)
 
 /* mysql -u root < database/schema.sql */

@@ -27,6 +27,7 @@ class Topbar extends Component {
           </div>
         </div>
         <div className="bBar">
+        <div className="row">
           <img src="../images/adidas-logo-white.png" width="75" height="75" className="nav-logo d-inline-block align-top"></img>
           <div className="choices white">
             <li> MENS</li>
@@ -35,6 +36,7 @@ class Topbar extends Component {
             <li> | </li>
             <li> SPORTS</li>
             <li> BRANDS</li>
+          </div>
           </div>
           <div className="search white">
             <span id="search-box"><i className="material-icons">search</i></span>

@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const { db , Shoes, Looks} = require('../database');
+const { db , Shoes, Looks, Shares } = require('../database');
 const mysql = require('mysql');
 
 
@@ -63,6 +63,20 @@ app.get('/looks/:id', (req,res) => {
   })
   .catch(err => {
     console.log('error', err);
+  })
+})
+
+app.get('/shares/:id', (req,res) => {
+  let id = Number(req.params.id);
+  Shares.sync()
+  .then(() => {
+    return Shares.findOne({where: {id: id}});
+  })
+  .then(share => {
+    res.json(share);
+  })
+  .catch( err => {
+    console.log('err', err)
   })
 })
 

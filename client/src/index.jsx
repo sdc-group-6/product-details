@@ -26,13 +26,12 @@ class App extends Component {
     this.specClick = this.specClick.bind(this);
     this.addToCart = this.addToCart.bind(this);
     this.getOne = this.getOne.bind(this);
+    this.getShares = this.getShares.bind(this);
   }
 
   componentDidMount() {
-    this.getAll();
     let id = Math.floor(Math.random() * (101));
     this.getOne(id);
-    this.getLooks(id);
   }
 
   getAll () {
@@ -55,6 +54,9 @@ class App extends Component {
       method: 'GET',
       success: shoe => {
         console.log("SUCCESS", shoe);
+        this.getLooks(id);
+        this.getShares(id);
+        this.getAll();
         this.setState({details: shoe.details.split(';'),
                       shoe,
                       desc: true,
@@ -74,6 +76,20 @@ class App extends Component {
       success: looks => {
         console.log("SUCCESS", looks);
         this.setState({looks})
+      },
+      error: err => {
+        console.log('ERROR: ', err);
+      }
+    })
+  }
+
+  getShares (id) {
+    $.ajax({
+      url: `http://localhost:8001/shares/${id}`,
+      method: 'GET',
+      success: shares => {
+        console.log("SUCCESS shares", shares);
+        this.setState({shares})
       },
       error: err => {
         console.log('ERROR: ', err);
@@ -103,14 +119,20 @@ class App extends Component {
         <Topbar cart={this.state.cart}/>
         <Looks looks={this.state.looks} add={this.addToCart}/>
         <div className="product">
-          <h1> PRODUCT DETAILS </h1>
+          <div className="title-1000">
+            <h1> PRODUCT DETAILS </h1>
+          </div>
           <div className="details">
             <div className={descClass} id="desc" onClick={this.descClick}>DESCRIPTION</div>
             <div className={specClass} id="spec" onClick={this.specClick}>SPECIFICATIONS</div>
           </div>
           {showDesc}
         </div>
-        <h1> YOU MAY ALSO LIKE </h1>
+        <div className="product">
+          <div className="title-1000">
+            <h1> YOU MAY ALSO LIKE </h1>
+          </div>
+        </div>
         <Likes shoes={this.state.shoes} handleClick={this.getOne}/>
         <Share shares={this.state.shares}/>
       </div>

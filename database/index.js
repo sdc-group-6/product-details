@@ -10,7 +10,7 @@ const db = new Sequelize('adidas', config.user , config.pw, {
   }
 });
 
-var Shoes = db.define('Shoes', {
+let Shoes = db.define('Shoes', {
   id: {type:Sequelize.INTEGER, primaryKey: true, autoIncrement: true},
   name: Sequelize.STRING,
   img_url: Sequelize.STRING,
@@ -23,7 +23,7 @@ var Shoes = db.define('Shoes', {
   details: Sequelize.STRING(1000)
 })
 
-var Looks = db.define('Looks', {
+let Looks = db.define('Looks', {
   id: {type:Sequelize.INTEGER, primaryKey: true, autoIncrement: true},
   pant_name: Sequelize.STRING,
   pant_url: Sequelize.STRING,
@@ -36,6 +36,21 @@ var Looks = db.define('Looks', {
   jacket_price: Sequelize.INTEGER
 })
 
+let Shares = db.define('Shares', {
+  id: {type:Sequelize.INTEGER, primaryKey: true, autoIncrement: true},
+  user1: Sequelize.STRING,
+  img1: Sequelize.STRING,
+  user2: Sequelize.STRING,
+  img2: Sequelize.STRING,
+  user3: Sequelize.STRING,
+  img3: Sequelize.STRING,
+  user4: Sequelize.STRING,
+  img4: Sequelize.STRING,
+  user5: Sequelize.STRING,
+  img5: Sequelize.STRING
+})
+
 module.exports.db = db;
 module.exports.Shoes = Shoes;
 module.exports.Looks = Looks;
+module.exports.Shares = Shares;

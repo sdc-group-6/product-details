@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('../server/index.js');
+const app = require('../../server/index.js');
 require('iconv-lite').encodingExists('foo');
 
 describe('Express server should route properly', () => {

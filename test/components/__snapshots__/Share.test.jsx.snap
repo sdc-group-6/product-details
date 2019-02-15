@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Share Component should look like snapshot 1`] = `
+<div
+  className="share"
+>
+  <div
+    className="title-1000"
+  >
+    <h1>
+       SHARE HOW YOU WEAR IT 
+    </h1>
+    <p
+      className="share-desc"
+    >
+      Share a photo of your adidas favorite and appear in our showcase below. Make sure to tag your image with @adidas
+    </p>
+  </div>
+  <div
+    className="col-2-12 justify-content-center share-photo"
+  >
+    <ul>
+      <li>
+        <div
+          className="overlay-blk"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <img
+            className="lrg-share img-fluid"
+            src="https://photorankmedia-a.akamaihd.net/media/8/y/w/8ywuwc4/mobile.jpg"
+          />
+        </div>
+        <span
+          className="share-username hidden"
+        >
+          anonymouse
+        </span>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <div
+          className="overlay-blk"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <img
+            className="sm-share img-fluid"
+            src="https://z3photorankmedia-a.akamaihd.net/media/3/f/7/3f7ywc4/mobile.jpg"
+          />
+        </div>
+        <span
+          className="share-username hidden"
+        >
+          indigosparkle
+        </span>
+      </li>
+      <li>
+        <div
+          className="overlay-blk"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+           
+          <img
+            className="sm-share img-fluid"
+            src="https://z3photorankmedia-a.akamaihd.net/media/3/f/7/3f7ywc4/mobile.jpg"
+          />
+        </div>
+        <span
+          className="share-username hidden"
+        >
+          weareliving
+        </span>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <div
+          className="overlay-blk"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+           
+          <img
+            className="sm-share img-fluid"
+            src="https://z3photorankmedia-a.akamaihd.net/media/3/f/7/3f7ywc4/mobile.jpg"
+          />
+        </div>
+        <span
+          className="share-username hidden"
+        >
+          urk3wl
+        </span>
+      </li>
+      <li>
+        <div
+          className="overlay-blk"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+           
+          <img
+            className="sm-share img-fluid"
+            src="https://z3photorankmedia-a.akamaihd.net/media/3/f/7/3f7ywc4/mobile.jpg"
+          />
+        </div>
+        <span
+          className="share-username hidden"
+        >
+          cereal_killer
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

@@ -11,10 +11,13 @@
     "start": "nodemon server/index.js",
     "dev:react": "webpack -d --watch",
     "db:setup": "node database/seed.js",
-    "test": "jest --watch --forceExit"
+    "test": "jest --watchAll --forceExit",
+    "debug": "jest --debug",
+    "jest:cache": "jest --clearCache"
   },
   "dependencies": {
     "bootstrap": "^4.2.1",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
     "express": "^4.16.4",
     "jest-enzyme": "^7.0.1",
     "jquery": "^3.3.1",
@@ -31,28 +34,32 @@
     "@babel/preset-react": "^7.0.0",
     "babel-jest": "^24.1.0",
     "babel-loader": "^8.0.5",
+    "babel-plugin-dynamic-import-node": "^2.2.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.9.1",
     "enzyme-to-json": "^3.3.5",
+    "eslint": "^5.13.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-react": "^7.12.4",
     "jest": "^24.1.0",
     "jsdom": "^13.2.0",
+    "supertest": "^3.4.2",
     "webpack": "^4.29.1",
     "webpack-cli": "^3.2.3"
   },
   "jest": {
+    "verbose": true,
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ],
-    "setupFiles": [
-      "./test/setupTests.js"
-    ],
     "setupFilesAfterEnv": [
-      "./node_modules/jest-enzyme/lib/index.js"
+      "<rootDir>/test/enzyme.setup.js"
     ],
     "testPathIgnorePatterns": [
-      "<rootDir>/tests"
+      "<rootDir>/node_modules/"
     ],
     "transform": {
       "^.+\\.jsx?$": "babel-jest"

@@ -1,0 +1,275 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Topbar/Navbar Component When cart has contents should match snapshot when cart has content 1`] = `
+<div
+  className="sticky-top"
+>
+  <div
+    className="topBar"
+  >
+    <div
+      className="help white"
+    >
+      <li>
+         HELP
+      </li>
+      <li>
+         | 
+      </li>
+      <li>
+         ORDER TRACKER AND RETURNS
+      </li>
+      <li>
+         | 
+      </li>
+      <li
+        id="fbold"
+      >
+         NEWSLETTER SIGNUP
+      </li>
+      <li>
+         LOGIN
+      </li>
+      <li />
+      <i
+        className="material-icons md-light"
+      >
+        person
+      </i>
+    </div>
+  </div>
+  <div
+    className="bBar"
+  >
+    <div
+      className="row"
+    >
+      <img
+        className="nav-logo d-inline-block align-top"
+        height="75"
+        src="../images/adidas-logo-white.png"
+        width="75"
+      />
+      <div
+        className="choices white"
+      >
+        <li>
+           MENS
+        </li>
+        <li>
+           WOMENS
+        </li>
+        <li>
+           KIDS
+        </li>
+        <li>
+           | 
+        </li>
+        <li>
+           SPORTS
+        </li>
+        <li>
+           BRANDS
+        </li>
+      </div>
+    </div>
+    <div
+      className="search white"
+    >
+      <span
+        id="search-box"
+      >
+        <i
+          className="material-icons"
+        >
+          search
+        </i>
+      </span>
+      <input
+        placeholder="search"
+        type="text"
+      />
+      <li />
+      <div
+        className="cart"
+      >
+        <i
+          className="material-icons md-light cartIcon"
+        >
+          shopping_cart
+        </i>
+        <span
+          className="cartNum"
+        >
+          2
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    className="shipping"
+  >
+    <h6>
+      <i
+        className="material-icons delivery"
+        height="24"
+        width="24"
+      >
+        local_shipping
+      </i>
+      <span
+        className="underline"
+      >
+        FREE SHIPPING AND RETURNS
+      </span>
+      <img
+        className="creators"
+        height="24"
+        src="../images/adidas-icon-creator.png"
+        width="24"
+      />
+      <span
+        className="underline"
+      >
+        CREATORS GET REWARDED - JOIN THE NEW ADIDAS CREATOR CLUB
+      </span>
+    </h6>
+  </div>
+</div>
+`;
+
+exports[`Topbar/Navbar Component When cart is empty should match snapshot when cart is empty 1`] = `
+<div
+  className="sticky-top"
+>
+  <div
+    className="topBar"
+  >
+    <div
+      className="help white"
+    >
+      <li>
+         HELP
+      </li>
+      <li>
+         | 
+      </li>
+      <li>
+         ORDER TRACKER AND RETURNS
+      </li>
+      <li>
+         | 
+      </li>
+      <li
+        id="fbold"
+      >
+         NEWSLETTER SIGNUP
+      </li>
+      <li>
+         LOGIN
+      </li>
+      <li />
+      <i
+        className="material-icons md-light"
+      >
+        person
+      </i>
+    </div>
+  </div>
+  <div
+    className="bBar"
+  >
+    <div
+      className="row"
+    >
+      <img
+        className="nav-logo d-inline-block align-top"
+        height="75"
+        src="../images/adidas-logo-white.png"
+        width="75"
+      />
+      <div
+        className="choices white"
+      >
+        <li>
+           MENS
+        </li>
+        <li>
+           WOMENS
+        </li>
+        <li>
+           KIDS
+        </li>
+        <li>
+           | 
+        </li>
+        <li>
+           SPORTS
+        </li>
+        <li>
+           BRANDS
+        </li>
+      </div>
+    </div>
+    <div
+      className="search white"
+    >
+      <span
+        id="search-box"
+      >
+        <i
+          className="material-icons"
+        >
+          search
+        </i>
+      </span>
+      <input
+        placeholder="search"
+        type="text"
+      />
+      <li />
+      <div
+        className=""
+      >
+        <i
+          className="material-icons md-light"
+        >
+          shopping_cart
+        </i>
+        <span
+          className="cartNum"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="shipping"
+  >
+    <h6>
+      <i
+        className="material-icons delivery"
+        height="24"
+        width="24"
+      >
+        local_shipping
+      </i>
+      <span
+        className="underline"
+      >
+        FREE SHIPPING AND RETURNS
+      </span>
+      <img
+        className="creators"
+        height="24"
+        src="../images/adidas-icon-creator.png"
+        width="24"
+      />
+      <span
+        className="underline"
+      >
+        CREATORS GET REWARDED - JOIN THE NEW ADIDAS CREATOR CLUB
+      </span>
+    </h6>
+  </div>
+</div>
+`;

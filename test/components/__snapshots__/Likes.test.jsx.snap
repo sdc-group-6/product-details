@@ -1,0 +1,601 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Likes component should display like snapshot 1`] = `
+<div
+  className="like"
+>
+  <div
+    className="carousel slide"
+    data-interval="false"
+    data-ride="carousel"
+    data-wrap="false"
+    id="carouselLikes"
+  >
+    <ol
+      className="carousel-indicators"
+    >
+      <li
+        className="active"
+        data-slide-to="0"
+        data-target="#carouselLikes"
+      />
+      <li
+        data-slide-to="1"
+        data-target="#carouselLikes"
+      />
+      <li
+        data-slide-to="2"
+        data-target="#carouselLikes"
+      />
+      <li
+        data-slide-to="3"
+        data-target="#carouselLikes"
+      />
+    </ol>
+    <div
+      className="carousel-inner"
+    >
+      <div
+        className="carousel-item active"
+      >
+        <div
+          id="likes"
+        >
+          <div
+            className="card"
+            key="0"
+            onClick={[Function]}
+          >
+            <img
+              className="card-img-top likes d-block"
+              src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
+            />
+            <div
+              className="card-body"
+            >
+              <span
+                id="like-type"
+              >
+                Performance
+              </span>
+              <br />
+              <span
+                id="like-name"
+              >
+                SOLARBOOST
+              </span>
+              <br />
+              <span
+                id="like-price"
+              >
+                $
+                110
+              </span>
+            </div>
+          </div>
+          <div
+            className="card"
+            key="1"
+            onClick={[Function]}
+          >
+            <img
+              className="card-img-top likes d-block"
+              src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
+            />
+            <div
+              className="card-body"
+            >
+              <span
+                id="like-type"
+              >
+                Comfort
+              </span>
+              <br />
+              <span
+                id="like-name"
+              >
+                ANDALAX
+              </span>
+              <br />
+              <span
+                id="like-price"
+              >
+                $
+                115
+              </span>
+            </div>
+          </div>
+          <div
+            className="card"
+            key="2"
+            onClick={[Function]}
+          >
+            <img
+              className="card-img-top likes d-block"
+              src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
+            />
+            <div
+              className="card-body"
+            >
+              <span
+                id="like-type"
+              >
+                Originals
+              </span>
+              <br />
+              <span
+                id="like-name"
+              >
+                SOLAR GLIDE
+              </span>
+              <br />
+              <span
+                id="like-price"
+              >
+                $
+                130
+              </span>
+            </div>
+          </div>
+          <div
+            className="card"
+            key="3"
+            onClick={[Function]}
+          >
+            <img
+              className="card-img-top likes d-block"
+              src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
+            />
+            <div
+              className="card-body"
+            >
+              <span
+                id="like-type"
+              >
+                Performance
+              </span>
+              <br />
+              <span
+                id="like-name"
+              >
+                ULTRABOOST
+              </span>
+              <br />
+              <span
+                id="like-price"
+              >
+                $
+                95
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="carousel-item"
+      >
+        <div
+          id="likes"
+        >
+          <div
+            className="card"
+            key="0"
+            onClick={[Function]}
+          >
+            <img
+              className="card-img-top likes d-block"
+              src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
+            />
+            <div
+              className="card-body"
+            >
+              <span
+                id="like-type"
+              >
+                Performance
+              </span>
+              <br />
+              <span
+                id="like-name"
+              >
+                SOLAR GLIDE ST
+              </span>
+              <br />
+              <span
+                id="like-price"
+              >
+                $
+                140
+              </span>
+            </div>
+          </div>
+          <div
+            className="card"
+            key="1"
+            onClick={[Function]}
+          >
+            <img
+              className="card-img-top likes d-block"
+              src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
+            />
+            <div
+              className="card-body"
+            >
+              <span
+                id="like-type"
+              >
+                Performance
+              </span>
+              <br />
+              <span
+                id="like-name"
+              >
+                SOLARBOOST
+              </span>
+              <br />
+              <span
+                id="like-price"
+              >
+                $
+                110
+              </span>
+            </div>
+          </div>
+          <div
+            className="card"
+            key="2"
+            onClick={[Function]}
+          >
+            <img
+              className="card-img-top likes d-block"
+              src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
+            />
+            <div
+              className="card-body"
+            >
+              <span
+                id="like-type"
+              >
+                Comfort
+              </span>
+              <br />
+              <span
+                id="like-name"
+              >
+                ANDALAX
+              </span>
+              <br />
+              <span
+                id="like-price"
+              >
+                $
+                115
+              </span>
+            </div>
+          </div>
+          <div
+            className="card"
+            key="3"
+            onClick={[Function]}
+          >
+            <img
+              className="card-img-top likes d-block"
+              src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
+            />
+            <div
+              className="card-body"
+            >
+              <span
+                id="like-type"
+              >
+                Originals
+              </span>
+              <br />
+              <span
+                id="like-name"
+              >
+                SOLAR GLIDE
+              </span>
+              <br />
+              <span
+                id="like-price"
+              >
+                $
+                130
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="carousel-item"
+      >
+        <div
+          id="likes"
+        >
+          <div
+            className="card"
+            key="0"
+            onClick={[Function]}
+          >
+            <img
+              className="card-img-top likes d-block"
+              src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
+            />
+            <div
+              className="card-body"
+            >
+              <span
+                id="like-type"
+              >
+                Performance
+              </span>
+              <br />
+              <span
+                id="like-name"
+              >
+                ULTRABOOST
+              </span>
+              <br />
+              <span
+                id="like-price"
+              >
+                $
+                95
+              </span>
+            </div>
+          </div>
+          <div
+            className="card"
+            key="1"
+            onClick={[Function]}
+          >
+            <img
+              className="card-img-top likes d-block"
+              src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
+            />
+            <div
+              className="card-body"
+            >
+              <span
+                id="like-type"
+              >
+                Performance
+              </span>
+              <br />
+              <span
+                id="like-name"
+              >
+                SOLAR GLIDE ST
+              </span>
+              <br />
+              <span
+                id="like-price"
+              >
+                $
+                140
+              </span>
+            </div>
+          </div>
+          <div
+            className="card"
+            key="2"
+            onClick={[Function]}
+          >
+            <img
+              className="card-img-top likes d-block"
+              src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
+            />
+            <div
+              className="card-body"
+            >
+              <span
+                id="like-type"
+              >
+                Performance
+              </span>
+              <br />
+              <span
+                id="like-name"
+              >
+                SOLARBOOST
+              </span>
+              <br />
+              <span
+                id="like-price"
+              >
+                $
+                110
+              </span>
+            </div>
+          </div>
+          <div
+            className="card"
+            key="3"
+            onClick={[Function]}
+          >
+            <img
+              className="card-img-top likes d-block"
+              src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
+            />
+            <div
+              className="card-body"
+            >
+              <span
+                id="like-type"
+              >
+                Comfort
+              </span>
+              <br />
+              <span
+                id="like-name"
+              >
+                ANDALAX
+              </span>
+              <br />
+              <span
+                id="like-price"
+              >
+                $
+                115
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="carousel-item"
+      >
+        <div
+          id="likes"
+        >
+          <div
+            className="card"
+            key="0"
+            onClick={[Function]}
+          >
+            <img
+              className="card-img-top likes d-block"
+              src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
+            />
+            <div
+              className="card-body"
+            >
+              <span
+                id="like-type"
+              >
+                Originals
+              </span>
+              <br />
+              <span
+                id="like-name"
+              >
+                SOLAR GLIDE
+              </span>
+              <br />
+              <span
+                id="like-price"
+              >
+                $
+                130
+              </span>
+            </div>
+          </div>
+          <div
+            className="card"
+            key="1"
+            onClick={[Function]}
+          >
+            <img
+              className="card-img-top likes d-block"
+              src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
+            />
+            <div
+              className="card-body"
+            >
+              <span
+                id="like-type"
+              >
+                Performance
+              </span>
+              <br />
+              <span
+                id="like-name"
+              >
+                ULTRABOOST
+              </span>
+              <br />
+              <span
+                id="like-price"
+              >
+                $
+                95
+              </span>
+            </div>
+          </div>
+          <div
+            className="card"
+            key="2"
+            onClick={[Function]}
+          >
+            <img
+              className="card-img-top likes d-block"
+              src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
+            />
+            <div
+              className="card-body"
+            >
+              <span
+                id="like-type"
+              >
+                Performance
+              </span>
+              <br />
+              <span
+                id="like-name"
+              >
+                SOLAR GLIDE ST
+              </span>
+              <br />
+              <span
+                id="like-price"
+              >
+                $
+                140
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="control-icons"
+    >
+      <div
+        className="controls"
+      >
+        <div
+          className="row control-row"
+        >
+          <a
+            className="carousel-control-prev"
+            data-slide="prev"
+            href="#carouselLikes"
+            role="button"
+          >
+            <span
+              aria-hidden="true"
+              className="carousel-control-prev-icon"
+            />
+            <span
+              className="sr-only"
+            >
+              Previous
+            </span>
+          </a>
+        </div>
+        <div
+          className="row control-row next-pos"
+        >
+          <a
+            className="carousel-control-next"
+            data-slide="next"
+            href="#carouselLikes"
+            role="button"
+          >
+            <span
+              aria-hidden="true"
+              className="carousel-control-next-icon"
+            />
+            <span
+              className="sr-only"
+            >
+              Next
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

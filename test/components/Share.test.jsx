@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Share from '../../client/src/components/Share';
+import Share from '../../client/src/components/Share/Share';
 
 let sample = {
   "id": 1,

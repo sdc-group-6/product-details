@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import sampleShoes from './data.js';
-import LikeCard from '../../client/src/components/LikeCard.jsx';
+import LikeCard from '../../client/src/components/Also-Like/LikeCard.jsx';
 
 describe('LikeCard Component', () => {
   const component = shallow(<LikeCard shoes={sampleShoes.slice(0,4)}/>)

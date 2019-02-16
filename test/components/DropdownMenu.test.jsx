@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import DropdownMenu from '../../client/src/components/DropdownMenu';
-import menu from '../../client/src/components/data.js';
+import DropdownMenu from '../../client/src/components/Navbar/DropdownMenu';
+import menu from '../../client/src/components/Navbar/data.js';
 
 describe('Dropdown Menu Component', () => {
   const component = shallow(<DropdownMenu title={'FEATURED'} options={menu.women.featured}/>);

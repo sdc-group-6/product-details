@@ -2,12 +2,12 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 
 import App from '../../client/src/components/App';
-import Description from '../../client/src/components/Description';
-import Likes from '../../client/src/components/Likes';
-import Looks from '../../client/src/components/Looks';
-import Share from '../../client/src/components/Share';
-import Topbar from '../../client/src/components/Topbar';
-import Specification from '../../client/src/components/Specification';
+import Description from '../../client/src/components/Product-Details/Description';
+import Likes from '../../client/src/components/Also-Like/Likes';
+import Looks from '../../client/src/components/Complete-Look/Looks';
+import Share from '../../client/src/components/Share/Share';
+import Topbar from '../../client/src/components/Navbar/Topbar';
+import Specification from '../../client/src/components/Product-Details/Specification';
 
 describe('App Component', () => {
   const component = shallow(<App />);

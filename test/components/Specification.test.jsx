@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Specification from '../../client/src/components/Specification';
+import Specification from '../../client/src/components/Product-Details/Specification';
 
 describe('Specification Component', () => {
   let sample = ['Lace closure', 'Seam-sealed stretch-mesh upper',

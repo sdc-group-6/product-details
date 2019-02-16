@@ -1,9 +1,9 @@
 import React from 'react';
 import { shallow, mount, render } from 'enzyme';
 
-import Likes from '../../client/src/components/Likes';
-import Description from '../../client/src/components/Description';
-import LikeCard from '../../client/src/components/LikeCard';
+import Likes from '../../client/src/components/Also-Like/Likes';
+import Description from '../../client/src/components/Product-Details/Description';
+import LikeCard from '../../client/src/components/Also-Like/LikeCard';
 import sampleShoes from './data.js';
 
 describe('Likes component', () => {

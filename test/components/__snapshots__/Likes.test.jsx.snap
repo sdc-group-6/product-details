@@ -7,7 +7,6 @@ exports[`Likes component should display like snapshot 1`] = `
   <div
     className="carousel slide"
     data-interval="false"
-    data-ride="carousel"
     data-wrap="false"
     id="carouselLikes"
   >
@@ -18,18 +17,22 @@ exports[`Likes component should display like snapshot 1`] = `
         className="active"
         data-slide-to="0"
         data-target="#carouselLikes"
+        onClick={[Function]}
       />
       <li
         data-slide-to="1"
         data-target="#carouselLikes"
+        onClick={[Function]}
       />
       <li
         data-slide-to="2"
         data-target="#carouselLikes"
+        onClick={[Function]}
       />
       <li
         data-slide-to="3"
         data-target="#carouselLikes"
+        onClick={[Function]}
       />
     </ol>
     <div
@@ -43,174 +46,6 @@ exports[`Likes component should display like snapshot 1`] = `
         >
           <div
             className="card"
-            key="0"
-            onClick={[Function]}
-          >
-            <img
-              className="card-img-top likes d-block"
-              src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
-            />
-            <div
-              className="card-body"
-            >
-              <span
-                id="like-type"
-              >
-                Performance
-              </span>
-              <br />
-              <span
-                id="like-name"
-              >
-                SOLARBOOST
-              </span>
-              <br />
-              <span
-                id="like-price"
-              >
-                $
-                110
-              </span>
-            </div>
-          </div>
-          <div
-            className="card"
-            key="1"
-            onClick={[Function]}
-          >
-            <img
-              className="card-img-top likes d-block"
-              src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
-            />
-            <div
-              className="card-body"
-            >
-              <span
-                id="like-type"
-              >
-                Comfort
-              </span>
-              <br />
-              <span
-                id="like-name"
-              >
-                ANDALAX
-              </span>
-              <br />
-              <span
-                id="like-price"
-              >
-                $
-                115
-              </span>
-            </div>
-          </div>
-          <div
-            className="card"
-            key="2"
-            onClick={[Function]}
-          >
-            <img
-              className="card-img-top likes d-block"
-              src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
-            />
-            <div
-              className="card-body"
-            >
-              <span
-                id="like-type"
-              >
-                Originals
-              </span>
-              <br />
-              <span
-                id="like-name"
-              >
-                SOLAR GLIDE
-              </span>
-              <br />
-              <span
-                id="like-price"
-              >
-                $
-                130
-              </span>
-            </div>
-          </div>
-          <div
-            className="card"
-            key="3"
-            onClick={[Function]}
-          >
-            <img
-              className="card-img-top likes d-block"
-              src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
-            />
-            <div
-              className="card-body"
-            >
-              <span
-                id="like-type"
-              >
-                Performance
-              </span>
-              <br />
-              <span
-                id="like-name"
-              >
-                ULTRABOOST
-              </span>
-              <br />
-              <span
-                id="like-price"
-              >
-                $
-                95
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="carousel-item"
-      >
-        <div
-          id="likes"
-        >
-          <div
-            className="card"
-            key="0"
-            onClick={[Function]}
-          >
-            <img
-              className="card-img-top likes d-block"
-              src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
-            />
-            <div
-              className="card-body"
-            >
-              <span
-                id="like-type"
-              >
-                Performance
-              </span>
-              <br />
-              <span
-                id="like-name"
-              >
-                SOLAR GLIDE ST
-              </span>
-              <br />
-              <span
-                id="like-price"
-              >
-                $
-                140
-              </span>
-            </div>
-          </div>
-          <div
-            className="card"
             key="1"
             onClick={[Function]}
           >
@@ -239,6 +74,39 @@ exports[`Likes component should display like snapshot 1`] = `
                 $
                 110
               </span>
+              <br />
+              <div
+                className="rating-review"
+              >
+                <RatingAPILayer
+                  direction="ltr"
+                  emptySymbol="far fa-star"
+                  fractions={5}
+                  fullSymbol="fa fa-star"
+                  initialRating={NaN}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onHover={[Function]}
+                  placeholderSymbol={
+                    Object {
+                      "backgroundColor": "red",
+                      "border": "5px double white",
+                      "borderRadius": "50%",
+                      "display": "inline-block",
+                      "height": 30,
+                      "width": 30,
+                    }
+                  }
+                  quiet={false}
+                  readonly={true}
+                  start={0}
+                  step={1}
+                  stop={5}
+                />
+                <span
+                  className="rating"
+                />
+              </div>
             </div>
           </div>
           <div
@@ -271,6 +139,39 @@ exports[`Likes component should display like snapshot 1`] = `
                 $
                 115
               </span>
+              <br />
+              <div
+                className="rating-review"
+              >
+                <RatingAPILayer
+                  direction="ltr"
+                  emptySymbol="far fa-star"
+                  fractions={5}
+                  fullSymbol="fa fa-star"
+                  initialRating={NaN}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onHover={[Function]}
+                  placeholderSymbol={
+                    Object {
+                      "backgroundColor": "red",
+                      "border": "5px double white",
+                      "borderRadius": "50%",
+                      "display": "inline-block",
+                      "height": 30,
+                      "width": 30,
+                    }
+                  }
+                  quiet={false}
+                  readonly={true}
+                  start={0}
+                  step={1}
+                  stop={5}
+                />
+                <span
+                  className="rating"
+                />
+              </div>
             </div>
           </div>
           <div
@@ -303,19 +204,44 @@ exports[`Likes component should display like snapshot 1`] = `
                 $
                 130
               </span>
+              <br />
+              <div
+                className="rating-review"
+              >
+                <RatingAPILayer
+                  direction="ltr"
+                  emptySymbol="far fa-star"
+                  fractions={5}
+                  fullSymbol="fa fa-star"
+                  initialRating={NaN}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onHover={[Function]}
+                  placeholderSymbol={
+                    Object {
+                      "backgroundColor": "red",
+                      "border": "5px double white",
+                      "borderRadius": "50%",
+                      "display": "inline-block",
+                      "height": 30,
+                      "width": 30,
+                    }
+                  }
+                  quiet={false}
+                  readonly={true}
+                  start={0}
+                  step={1}
+                  stop={5}
+                />
+                <span
+                  className="rating"
+                />
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div
-        className="carousel-item"
-      >
-        <div
-          id="likes"
-        >
           <div
             className="card"
-            key="0"
+            key="4"
             onClick={[Function]}
           >
             <img
@@ -343,11 +269,52 @@ exports[`Likes component should display like snapshot 1`] = `
                 $
                 95
               </span>
+              <br />
+              <div
+                className="rating-review"
+              >
+                <RatingAPILayer
+                  direction="ltr"
+                  emptySymbol="far fa-star"
+                  fractions={5}
+                  fullSymbol="fa fa-star"
+                  initialRating={NaN}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onHover={[Function]}
+                  placeholderSymbol={
+                    Object {
+                      "backgroundColor": "red",
+                      "border": "5px double white",
+                      "borderRadius": "50%",
+                      "display": "inline-block",
+                      "height": 30,
+                      "width": 30,
+                    }
+                  }
+                  quiet={false}
+                  readonly={true}
+                  start={0}
+                  step={1}
+                  stop={5}
+                />
+                <span
+                  className="rating"
+                />
+              </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div
+        className="carousel-item"
+      >
+        <div
+          id="likes"
+        >
           <div
             className="card"
-            key="1"
+            key="5"
             onClick={[Function]}
           >
             <img
@@ -375,11 +342,44 @@ exports[`Likes component should display like snapshot 1`] = `
                 $
                 140
               </span>
+              <br />
+              <div
+                className="rating-review"
+              >
+                <RatingAPILayer
+                  direction="ltr"
+                  emptySymbol="far fa-star"
+                  fractions={5}
+                  fullSymbol="fa fa-star"
+                  initialRating={NaN}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onHover={[Function]}
+                  placeholderSymbol={
+                    Object {
+                      "backgroundColor": "red",
+                      "border": "5px double white",
+                      "borderRadius": "50%",
+                      "display": "inline-block",
+                      "height": 30,
+                      "width": 30,
+                    }
+                  }
+                  quiet={false}
+                  readonly={true}
+                  start={0}
+                  step={1}
+                  stop={5}
+                />
+                <span
+                  className="rating"
+                />
+              </div>
             </div>
           </div>
           <div
             className="card"
-            key="2"
+            key="6"
             onClick={[Function]}
           >
             <img
@@ -407,11 +407,44 @@ exports[`Likes component should display like snapshot 1`] = `
                 $
                 110
               </span>
+              <br />
+              <div
+                className="rating-review"
+              >
+                <RatingAPILayer
+                  direction="ltr"
+                  emptySymbol="far fa-star"
+                  fractions={5}
+                  fullSymbol="fa fa-star"
+                  initialRating={NaN}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onHover={[Function]}
+                  placeholderSymbol={
+                    Object {
+                      "backgroundColor": "red",
+                      "border": "5px double white",
+                      "borderRadius": "50%",
+                      "display": "inline-block",
+                      "height": 30,
+                      "width": 30,
+                    }
+                  }
+                  quiet={false}
+                  readonly={true}
+                  start={0}
+                  step={1}
+                  stop={5}
+                />
+                <span
+                  className="rating"
+                />
+              </div>
             </div>
           </div>
           <div
             className="card"
-            key="3"
+            key="7"
             onClick={[Function]}
           >
             <img
@@ -439,19 +472,44 @@ exports[`Likes component should display like snapshot 1`] = `
                 $
                 115
               </span>
+              <br />
+              <div
+                className="rating-review"
+              >
+                <RatingAPILayer
+                  direction="ltr"
+                  emptySymbol="far fa-star"
+                  fractions={5}
+                  fullSymbol="fa fa-star"
+                  initialRating={NaN}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onHover={[Function]}
+                  placeholderSymbol={
+                    Object {
+                      "backgroundColor": "red",
+                      "border": "5px double white",
+                      "borderRadius": "50%",
+                      "display": "inline-block",
+                      "height": 30,
+                      "width": 30,
+                    }
+                  }
+                  quiet={false}
+                  readonly={true}
+                  start={0}
+                  step={1}
+                  stop={5}
+                />
+                <span
+                  className="rating"
+                />
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div
-        className="carousel-item"
-      >
-        <div
-          id="likes"
-        >
           <div
             className="card"
-            key="0"
+            key="8"
             onClick={[Function]}
           >
             <img
@@ -479,11 +537,52 @@ exports[`Likes component should display like snapshot 1`] = `
                 $
                 130
               </span>
+              <br />
+              <div
+                className="rating-review"
+              >
+                <RatingAPILayer
+                  direction="ltr"
+                  emptySymbol="far fa-star"
+                  fractions={5}
+                  fullSymbol="fa fa-star"
+                  initialRating={NaN}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onHover={[Function]}
+                  placeholderSymbol={
+                    Object {
+                      "backgroundColor": "red",
+                      "border": "5px double white",
+                      "borderRadius": "50%",
+                      "display": "inline-block",
+                      "height": 30,
+                      "width": 30,
+                    }
+                  }
+                  quiet={false}
+                  readonly={true}
+                  start={0}
+                  step={1}
+                  stop={5}
+                />
+                <span
+                  className="rating"
+                />
+              </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div
+        className="carousel-item"
+      >
+        <div
+          id="likes"
+        >
           <div
             className="card"
-            key="1"
+            key="9"
             onClick={[Function]}
           >
             <img
@@ -511,11 +610,44 @@ exports[`Likes component should display like snapshot 1`] = `
                 $
                 95
               </span>
+              <br />
+              <div
+                className="rating-review"
+              >
+                <RatingAPILayer
+                  direction="ltr"
+                  emptySymbol="far fa-star"
+                  fractions={5}
+                  fullSymbol="fa fa-star"
+                  initialRating={NaN}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onHover={[Function]}
+                  placeholderSymbol={
+                    Object {
+                      "backgroundColor": "red",
+                      "border": "5px double white",
+                      "borderRadius": "50%",
+                      "display": "inline-block",
+                      "height": 30,
+                      "width": 30,
+                    }
+                  }
+                  quiet={false}
+                  readonly={true}
+                  start={0}
+                  step={1}
+                  stop={5}
+                />
+                <span
+                  className="rating"
+                />
+              </div>
             </div>
           </div>
           <div
             className="card"
-            key="2"
+            key="10"
             onClick={[Function]}
           >
             <img
@@ -543,6 +675,372 @@ exports[`Likes component should display like snapshot 1`] = `
                 $
                 140
               </span>
+              <br />
+              <div
+                className="rating-review"
+              >
+                <RatingAPILayer
+                  direction="ltr"
+                  emptySymbol="far fa-star"
+                  fractions={5}
+                  fullSymbol="fa fa-star"
+                  initialRating={NaN}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onHover={[Function]}
+                  placeholderSymbol={
+                    Object {
+                      "backgroundColor": "red",
+                      "border": "5px double white",
+                      "borderRadius": "50%",
+                      "display": "inline-block",
+                      "height": 30,
+                      "width": 30,
+                    }
+                  }
+                  quiet={false}
+                  readonly={true}
+                  start={0}
+                  step={1}
+                  stop={5}
+                />
+                <span
+                  className="rating"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            className="card"
+            key="11"
+            onClick={[Function]}
+          >
+            <img
+              className="card-img-top likes d-block"
+              src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
+            />
+            <div
+              className="card-body"
+            >
+              <span
+                id="like-type"
+              >
+                Performance
+              </span>
+              <br />
+              <span
+                id="like-name"
+              >
+                SOLARBOOST
+              </span>
+              <br />
+              <span
+                id="like-price"
+              >
+                $
+                110
+              </span>
+              <br />
+              <div
+                className="rating-review"
+              >
+                <RatingAPILayer
+                  direction="ltr"
+                  emptySymbol="far fa-star"
+                  fractions={5}
+                  fullSymbol="fa fa-star"
+                  initialRating={NaN}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onHover={[Function]}
+                  placeholderSymbol={
+                    Object {
+                      "backgroundColor": "red",
+                      "border": "5px double white",
+                      "borderRadius": "50%",
+                      "display": "inline-block",
+                      "height": 30,
+                      "width": 30,
+                    }
+                  }
+                  quiet={false}
+                  readonly={true}
+                  start={0}
+                  step={1}
+                  stop={5}
+                />
+                <span
+                  className="rating"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            className="card"
+            key="12"
+            onClick={[Function]}
+          >
+            <img
+              className="card-img-top likes d-block"
+              src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
+            />
+            <div
+              className="card-body"
+            >
+              <span
+                id="like-type"
+              >
+                Comfort
+              </span>
+              <br />
+              <span
+                id="like-name"
+              >
+                ANDALAX
+              </span>
+              <br />
+              <span
+                id="like-price"
+              >
+                $
+                115
+              </span>
+              <br />
+              <div
+                className="rating-review"
+              >
+                <RatingAPILayer
+                  direction="ltr"
+                  emptySymbol="far fa-star"
+                  fractions={5}
+                  fullSymbol="fa fa-star"
+                  initialRating={NaN}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onHover={[Function]}
+                  placeholderSymbol={
+                    Object {
+                      "backgroundColor": "red",
+                      "border": "5px double white",
+                      "borderRadius": "50%",
+                      "display": "inline-block",
+                      "height": 30,
+                      "width": 30,
+                    }
+                  }
+                  quiet={false}
+                  readonly={true}
+                  start={0}
+                  step={1}
+                  stop={5}
+                />
+                <span
+                  className="rating"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="carousel-item"
+      >
+        <div
+          id="likes"
+        >
+          <div
+            className="card"
+            key="13"
+            onClick={[Function]}
+          >
+            <img
+              className="card-img-top likes d-block"
+              src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
+            />
+            <div
+              className="card-body"
+            >
+              <span
+                id="like-type"
+              >
+                Originals
+              </span>
+              <br />
+              <span
+                id="like-name"
+              >
+                SOLAR GLIDE
+              </span>
+              <br />
+              <span
+                id="like-price"
+              >
+                $
+                130
+              </span>
+              <br />
+              <div
+                className="rating-review"
+              >
+                <RatingAPILayer
+                  direction="ltr"
+                  emptySymbol="far fa-star"
+                  fractions={5}
+                  fullSymbol="fa fa-star"
+                  initialRating={NaN}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onHover={[Function]}
+                  placeholderSymbol={
+                    Object {
+                      "backgroundColor": "red",
+                      "border": "5px double white",
+                      "borderRadius": "50%",
+                      "display": "inline-block",
+                      "height": 30,
+                      "width": 30,
+                    }
+                  }
+                  quiet={false}
+                  readonly={true}
+                  start={0}
+                  step={1}
+                  stop={5}
+                />
+                <span
+                  className="rating"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            className="card"
+            key="14"
+            onClick={[Function]}
+          >
+            <img
+              className="card-img-top likes d-block"
+              src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
+            />
+            <div
+              className="card-body"
+            >
+              <span
+                id="like-type"
+              >
+                Performance
+              </span>
+              <br />
+              <span
+                id="like-name"
+              >
+                ULTRABOOST
+              </span>
+              <br />
+              <span
+                id="like-price"
+              >
+                $
+                95
+              </span>
+              <br />
+              <div
+                className="rating-review"
+              >
+                <RatingAPILayer
+                  direction="ltr"
+                  emptySymbol="far fa-star"
+                  fractions={5}
+                  fullSymbol="fa fa-star"
+                  initialRating={NaN}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onHover={[Function]}
+                  placeholderSymbol={
+                    Object {
+                      "backgroundColor": "red",
+                      "border": "5px double white",
+                      "borderRadius": "50%",
+                      "display": "inline-block",
+                      "height": 30,
+                      "width": 30,
+                    }
+                  }
+                  quiet={false}
+                  readonly={true}
+                  start={0}
+                  step={1}
+                  stop={5}
+                />
+                <span
+                  className="rating"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            className="card"
+            key="15"
+            onClick={[Function]}
+          >
+            <img
+              className="card-img-top likes d-block"
+              src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
+            />
+            <div
+              className="card-body"
+            >
+              <span
+                id="like-type"
+              >
+                Performance
+              </span>
+              <br />
+              <span
+                id="like-name"
+              >
+                SOLAR GLIDE ST
+              </span>
+              <br />
+              <span
+                id="like-price"
+              >
+                $
+                140
+              </span>
+              <br />
+              <div
+                className="rating-review"
+              >
+                <RatingAPILayer
+                  direction="ltr"
+                  emptySymbol="far fa-star"
+                  fractions={5}
+                  fullSymbol="fa fa-star"
+                  initialRating={NaN}
+                  onChange={[Function]}
+                  onClick={[Function]}
+                  onHover={[Function]}
+                  placeholderSymbol={
+                    Object {
+                      "backgroundColor": "red",
+                      "border": "5px double white",
+                      "borderRadius": "50%",
+                      "display": "inline-block",
+                      "height": 30,
+                      "width": 30,
+                    }
+                  }
+                  quiet={false}
+                  readonly={true}
+                  start={0}
+                  step={1}
+                  stop={5}
+                />
+                <span
+                  className="rating"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -558,20 +1056,16 @@ exports[`Likes component should display like snapshot 1`] = `
           className="row control-row"
         >
           <a
-            className="carousel-control-prev"
+            className="carousel-control-prev hidden"
             data-slide="prev"
             href="#carouselLikes"
+            onClick={[Function]}
             role="button"
           >
             <span
               aria-hidden="true"
               className="carousel-control-prev-icon"
             />
-            <span
-              className="sr-only"
-            >
-              Previous
-            </span>
           </a>
         </div>
         <div
@@ -581,17 +1075,13 @@ exports[`Likes component should display like snapshot 1`] = `
             className="carousel-control-next"
             data-slide="next"
             href="#carouselLikes"
+            onClick={[Function]}
             role="button"
           >
             <span
               aria-hidden="true"
               className="carousel-control-next-icon"
             />
-            <span
-              className="sr-only"
-            >
-              Next
-            </span>
           </a>
         </div>
       </div>

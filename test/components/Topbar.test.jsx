@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Topbar from '../../client/src/components/Topbar';
+import DropdownMenu from '../../client/src/components/DropdownMenu';
 
 describe('Topbar/Navbar Component', () => {
   const component = shallow(<Topbar cart={0}/>);

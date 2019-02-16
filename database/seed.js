@@ -9,8 +9,8 @@ let sampleShoes = [
    "long_desc": "Ready for the streets. These shoes borrow their modern look and feel from lightweight runners. They have a flexible knit upper with floating 3-Stripes integrated into the lacing system. Pillow-soft midsole and outsole cushioning provides all-day comfort.",
    "type": "Performance",
    "price": 110,
-   "weight": 310,
-   "composition": "Polyester",
+   "review_count": 310,
+   "rating": 3.75,
    "details": "Regular fit;Lace closure;Adidas Primeknit textile upper, Knit midfoot cage, outsole for extraordinary traction in wet and dry conditions;Responsive boost midsole;Lightweight and breathable;Imported;Product code: AQ0481"
  },
  {
@@ -21,8 +21,8 @@ let sampleShoes = [
    "long_desc": "Ready for the streets. These shoes borrow their modern look and feel from lightweight runners. They have a flexible knit upper with floating 3-Stripes integrated into the lacing system. Pillow-soft midsole and outsole cushioning provides all-day comfort.",
    "type": "Comfort",
    "price": 115,
-   "weight": 308,
-   "composition": "Nylon",
+   "review_count": 308,
+   "rating": 4.25,
    "details": "Regular fit;Lace closure;Responsive Boost midsole;Recommended for: Long, urban runs, Arch type: Normal, Stabilizing Torsion System;Supportive midfoot cage, Fitcounter heel for unrestricted fit;imported;Product code: BB1234"
  },
  {
@@ -33,8 +33,8 @@ let sampleShoes = [
    "long_desc": "These running shoes combine comfort and high-performance technology for a best-ever-run feeling. They have a stretchy knit upper that adapts to the changing shape of your foot as you run. Responsive midsole cushioning and a flexible outsole deliver a smooth and energized ride.",
    "type": "Originals",
    "price": 130,
-   "weight": 305,
-   "composition": "Polyester",
+   "review_count": 798,
+   "rating": 4.75,
    "details": "Regular fit;Lace closure;Responsive Boost midsole;Recommended for: Long and short distances across city surfaces like asphalt, cobblestones, concrete, grass;imported;Product code: G26603"
  },
  {
@@ -45,8 +45,8 @@ let sampleShoes = [
    "long_desc": "Inspired by Los Angeles. Co-created with runners. Made for city running. Glue-free assembly delivers a direct feel and distraction-free fit, and the outsole offers enhanced grip on city surfaces. An NFC chip in the tongue is the gateway to a unique digital experience.",
    "type": "Performance",
    "price": 95,
-   "weight": 300,
-   "composition": "Polyester",
+   "review_count": 837,
+   "rating": 3.75,
    "details": "Regular fit;Lace closure;Specialized, durable support;Recommended for: Short, urban runs, Arch type: High, Stabilizing Torsion System;Recommened for short;Supportive midfoot cage;imported;Product code: BB1034"
  },
  {
@@ -57,8 +57,8 @@ let sampleShoes = [
    "long_desc": "These running shoes were created using insights provided by London athletes and crafted at adidas innovative SPEEDFACTORY facility in Germany and assembled in the U.S. Built with Boost for an energized push-off with each footstrike, they feature a foot-hugging knit textile upper.",
    "type": "Performance",
    "price": 140,
-   "weight": 310,
-   "composition": "Polyester",
+   "review_count": 310,
+   "rating": 2.5,
    "details": "Regular fit;Lace closure;Mesh upper with forefoot ribbing;Flexible Stretchweb outsole; Continental™ Rubber outsole for extraordinary traction in wet and dry conditions;Recommended for: Road running; Arch type: Normal; Solar Propulsion Rail helps guide the foot; Stabilizing Torsion System; Fitcounter heel for unrestricted fit; Reflective details;Midsole drop: 10 mm (heel: 32 mm / forefoot 22 mm);Imported;Product code: AQ0332"
  },
  {
@@ -69,8 +69,8 @@ let sampleShoes = [
    "long_desc": "A go-to pair for all your runs, these shoes have Energized cushioning that works with a flexible outsole to deliver a smooth and comfortable ride. The breathable mesh upper is designed to support and stretch as you move for an optimal fit.",
    "type": "Originals",
    "price": 100,
-   "weight": 310,
-   "composition": "Polyester",
+   "review_count": 310,
+   "rating": 3.75,
    "details": "Lace closer;Techfit upper; Stretch-mesh forefoot; Cushioned tongue for more precise fit;Responsive Boost midsole;Foot-hugging upper;Midsole drop: 10 mm (heel: 32 mm / forefoot: 22 mm);imported;Product code: BA2341"
  },
  {
@@ -81,8 +81,8 @@ let sampleShoes = [
    "long_desc": "These natural running shoes are designed for versatility and long-lasting comfort. They have an upper that hugs your foot in compressive support, and a flexible outsole that adapts to your unique foot strike.",
    "type": "Performance",
    "price": 80,
-   "weight": 290,
-   "composition": "Nylon",
+   "review_count": 1343,
+   "rating": 4.25,
    "details": "Lace closure;Techfit upper;Stretch-mesh forefoot;Cushioned tongue for more precise fit;Flexible Stretch web outsole;Continental™ Rubber outsole for extraordinary traction in wet and dry conditions;Foot-hugging upper;Midsole drop: 10 mm (heel: 32 mm / forefoot: 22 mm);Imported;Product code: CQ3168"
  },
  {
@@ -93,8 +93,8 @@ let sampleShoes = [
    "long_desc": "Inspired by aerospace engineering design and built for performance, these shoes help you tackle longer runs. A supportive stability rail works with the responsive midsole and flexible outsole for a smooth and energized run. The heel counter locks in the fit while allowing the Achilles to move freely.",
    "type": "Performance",
    "price": 110,
-   "weight": 310,
-   "composition": "Polyester",
+   "review_count": 310,
+   "rating": 3.5,
    "details": "Lace closure;Techfit upper;Stretch-mesh forefoot;Cushioned tongue for more precise fit;Road running; Arch type: Normal; Solar Propulsion Rail helps guide the foot; Stabilizing Torsion System; Fitcounter heel for unrestricted fit;Foot-hugging upper;Midsole drop: 10 mm (heel: 32 mm / forefoot: 22 mm);Imported;Product code: BB91232"
  },
  {
@@ -105,8 +105,8 @@ let sampleShoes = [
    "long_desc": "Built to handle curbs, corners and uneven sidewalks, these natural running shoes have an expanded landing zone and a heel plate for added stability. A lightweight and stretchy knit upper supports your native stride. Energized cushioning works with the flexible outsole to give you a smooth and comfortable ride. Endless energy Boost is our most responsive cushioning ever, delivering incredible energy return: The more energy you give, the more you get",
    "type": "Performance",
    "price": 108,
-   "weight": 300,
-   "composition": "Polyester",
+   "review_count": 992,
+   "rating": 4.75,
    "details": "Regular fit;Lace closure;Knit upper;Flexible Stretchweb outsole;Responsive Boost midsole;Lightweight and supportive;Midsole drop: 8 mm (heel: 21 mm / forefoot: 13 mm);Arch type: Normal;Imported;Product code: B75822"
  },
  {
@@ -117,8 +117,8 @@ let sampleShoes = [
    "long_desc": "With a nod to technical outerwear, these shoes blend heritage style with modern innovation. The soft knit textile upper is detailed with subtle 3-Stripes and bold patch overlays. The Boost midsole provides responsive comfort and is accented with distinctive NMD plugs. Iconic 80s detail Midsole EVA plugs highlight a signature adidas design feature Endless energy Boost is our most responsive cushioning ever, delivering incredible energy return: The more energy you give, the more you get",
    "type": "Originals",
    "price": 130,
-   "weight": 305,
-   "composition": "Polyester",
+   "review_count": 305,
+   "rating": 4.75,
    "details": "Regular fit;Lace closure;Knit textile upper;Rubber outsole;Enjoy the comfort and performance of OrthoLite® sockliner; Responsive Boost midsole with EVA plugs;Soft feel;Imported;Product code: BD7741"
  },
  {
@@ -129,8 +129,8 @@ let sampleShoes = [
    "long_desc": "With a nod to technical outerwear, these shoes blend heritage style with modern innovation. The soft knit textile upper is detailed with subtle 3-Stripes and bold patch overlays. The Boost midsole provides responsive comfort and is accented with distinctive NMD plugs. Iconic 80s detail Midsole EVA plugs highlight a signature adidas design feature Endless energy Boost is our most responsive cushioning ever, delivering incredible energy return: The more energy you give, the more you get",
    "type": "Originals",
    "price": 130,
-   "weight": 305,
-   "composition": "Polyester",
+   "review_count": 305,
+   "rating": 3.75,
    "details": "Regular fit;Lace closure;Knit textile upper;Rubber outsole;Enjoy the comfort and performance of OrthoLite® sockliner; Responsive Boost midsole with EVA plugs;Soft feel;Imported;Product code: HS2343"
  },
  {
@@ -141,8 +141,8 @@ let sampleShoes = [
    "long_desc": "A go-to pair for all your runs, these shoes have Energized cushioning that works with a flexible outsole to deliver a smooth and comfortable ride. The breathable mesh upper is designed to support and stretch as you move for an optimal fit. Engineered fit adidas Primeknit upper wraps the foot with an engineered fit for targeted support that enhances movement",
    "type": "Performance",
    "price": 180,
-   "weight": 320,
-   "composition": "Polyester",
+   "review_count": 876,
+   "rating": 3.5,
    "details": "Regular fit;Lace closure;Adidas Primeknit textile upper;Flexible Stretchweb outsole, Continental Rubber outsole for extraordinary traction in wet and dry conditions; Midfoot cage;Responsive Boost midsole; Stabilizing Torsion System;Arch type: Normal; Fitcounter heel for unrestricted fit;Imported;Product code: F35233"
  },
  {
@@ -153,8 +153,8 @@ let sampleShoes = [
    "long_desc": "Part of a statement collection inspired by Stella McCartney, these neutral running shoes are geared for gym floors or pavement. The women-specific design features a wide forefoot and heel platform to deliver stability while cross training. The shoes have a stretch mesh upper that offers foot-cradling comfort.",
    "type": "Performance",
    "price": 100,
-   "weight": 300,
-   "composition": "Nylon",
+   "review_count": 798,
+   "rating": 4.25,
    "details": "Women-specific fit; Slightly wider forefoot and heel;Lace closure;Seam-sealed stretch-mesh upper;Internal custom-fit sockliner, Durable Adiwear outsole;Flexible Bounce midsole cushioning;Supportive feel;Midsole drop: 10 mm (heel: 22.5 mm / forefoot: 12.5 mm);Recommended for: Indoor and outdoor running; Arch type: Normal;Imported;Product code: AC7104"
  },
  {
@@ -165,8 +165,8 @@ let sampleShoes = [
    "long_desc": "A go-to pair for all your runs, these shoes have Energized cushioning that works with a flexible outsole to deliver a smooth and comfortable ride. The breathable mesh upper is designed to support and stretch as you move for an optimal fit. Engineered fit adidas Primeknit upper wraps the foot with an engineered fit for targeted support that enhances movement",
    "type": "Performance",
    "price": 180,
-   "weight": 320,
-   "composition": "Polyester",
+   "review_count": 1023,
+   "rating": 3.75,
    "details": "Regular fit;Lace closure;Adidas Primeknit textile upper;Flexible Stretchweb outsole, Continental Rubber outsole for extraordinary traction in wet and dry conditions; Midfoot cage;Responsive Boost midsole; Stabilizing Torsion System;Arch type: Normal; Fitcounter heel for unrestricted fit;Imported;Product code: UJ7649"
  },
  {
@@ -177,8 +177,8 @@ let sampleShoes = [
    "long_desc": "Designed for warm-weather runs, these shoes feature a breathable mesh upper to help keep feet cool. They have a second-skin fit with overlays for added support in key areas. Flexible cushioning adds spring to your stride. Shoe type Neutral shoes offer flexibility and versatility, with premium cushioning Springy cushioning Bounce cushioning provides enhanced comfort and flexibility",
    "type": "Performance",
    "price": 100,
-   "weight": 300,
-   "composition": "Polyester",
+   "review_count": 821,
+   "rating": 3.75,
    "details": "Regular fit;Lace closure;Mesh upper is a lightweight, breathable second-skin providing a supportive, comfortable fit;Rubber outsole, supportive overlays;Flexible Bounce midsole cushioning;Imported;Product code: CQ0595"
  },
  {
@@ -189,8 +189,8 @@ let sampleShoes = [
    "long_desc": "Exceptional comfort, inspired design. These guys shoes embrace your feet with a sock-like knit upper. Outsole cutouts flash a peek at the cloudfoam cushioning that delivers unmatched comfort.",
    "type": "Essentials",
    "price": 85,
-   "weight": 290,
-   "composition": "Polyester",
+   "review_count": 54,
+   "rating": 3.75,
    "details": "Knit,sock-like upper;Seamless 3-Strips;Comfortable textile lining;Webbing tongue pull;cloudfoam ULTIMATE combines a cloudfoam midsole with a super-soft insert for enhanced comfort;Combined cloudfoam midsole and outsole for step-in comfort and superior cushioning you can see and feel;Textile and synthetic upper / Textile lining / Synthetic outsole;Imported;Product code: BC0018"
  },
  {
@@ -201,8 +201,8 @@ let sampleShoes = [
    "long_desc": "Exceptional comfort, inspired design. These guys shoes embrace your feet with a sock-like knit upper. Outsole cutouts flash a peek at the cloudfoam cushioning that delivers unmatched comfort.",
    "type": "Essentials",
    "price": 90,
-   "weight": 300,
-   "composition": "Polyester",
+   "review_count": 308,
+   "rating": 4.5,
    "details": "Knit,sock-like upper;Seamless 3-Strips;Comfortable textile lining;Webbing tongue pull;cloudfoam ULTIMATE combines a cloudfoam midsole with a super-soft insert for enhanced comfort;Combined cloudfoam midsole and outsole for step-in comfort and superior cushioning you can see and feel;Textile and synthetic upper / Textile lining / Synthetic outsole;Imported;Product code: BC1231"
  },
  {
@@ -213,8 +213,8 @@ let sampleShoes = [
   "long_desc": "These neutral running shoes have a women-specific design, with a rounder heel that cradles the foot. The upper is made of lightweight stretch mesh for a barely there feel. Designed for indoor and outdoor running, the shoes feature springy cushioning to keep you comfortable over the miles.",
   "type": "Performance",
   "price": 100,
-  "weight": 295,
-  "composition": "Polyester",
+  "review_count": 295,
+  "rating": 4.5,
   "details": "Lace closure with wide laces;Stretch mesh upper;Rubber outsole;Flexible Bounce midsole cushioning;Lightweight feel;Midsole drop: 15 mm (heel: 30 mm / forefoot: 15 mm);Arch type: normal;Imported;Produce code: HJ2341"
  },
  {
@@ -225,8 +225,8 @@ let sampleShoes = [
    "long_desc": "Inspired by aerospace engineering design and built for performance, these shoes help you tackle longer runs. A supportive stability rail works with the responsive midsole and flexible outsole for a smooth and energized run. The heel counter locks in the fit while allowing the Achilles to move freely.",
    "type": "Performance",
    "price": 180,
-   "weight": 320,
-   "composition": "Polyester",
+   "review_count": 1523,
+   "rating": 4.5,
    "details": "Regular fit;Lace closure;Adidas Primeknit textile upper;Flexible Stretchweb outsole, Continental Rubber outsole for extraordinary traction in wet and dry conditions; Midfoot cage;Responsive Boost midsole; Stabilizing Torsion System;Arch type: Normal; Fitcounter heel for unrestricted fit;Imported;Product code: UJ7649"
  },
  {
@@ -237,8 +237,8 @@ let sampleShoes = [
    "long_desc": "With a nod to technical outerwear, these shoes blend heritage style with modern innovation. The soft knit textile upper is detailed with subtle 3-Stripes and bold patch overlays. The Boost midsole provides responsive comfort and is accented with distinctive NMD plugs. Iconic 80s detail Midsole EVA plugs highlight a signature adidas design feature Endless energy Boost is our most responsive cushioning ever, delivering incredible energy return: The more energy you give, the more you get",
    "type": "Originals",
    "price": 140,
-   "weight": 305,
-   "composition": "Polyester",
+   "review_count": 798,
+   "rating": 4.5,
    "details": "Regular fit;Lace closure;Knit textile upper;Rubber outsole;Enjoy the comfort and performance of OrthoLite® sockliner; Responsive Boost midsole with EVA plugs;Soft feel;Imported;Product code: HS1243"
  },
  {
@@ -249,8 +249,8 @@ let sampleShoes = [
    "long_desc": "These neutral running shoes have a women-specific design, with a rounder heel that cradles the foot. The upper is made of lightweight stretch mesh for a barely there feel. Designed for indoor and outdoor running, the shoes feature springy cushioning to keep you comfortable over the miles.",
    "type": "Performance",
    "price": 100,
-   "weight": 295,
-   "composition": "Polyester",
+   "review_count": 295,
+   "rating": 4.5,
    "details": "Lace closure with wide laces;Stretch mesh upper;Rubber outsole;Flexible Bounce midsole cushioning;Lightweight feel;Midsole drop: 15 mm (heel: 30 mm / forefoot: 15 mm);Arch type: normal;Imported;Produce code: GS2341"
  },
  {
@@ -261,8 +261,8 @@ let sampleShoes = [
    "long_desc": "Ready for the streets. These shoes borrow their modern look and feel from lightweight runners. They have a flexible knit upper with floating 3-Stripes integrated into the lacing system. Pillow-soft midsole and outsole cushioning provides all-day comfort.",
    "type": "Performance",
    "price": 180,
-   "weight": 320,
-   "composition": "Polyester",
+   "review_count": 109,
+   "rating": 3.75,
    "details": "Regular fit;Lace closure;Adidas Primeknit textile upper;Flexible Stretchweb outsole, Continental Rubber outsole for extraordinary traction in wet and dry conditions; Midfoot cage;Responsive Boost midsole; Stabilizing Torsion System;Arch type: Normal; Fitcounter heel for unrestricted fit;Imported;Product code: UJ7649"
  },
  {
@@ -273,8 +273,8 @@ let sampleShoes = [
    "long_desc": "Ready for the streets. These shoes borrow their modern look and feel from lightweight runners. They have a flexible knit upper with floating 3-Stripes integrated into the lacing system. Pillow-soft midsole and outsole cushioning provides all-day comfort.",
    "type": "Originals",
    "price": 150,
-   "weight": 300,
-   "composition": "Polyester",
+   "review_count": 462,
+   "rating": 4.75,
    "details": "Regular fit;Lace closure;Adidas Primeknit textile upper;Flexible Stretchweb outsole, Continental Rubber outsole for extraordinary traction in wet and dry conditions; Midfoot cage;Responsive Boost midsole; Stabilizing Torsion System;Arch type: Normal; Fitcounter heel for unrestricted fit;Imported;Product code: UJ7649"
  },
  {
@@ -285,8 +285,8 @@ let sampleShoes = [
    "long_desc": "A go-to pair for all your runs, these shoes have Energized cushioning that works with a flexible outsole to deliver a smooth and comfortable ride. The breathable mesh upper is designed to support and stretch as you move for an optimal fit. Engineered fit adidas Primeknit upper wraps the foot with an engineered fit for targeted support that enhances movement",
    "type": "Performance",
    "price": 180,
-   "weight": 320,
-   "composition": "Polyester",
+   "review_count": 205,
+   "rating": 4.75,
    "details": "Regular fit;Lace closure;Adidas Primeknit textile upper;Flexible Stretchweb outsole, Continental Rubber outsole for extraordinary traction in wet and dry conditions; Midfoot cage;Responsive Boost midsole; Stabilizing Torsion System;Arch type: Normal; Fitcounter heel for unrestricted fit;Imported;Product code: UJ3321"
  },
  {
@@ -297,8 +297,8 @@ let sampleShoes = [
    "long_desc": "Exceptional comfort, inspired design. These guys shoes embrace your feet with a sock-like knit upper. Outsole cutouts flash a peek at the cloudfoam cushioning that delivers unmatched comfort.",
    "type": "Essentials",
    "price": 100,
-   "weight": 290,
-   "composition": "Polyester",
+   "review_count": 1043,
+   "rating": 4.5,
    "details": "Knit,sock-like upper;Seamless 3-Strips;Comfortable textile lining;Webbing tongue pull;cloudfoam ULTIMATE combines a cloudfoam midsole with a super-soft insert for enhanced comfort;Combined cloudfoam midsole and outsole for step-in comfort and superior cushioning you can see and feel;Textile and synthetic upper / Textile lining / Synthetic outsole;Imported;Product code: BC1231"
  },
  {
@@ -309,8 +309,8 @@ let sampleShoes = [
   "long_desc": "A go-to pair for all your runs, these shoes have Energized cushioning that works with a flexible outsole to deliver a smooth and comfortable ride. The breathable mesh upper is designed to support and stretch as you move for an optimal fit. Engineered fit adidas Primeknit upper wraps the foot with an engineered fit for targeted support that enhances movement",
   "type": "Performance",
   "price": 180,
-  "weight": 320,
-  "composition": "Polyster",
+  "review_count": 209,
+  "rating": 2.75,
   "details": "Regular fit;Lace closure;Adidas Primeknit textile upper;Flexible Stretchweb outsole, Continental Rubber outsole for extraordinary traction in wet and dry conditions; Midfoot cage;Responsive Boost midsole; Stabilizing Torsion System;Arch type: Normal; Fitcounter heel for unrestricted fit;Imported;Product code: BB92340"
 },
 {
@@ -321,8 +321,8 @@ let sampleShoes = [
   "long_desc": "A go-to pair for all your runs, these shoes have Energized cushioning that works with a flexible outsole to deliver a smooth and comfortable ride. The breathable mesh upper is designed to support and stretch as you move for an optimal fit. Engineered fit adidas Primeknit upper wraps the foot with an engineered fit for targeted support that enhances movement",
   "type": "Performance",
   "price": 180,
-  "weight": 310,
-  "composition": "Polyster",
+  "review_count": 310,
+  "rating": 2.75,
   "details": "Regular fit;Lace closure;Adidas Primeknit textile upper;Flexible Stretchweb outsole, Continental Rubber outsole for extraordinary traction in wet and dry conditions; Midfoot cage;Responsive Boost midsole; Stabilizing Torsion System;Arch type: Normal; Fitcounter heel for unrestricted fit;Imported;Product code: BB92340"
 },
 {
@@ -333,8 +333,8 @@ let sampleShoes = [
   "long_desc": "Designed in collaboration with ripper Dennis Busenitz, these next-level skate shoes are as tough as they are nimble. With solid skate-specific soles, heavy-duty heel and toe caps, and an abrasion-resistant leather upper, you get durability plus maximum board feel.",
   "type": "Originals",
   "price": 80,
-  "weight": 340,
-  "composition": "Nubuck Leather",
+  "review_count": 340,
+  "rating": 4.1,
   "details": "Regular fit;Lace closure;Nubuck and leather upper with Geofit padded collar;Synthetic lining; Rubber cupsole;Molded sockliner;Soft feel;Imported;Product Code: BA9342"
 },
 {
@@ -345,8 +345,8 @@ let sampleShoes = [
   "long_desc": "The definitive daily sneaker. These classic shoes for men are reworked with a modern shape and fresh materials. The casual denim upper is accented with stitched-on 3-Stripes for go-with-anything ease. A vulc-look outsole completes the package.",
   "type": "Originals",
   "price": 75,
-  "weight": 330,
-  "composition": "Polyester",
+  "review_count": 330,
+  "rating": 2.5,
   "details": "Denim upper;Comfortable textile lining;Synthetic leather 3-Strips;adidas wordmark on tongue label and synthetic leather heel tab;Rubber cupsole with vulcanized look;Main materials: Textile and synthetic upper / Textile lining / Rubber outsole;Imported;Product Code: JJ1923"
 },
 {
@@ -357,8 +357,8 @@ let sampleShoes = [
   "long_desc": "The definitive daily sneaker. These classic shoes for men are reworked with a modern shape and fresh materials. The casual denim upper is accented with stitched-on 3-Stripes for go-with-anything ease. A vulc-look outsole completes the package.",
   "type": "Originals",
   "price": 75,
-  "weight": 330,
-  "composition": "Polyester",
+  "review_count": 330,
+  "rating": 4.5,
   "details": "Denim upper;Comfortable textile lining;Synthetic leather 3-Strips;adidas wordmark on tongue label and synthetic leather heel tab;Rubber cupsole with vulcanized look;Main materials: Textile and synthetic upper / Textile lining / Rubber outsole;Imported;Product Code: JJ1923"
 },
 {
@@ -369,8 +369,8 @@ let sampleShoes = [
   "long_desc": "Exceptional comfort, inspired design. These guys shoes embrace your feet with a sock-like knit upper. Outsole cutouts flash a peek at the cloudfoam cushioning that delivers unmatched comfort.",
   "type": "Essentials",
   "price": 120,
-  "weight": 290,
-  "composition": "Polyester",
+  "review_count": 1943,
+  "rating": 3.75,
   "details": "Knit,sock-like upper;Seamless 3-Strips;Comfortable textile lining;Webbing tongue pull;cloudfoam ULTIMATE combines a cloudfoam midsole with a super-soft insert for enhanced comfort;Combined cloudfoam midsole and outsole for step-in comfort and superior cushioning you can see and feel;Textile and synthetic upper / Textile lining / Synthetic outsole;Imported;Product code: BC1231"
 },
 {
@@ -381,8 +381,8 @@ let sampleShoes = [
   "long_desc": "Built to handle curbs, corners and uneven sidewalks, these natural running shoes have an expanded landing zone and a heel plate for added stability. A lightweight and stretchy knit upper supports your native stride. Energized cushioning works with the flexible outsole to give you a smooth and comfortable ride. Endless energy Boost is our most responsive cushioning ever, delivering incredible energy return: The more energy you give, the more you get",
   "type": "Performance",
   "price": 100,
-  "weight": 300,
-  "composition": "Polyester",
+  "review_count": 753,
+  "rating": 3.75,
   "details": "Regular fit;Lace closure;Knit upper;Flexible Stretchweb outsole;Responsive Boost midsole;Lightweight and supportive;Midsole drop: 8 mm (heel: 21 mm / forefoot: 13 mm);Arch type: Normal;Imported;Product code: B75822"
 },
 {
@@ -393,8 +393,8 @@ let sampleShoes = [
   "long_desc": "These running shoes were created using insights provided by London athletes and crafted at adidas innovative SPEEDFACTORY facility in Germany and assembled in the U.S. Built with Boost for an energized push-off with each footstrike, they feature a foot-hugging knit textile upper.",
   "type": "Performance",
   "price": 150,
-  "weight": 300,
-  "composition": "Polyester",
+  "review_count": 402,
+  "rating": 3.75,
   "details": "Regular fit;Lace closure;Mesh upper with forefoot ribbing;Flexible Stretchweb outsole; Continental™ Rubber outsole for extraordinary traction in wet and dry conditions;Recommended for: Road running; Arch type: Normal; Solar Propulsion Rail helps guide the foot; Stabilizing Torsion System; Fitcounter heel for unrestricted fit; Reflective details;Midsole drop: 10 mm (heel: 32 mm / forefoot 22 mm);Imported;Product code: AQ0332"
 },
 {
@@ -405,8 +405,8 @@ let sampleShoes = [
   "long_desc": "Ready for the streets. These shoes borrow their modern look and feel from lightweight runners. They have a flexible knit upper with floating 3-Stripes integrated into the lacing system. Pillow-soft midsole and outsole cushioning provides all-day comfort.",
   "type": "Originals",
   "price": 90,
-  "weight": 310,
-  "composition": "Nylon",
+  "review_count": 310,
+  "rating": 4.25,
   "details": "Regular fit;Lace closure;Responsive Boost midsole;Recommended for: Long, urban runs, Arch type: Normal, Stabilizing Torsion System;Supportive midfoot cage, Fitcounter heel for unrestricted fit;imported;Product code: BB1234"
 },
 {
@@ -417,8 +417,8 @@ let sampleShoes = [
   "long_desc": "A go-to pair for all your runs, these shoes have Energized cushioning that works with a flexible outsole to deliver a smooth and comfortable ride. The breathable mesh upper is designed to support and stretch as you move for an optimal fit.",
   "type": "Performance",
   "price": 170,
-  "weight": 315,
-  "composition": "Polyester",
+  "review_count": 315,
+  "rating": 2.5,
   "details": "Lace closer;Techfit upper; Stretch-mesh forefoot; Cushioned tongue for more precise fit;Responsive Boost midsole;Foot-hugging upper;Midsole drop: 10 mm (heel: 32 mm / forefoot: 22 mm);imported;Product code: BA2341"
 },
 {
@@ -429,8 +429,8 @@ let sampleShoes = [
   "long_desc": "With a nod to technical outerwear, these shoes blend heritage style with modern innovation. The soft knit textile upper is detailed with subtle 3-Stripes and bold patch overlays. The Boost midsole provides responsive comfort and is accented with distinctive NMD plugs. Iconic 80s detail Midsole EVA plugs highlight a signature adidas design feature Endless energy Boost is our most responsive cushioning ever, delivering incredible energy return: The more energy you give, the more you get",
   "type": "Originals",
   "price": 110,
-  "weight": 300,
-  "composition": "Polyester",
+  "review_count": 402,
+  "rating": 4.75,
   "details": "Regular fit;Lace closure;Knit textile upper;Rubber outsole;Enjoy the comfort and performance of OrthoLite® sockliner; Responsive Boost midsole with EVA plugs;Soft feel;Imported;Product code: HS2343"
 },
 {
@@ -441,8 +441,8 @@ let sampleShoes = [
   "long_desc": "These natural running shoes are designed for versatility and long-lasting comfort. They have an upper that hugs your foot in compressive support, and a flexible outsole that adapts to your unique foot strike.",
   "type": "Performance",
   "price": 70,
-  "weight": 300,
-  "composition": "Polyester",
+  "review_count": 333,
+  "rating": 4.5,
   "details": "Lace closure;Techfit upper;Stretch-mesh forefoot;Cushioned tongue for more precise fit;Flexible Stretch web outsole;Continental™ Rubber outsole for extraordinary traction in wet and dry conditions;Foot-hugging upper;Midsole drop: 10 mm (heel: 32 mm / forefoot: 22 mm);Imported;Product code: CQ3168"
 },
 {
@@ -453,8 +453,8 @@ let sampleShoes = [
   "long_desc": "Part of a statement collection inspired by Stella McCartney, these neutral running shoes are geared for gym floors or pavement. The women-specific design features a wide forefoot and heel platform to deliver stability while cross training. The shoes have a stretch mesh upper that offers foot-cradling comfort.",
   "type": "Performance",
   "price": 100,
-  "weight": 300,
-  "composition": "Nylon",
+  "review_count": 235,
+  "rating": 4.25,
   "details": "Women-specific fit; Slightly wider forefoot and heel;Lace closure;Seam-sealed stretch-mesh upper;Internal custom-fit sockliner, Durable Adiwear outsole;Flexible Bounce midsole cushioning;Supportive feel;Midsole drop: 10 mm (heel: 22.5 mm / forefoot: 12.5 mm);Recommended for: Indoor and outdoor running; Arch type: Normal;Imported;Product code: AC7104"
 },
 {
@@ -465,8 +465,8 @@ let sampleShoes = [
   "long_desc": "Leave the scissors in the drawer. Inspired by runners who cut off the cages of their shoes, adidas created a simplified design that gives you a feeling of free and unrestricted movement. The neutral shoes have an internally reinforced knit upper for a supportive fit. The responsive midsole and flexible outsole deliver a smooth and comfortable ride.",
   "type": "Performance",
   "price": 180,
-  "weight": 295,
-  "composition": "Polyester",
+  "review_count": 295,
+  "rating": 4.5,
   "details": "Lace closure;Seam-sealed stretch-mesh upper;Internal custom-fit sockliner, Durable Adiwear outsole;Flexible Bounce midsole cushioning;Supportive feel;Midsole drop: 10 mm (heel: 22.5 mm / forefoot: 12.5 mm);Recommended for: Indoor and outdoor running; Arch type: Normal;Imported;Product code: B37692"
 },
 {
@@ -477,8 +477,8 @@ let sampleShoes = [
   "long_desc": "A go-to pair for all your runs, these shoes have Energized cushioning that works with a flexible outsole to deliver a smooth and comfortable ride. The breathable mesh upper is designed to support and stretch as you move for an optimal fit. Engineered fit adidas Primeknit upper wraps the foot with an engineered fit for targeted support that enhances movement",
   "type": "Performance",
   "price": 180,
-  "weight": 320,
-  "composition": "Polyester",
+  "review_count": 253,
+  "rating": 4.5,
   "details": "Regular fit;Lace closure;Adidas Primeknit textile upper;Flexible Stretchweb outsole, Continental Rubber outsole for extraordinary traction in wet and dry conditions; Midfoot cage;Responsive Boost midsole; Stabilizing Torsion System;Arch type: Normal; Fitcounter heel for unrestricted fit;Imported;Product code: UJ3321"
 },
 {
@@ -489,8 +489,8 @@ let sampleShoes = [
   "long_desc": "A go-to pair for all your runs, these shoes have Energized cushioning that works with a flexible outsole to deliver a smooth and comfortable ride. The breathable mesh upper is designed to support and stretch as you move for an optimal fit. Engineered fit adidas Primeknit upper wraps the foot with an engineered fit for targeted support that enhances movement",
   "type": "Performance",
   "price": 180,
-  "weight": 320,
-  "composition": "Polyester",
+  "review_count": 934,
+  "rating": 4.5,
   "details": "Regular fit;Lace closure;Adidas Primeknit textile upper;Flexible Stretchweb outsole, Continental Rubber outsole for extraordinary traction in wet and dry conditions; Midfoot cage;Responsive Boost midsole; Stabilizing Torsion System;Arch type: Normal; Fitcounter heel for unrestricted fit;Imported;Product code: UJ3321"
 },
 {
@@ -501,8 +501,8 @@ let sampleShoes = [
   "long_desc": "A go-to pair for all your runs, these shoes have Energized cushioning that works with a flexible outsole to deliver a smooth and comfortable ride. The breathable mesh upper is designed to support and stretch as you move for an optimal fit. Engineered fit adidas Primeknit upper wraps the foot with an engineered fit for targeted support that enhances movement",
   "type": "Performance",
   "price": 180,
-  "weight": 320,
-  "composition": "Polyester",
+  "review_count": 142,
+  "rating": 4.5,
   "details": "Regular fit;Lace closure;Adidas Primeknit textile upper;Flexible Stretchweb outsole, Continental Rubber outsole for extraordinary traction in wet and dry conditions; Midfoot cage;Responsive Boost midsole; Stabilizing Torsion System;Arch type: Normal; Fitcounter heel for unrestricted fit;Imported;Product code: UJ3321"
 },
 {
@@ -513,8 +513,8 @@ let sampleShoes = [
   "long_desc": "Leave the scissors in the drawer. Inspired by runners who cut off the cages of their shoes, adidas created a simplified design that gives you a feeling of free and unrestricted movement. The neutral shoes have an internally reinforced knit upper for a supportive fit. The responsive midsole and flexible outsole deliver a smooth and comfortable ride.",
   "type": "Performance",
   "price": 180,
-  "weight": 295,
-  "composition": "Polyester",
+  "review_count": 295,
+  "rating": 4.75,
   "details": "Lace closure;Seam-sealed stretch-mesh upper;Internal custom-fit sockliner, Durable Adiwear outsole;Flexible Bounce midsole cushioning;Supportive feel;Midsole drop: 10 mm (heel: 22.5 mm / forefoot: 12.5 mm);Recommended for: Indoor and outdoor running; Arch type: Normal;Imported;Product code: B37692"
 },
 {
@@ -525,8 +525,8 @@ let sampleShoes = [
   "long_desc": "Wet sidewalks, icy puddles and muddy park trails can't slow you down. These neutral running shoes have a water-repellent knit upper with a high collar that wraps the ankle like a warm scarf. An all-terrain outsole provides dependable traction on wet or slippery surfaces.",
   "type": "Performance",
   "price": 240,
-  "weight": 320,
-  "composition": "Polyester",
+  "review_count": 432,
+  "rating": 3.75,
   "details": "Regular fit;Lace closure;Adidas Primeknit textile upper;Flexible Stretchweb outsole, Continental Rubber outsole for extraordinary traction in wet and dry conditions; Midfoot cage;Responsive Boost midsole; Stabilizing Torsion System;Arch type: Normal; Water-repellent film; Fitcounter heel for unrestricted fit;Imported;Product code: B37699"
 },
 {
@@ -537,8 +537,8 @@ let sampleShoes = [
   "long_desc": "These neutral running shoes were designed using motion capture technology to deliver an unrestricted feel. The laceless shoes have a stretchy knit upper that hugs the foot. A forged band at the midfoot provides a supportive fit. Responsive cushioning and a flexible outsole give you a smooth ride.\nEngineered fit\nadidas Primeknit upper wraps the foot with an engineered fit for targeted support that enhances movement",
   "type": "Performance",
   "price": 200,
-  "weight": 290,
-  "composition": "Polyester",
+  "review_count": 634,
+  "rating": 2.5,
   "details": "Regular fit;Laceless;Forged adidas Primeknit textile upper;Flexible Stretchweb outsole, Continental Rubber outsole for extraordinary traction in wet and dry conditions; Midfoot cage;Responsive Boost midsole; Stabilizing Torsion System;Arch type: Normal; Fitcounter heel for unrestricted fit;Imported;Product code: B37687"
 },
 {
@@ -549,8 +549,8 @@ let sampleShoes = [
   "long_desc": "The definitive daily sneaker. These classic shoes for men are reworked with a modern shape and fresh materials. The casual denim upper is accented with stitched-on 3-Stripes for go-with-anything ease. A vulc-look outsole completes the package.",
   "type": "Originals",
   "price": 85,
-  "weight": 330,
-  "composition": "Polyester",
+  "review_count": 330,
+  "rating": 2.5,
   "details": "Denim upper;Comfortable textile lining;Synthetic leather 3-Strips;adidas wordmark on tongue label and synthetic leather heel tab;Rubber cupsole with vulcanized look;Main materials: Textile and synthetic upper / Textile lining / Rubber outsole;Imported;Product Code: JJ1923"
 },
 {
@@ -561,8 +561,8 @@ let sampleShoes = [
   "long_desc": "Exceptional comfort, inspired design. These guys shoes embrace your feet with a sock-like knit upper. Outsole cutouts flash a peek at the cloudfoam cushioning that delivers unmatched comfort.",
   "type": "Essentials",
   "price": 80,
-  "weight": 300,
-  "composition": "Polyester",
+  "review_count": 20,
+  "rating": 3.75,
   "details": "Knit,sock-like upper;Seamless 3-Strips;Comfortable textile lining;Webbing tongue pull;cloudfoam ULTIMATE combines a cloudfoam midsole with a super-soft insert for enhanced comfort;Combined cloudfoam midsole and outsole for step-in comfort and superior cushioning you can see and feel;Textile and synthetic upper / Textile lining / Synthetic outsole;Imported;Product code: BC0018"
 },
 {
@@ -573,8 +573,8 @@ let sampleShoes = [
   "long_desc": "Designed in collaboration with ripper Dennis Busenitz, these next-level skate shoes are as tough as they are nimble. With solid skate-specific soles, heavy-duty heel and toe caps, and an abrasion-resistant leather upper, you get durability plus maximum board feel.",
   "type": "Originals",
   "price": 90,
-  "weight": 300,
-  "composition": "Polyester",
+  "review_count": 254,
+  "rating": 4.75,
   "details": "Regular fit;Lace closure;Nubuck and leather upper with Geofit padded collar;Synthetic lining; Rubber cupsole;Molded sockliner;Soft feel;Imported;Product Code: BA9342"
 },
 {
@@ -585,8 +585,8 @@ let sampleShoes = [
   "long_desc": "Wet sidewalks, icy puddles and muddy park trails can't slow you down. These neutral running shoes have a water-repellent knit upper with a high collar that wraps the ankle like a warm scarf. An all-terrain outsole provides dependable traction on wet or slippery surfaces.",
   "type": "Performance",
   "price": 260,
-  "weight": 320,
-  "composition": "Polyester",
+  "review_count": 986,
+  "rating": 4.5,
   "details": "Regular fit;Lace closure;Adidas Primeknit textile upper;Flexible Stretchweb outsole, Continental Rubber outsole for extraordinary traction in wet and dry conditions; Midfoot cage;Responsive Boost midsole; Stabilizing Torsion System;Arch type: Normal; Water-repellent film; Fitcounter heel for unrestricted fit;Imported;Product code: B37699"
 },
 {
@@ -597,8 +597,8 @@ let sampleShoes = [
   "long_desc": "A go-to pair for all your runs, these shoes have Energized cushioning that works with a flexible outsole to deliver a smooth and comfortable ride. The breathable mesh upper is designed to support and stretch as you move for an optimal fit. Engineered fit adidas Primeknit upper wraps the foot with an engineered fit for targeted support that enhances movement",
   "type": "Performance",
   "price": 180,
-  "weight": 320,
-  "composition": "Polyester",
+  "review_count": 649,
+  "rating": 4.5,
   "details": "Regular fit;Lace closure;Adidas Primeknit textile upper;Flexible Stretchweb outsole, Continental Rubber outsole for extraordinary traction in wet and dry conditions; Midfoot cage;Responsive Boost midsole; Stabilizing Torsion System;Arch type: Normal; Fitcounter heel for unrestricted fit;Imported;Product code: UJ3321"
 },
 {
@@ -609,8 +609,8 @@ let sampleShoes = [
   "long_desc": "Ready for the streets. These shoes borrow their modern look and feel from lightweight runners. They have a flexible knit upper with floating 3-Stripes integrated into the lacing system. Pillow-soft midsole and outsole cushioning provides all-day comfort.",
   "type": "Performance",
   "price": 110,
-  "weight": 310,
-  "composition": "Polyester",
+  "review_count": 310,
+  "rating": 2.75,
   "details": "Regular fit;Lace closure;Adidas Primeknit textile upper, Knit midfoot cage, outsole for extraordinary traction in wet and dry conditions;Responsive boost midsole;Lightweight and breathable;Imported;Product code: AQ0481"
 },
 {
@@ -621,8 +621,8 @@ let sampleShoes = [
   "long_desc": "Ready for the streets. These shoes borrow their modern look and feel from lightweight runners. They have a flexible knit upper with floating 3-Stripes integrated into the lacing system. Pillow-soft midsole and outsole cushioning provides all-day comfort.",
   "type": "Comfort",
   "price": 115,
-  "weight": 308,
-  "composition": "Nylon",
+  "review_count": 308,
+  "rating": 4.25,
   "details": "Regular fit;Lace closure;Responsive Boost midsole;Recommended for: Long, urban runs, Arch type: Normal, Stabilizing Torsion System;Supportive midfoot cage, Fitcounter heel for unrestricted fit;imported;Product code: BB1234"
 },
 {
@@ -633,8 +633,8 @@ let sampleShoes = [
   "long_desc": "These running shoes combine comfort and high-performance technology for a best-ever-run feeling. They have a stretchy knit upper that adapts to the changing shape of your foot as you run. Responsive midsole cushioning and a flexible outsole deliver a smooth and energized ride.",
   "type": "Originals",
   "price": 130,
-  "weight": 305,
-  "composition": "Polyester",
+  "review_count": 305,
+  "rating": 4.5,
   "details": "Regular fit;Lace closure;Responsive Boost midsole;Recommended for: Long and short distances across city surfaces like asphalt, cobblestones, concrete, grass;imported;Product code: G26603"
 },
 {
@@ -645,8 +645,8 @@ let sampleShoes = [
   "long_desc": "Inspired by Los Angeles. Co-created with runners. Made for city running. Glue-free assembly delivers a direct feel and distraction-free fit, and the outsole offers enhanced grip on city surfaces. An NFC chip in the tongue is the gateway to a unique digital experience.",
   "type": "Performance",
   "price": 95,
-  "weight": 300,
-  "composition": "Polyester",
+  "review_count": 1098,
+  "rating": 4.75,
   "details": "Regular fit;Lace closure;Specialized, durable support;Recommended for: Short, urban runs, Arch type: High, Stabilizing Torsion System;Recommened for short;Supportive midfoot cage;imported;Product code: BB1034"
 },
 {
@@ -657,8 +657,8 @@ let sampleShoes = [
   "long_desc": "These running shoes were created using insights provided by London athletes and crafted at adidas innovative SPEEDFACTORY facility in Germany and assembled in the U.S. Built with Boost for an energized push-off with each footstrike, they feature a foot-hugging knit textile upper.",
   "type": "Performance",
   "price": 130,
-  "weight": 300,
-  "composition": "Polyester",
+  "review_count": 419,
+  "rating": 3.75,
   "details": "Regular fit;Lace closure;Mesh upper with forefoot ribbing;Flexible Stretchweb outsole; Continental™ Rubber outsole for extraordinary traction in wet and dry conditions;Recommended for: Road running; Arch type: Normal; Solar Propulsion Rail helps guide the foot; Stabilizing Torsion System; Fitcounter heel for unrestricted fit; Reflective details;Midsole drop: 10 mm (heel: 32 mm / forefoot 22 mm);Imported;Product code: AQ0332"
 },
 {
@@ -669,8 +669,8 @@ let sampleShoes = [
   "long_desc": "A go-to pair for all your runs, these shoes have Energized cushioning that works with a flexible outsole to deliver a smooth and comfortable ride. The breathable mesh upper is designed to support and stretch as you move for an optimal fit.",
   "type": "Originals",
   "price": 110,
-  "weight": 300,
-  "composition": "Polyester",
+  "review_count": 1123,
+  "rating": 3.75,
   "details": "Lace closer;Techfit upper; Stretch-mesh forefoot; Cushioned tongue for more precise fit;Responsive Boost midsole;Foot-hugging upper;Midsole drop: 10 mm (heel: 32 mm / forefoot: 22 mm);imported;Product code: BA2341"
 },
 {
@@ -681,8 +681,8 @@ let sampleShoes = [
   "long_desc": "These natural running shoes are designed for versatility and long-lasting comfort. They have an upper that hugs your foot in compressive support, and a flexible outsole that adapts to your unique foot strike.",
   "type": "Performance",
   "price": 120,
-  "weight": 290,
-  "composition": "Nylon",
+  "review_count": 290,
+  "rating": 4.25,
   "details": "Lace closure;Techfit upper;Stretch-mesh forefoot;Cushioned tongue for more precise fit;Flexible Stretch web outsole;Continental™ Rubber outsole for extraordinary traction in wet and dry conditions;Foot-hugging upper;Midsole drop: 10 mm (heel: 32 mm / forefoot: 22 mm);Imported;Product code: CQ3168"
 },
 {
@@ -693,8 +693,8 @@ let sampleShoes = [
   "long_desc": "Inspired by aerospace engineering design and built for performance, these shoes help you tackle longer runs. A supportive stability rail works with the responsive midsole and flexible outsole for a smooth and energized run. The heel counter locks in the fit while allowing the Achilles to move freely.",
   "type": "Performance",
   "price": 140,
-  "weight": 310,
-  "composition": "Polyester",
+  "review_count": 310,
+  "rating": 3.75,
   "details": "Lace closure;Techfit upper;Stretch-mesh forefoot;Cushioned tongue for more precise fit;Road running; Arch type: Normal; Solar Propulsion Rail helps guide the foot; Stabilizing Torsion System; Fitcounter heel for unrestricted fit;Foot-hugging upper;Midsole drop: 10 mm (heel: 32 mm / forefoot: 22 mm);Imported;Product code: BB91232"
 },
 {
@@ -705,8 +705,8 @@ let sampleShoes = [
   "long_desc": "Built to handle curbs, corners and uneven sidewalks, these natural running shoes have an expanded landing zone and a heel plate for added stability. A lightweight and stretchy knit upper supports your native stride. Energized cushioning works with the flexible outsole to give you a smooth and comfortable ride. Endless energy Boost is our most responsive cushioning ever, delivering incredible energy return: The more energy you give, the more you get",
   "type": "Performance",
   "price": 140,
-  "weight": 300,
-  "composition": "Polyester",
+  "review_count": 1432,
+  "rating": 3.75,
   "details": "Regular fit;Lace closure;Knit upper;Flexible Stretchweb outsole;Responsive Boost midsole;Lightweight and supportive;Midsole drop: 8 mm (heel: 21 mm / forefoot: 13 mm);Arch type: Normal;Imported;Product code: B75822"
 },
 {
@@ -717,8 +717,8 @@ let sampleShoes = [
   "long_desc": "With a nod to technical outerwear, these shoes blend heritage style with modern innovation. The soft knit textile upper is detailed with subtle 3-Stripes and bold patch overlays. The Boost midsole provides responsive comfort and is accented with distinctive NMD plugs. Iconic 80s detail Midsole EVA plugs highlight a signature adidas design feature Endless energy Boost is our most responsive cushioning ever, delivering incredible energy return: The more energy you give, the more you get",
   "type": "Originals",
   "price": 130,
-  "weight": 305,
-  "composition": "Polyester",
+  "review_count": 798,
+  "rating": 4.75,
   "details": "Regular fit;Lace closure;Knit textile upper;Rubber outsole;Enjoy the comfort and performance of OrthoLite® sockliner; Responsive Boost midsole with EVA plugs;Soft feel;Imported;Product code: BD7741"
 },
 {
@@ -729,8 +729,8 @@ let sampleShoes = [
   "long_desc": "With a nod to technical outerwear, these shoes blend heritage style with modern innovation. The soft knit textile upper is detailed with subtle 3-Stripes and bold patch overlays. The Boost midsole provides responsive comfort and is accented with distinctive NMD plugs. Iconic 80s detail Midsole EVA plugs highlight a signature adidas design feature Endless energy Boost is our most responsive cushioning ever, delivering incredible energy return: The more energy you give, the more you get",
   "type": "Originals",
   "price": 130,
-  "weight": 305,
-  "composition": "Polyester",
+  "review_count": 305,
+  "rating": 3.75,
   "details": "Regular fit;Lace closure;Knit textile upper;Rubber outsole;Enjoy the comfort and performance of OrthoLite® sockliner; Responsive Boost midsole with EVA plugs;Soft feel;Imported;Product code: HS2343"
 },
 {
@@ -741,8 +741,8 @@ let sampleShoes = [
   "long_desc": "A go-to pair for all your runs, these shoes have Energized cushioning that works with a flexible outsole to deliver a smooth and comfortable ride. The breathable mesh upper is designed to support and stretch as you move for an optimal fit. Engineered fit adidas Primeknit upper wraps the foot with an engineered fit for targeted support that enhances movement",
   "type": "Performance",
   "price": 180,
-  "weight": 320,
-  "composition": "Polyester",
+  "review_count": 464,
+  "rating": 3.75,
   "details": "Regular fit;Lace closure;Adidas Primeknit textile upper;Flexible Stretchweb outsole, Continental Rubber outsole for extraordinary traction in wet and dry conditions; Midfoot cage;Responsive Boost midsole; Stabilizing Torsion System;Arch type: Normal; Fitcounter heel for unrestricted fit;Imported;Product code: F35233"
 },
 {
@@ -753,8 +753,8 @@ let sampleShoes = [
   "long_desc": "Part of a statement collection inspired by Stella McCartney, these neutral running shoes are geared for gym floors or pavement. The women-specific design features a wide forefoot and heel platform to deliver stability while cross training. The shoes have a stretch mesh upper that offers foot-cradling comfort.",
   "type": "Performance",
   "price": 100,
-  "weight": 300,
-  "composition": "Nylon",
+  "review_count": 2903,
+  "rating": 4.25,
   "details": "Women-specific fit; Slightly wider forefoot and heel;Lace closure;Seam-sealed stretch-mesh upper;Internal custom-fit sockliner, Durable Adiwear outsole;Flexible Bounce midsole cushioning;Supportive feel;Midsole drop: 10 mm (heel: 22.5 mm / forefoot: 12.5 mm);Recommended for: Indoor and outdoor running; Arch type: Normal;Imported;Product code: AC7104"
 },
 {
@@ -765,8 +765,8 @@ let sampleShoes = [
   "long_desc": "A go-to pair for all your runs, these shoes have Energized cushioning that works with a flexible outsole to deliver a smooth and comfortable ride. The breathable mesh upper is designed to support and stretch as you move for an optimal fit. Engineered fit adidas Primeknit upper wraps the foot with an engineered fit for targeted support that enhances movement",
   "type": "Performance",
   "price": 180,
-  "weight": 320,
-  "composition": "Polyester",
+  "review_count": 238,
+  "rating": 2.5,
   "details": "Regular fit;Lace closure;Adidas Primeknit textile upper;Flexible Stretchweb outsole, Continental Rubber outsole for extraordinary traction in wet and dry conditions; Midfoot cage;Responsive Boost midsole; Stabilizing Torsion System;Arch type: Normal; Fitcounter heel for unrestricted fit;Imported;Product code: UJ7649"
 },
 {
@@ -777,8 +777,8 @@ let sampleShoes = [
   "long_desc": "Designed for warm-weather runs, these shoes feature a breathable mesh upper to help keep feet cool. They have a second-skin fit with overlays for added support in key areas. Flexible cushioning adds spring to your stride. Shoe type Neutral shoes offer flexibility and versatility, with premium cushioning Springy cushioning Bounce cushioning provides enhanced comfort and flexibility",
   "type": "Performance",
   "price": 100,
-  "weight": 300,
-  "composition": "Polyester",
+  "review_count": 1054,
+  "rating": 4.75,
   "details": "Regular fit;Lace closure;Mesh upper is a lightweight, breathable second-skin providing a supportive, comfortable fit;Rubber outsole, supportive overlays;Flexible Bounce midsole cushioning;Imported;Product code: CQ0595"
 },
 {
@@ -789,8 +789,8 @@ let sampleShoes = [
   "long_desc": "Exceptional comfort, inspired design. These guys shoes embrace your feet with a sock-like knit upper. Outsole cutouts flash a peek at the cloudfoam cushioning that delivers unmatched comfort.",
   "type": "Essentials",
   "price": 85,
-  "weight": 290,
-  "composition": "Polyester",
+  "review_count": 290,
+  "rating": 4.75,
   "details": "Knit,sock-like upper;Seamless 3-Strips;Comfortable textile lining;Webbing tongue pull;cloudfoam ULTIMATE combines a cloudfoam midsole with a super-soft insert for enhanced comfort;Combined cloudfoam midsole and outsole for step-in comfort and superior cushioning you can see and feel;Textile and synthetic upper / Textile lining / Synthetic outsole;Imported;Product code: BC0018"
 },
 {
@@ -801,8 +801,8 @@ let sampleShoes = [
   "long_desc": "Exceptional comfort, inspired design. These guys shoes embrace your feet with a sock-like knit upper. Outsole cutouts flash a peek at the cloudfoam cushioning that delivers unmatched comfort.",
   "type": "Essentials",
   "price": 90,
-  "weight": 300,
-  "composition": "Polyester",
+  "review_count": 244,
+  "rating": 3.75,
   "details": "Knit,sock-like upper;Seamless 3-Strips;Comfortable textile lining;Webbing tongue pull;cloudfoam ULTIMATE combines a cloudfoam midsole with a super-soft insert for enhanced comfort;Combined cloudfoam midsole and outsole for step-in comfort and superior cushioning you can see and feel;Textile and synthetic upper / Textile lining / Synthetic outsole;Imported;Product code: BC1231"
 },
 {
@@ -813,8 +813,8 @@ let sampleShoes = [
  "long_desc": "These neutral running shoes have a women-specific design, with a rounder heel that cradles the foot. The upper is made of lightweight stretch mesh for a barely there feel. Designed for indoor and outdoor running, the shoes feature springy cushioning to keep you comfortable over the miles.",
  "type": "Performance",
  "price": 100,
- "weight": 295,
- "composition": "Polyester",
+ "review_count": 295,
+ "rating": 3.75,
  "details": "Lace closure with wide laces;Stretch mesh upper;Rubber outsole;Flexible Bounce midsole cushioning;Lightweight feel;Midsole drop: 15 mm (heel: 30 mm / forefoot: 15 mm);Arch type: normal;Imported;Produce code: HJ2341"
 },
 {
@@ -825,8 +825,8 @@ let sampleShoes = [
   "long_desc": "Inspired by aerospace engineering design and built for performance, these shoes help you tackle longer runs. A supportive stability rail works with the responsive midsole and flexible outsole for a smooth and energized run. The heel counter locks in the fit while allowing the Achilles to move freely.",
   "type": "Performance",
   "price": 180,
-  "weight": 320,
-  "composition": "Polyester",
+  "review_count": 320,
+  "rating": 4.5,
   "details": "Regular fit;Lace closure;Adidas Primeknit textile upper;Flexible Stretchweb outsole, Continental Rubber outsole for extraordinary traction in wet and dry conditions; Midfoot cage;Responsive Boost midsole; Stabilizing Torsion System;Arch type: Normal; Fitcounter heel for unrestricted fit;Imported;Product code: UJ7649"
 },
 {
@@ -837,8 +837,8 @@ let sampleShoes = [
   "long_desc": "With a nod to technical outerwear, these shoes blend heritage style with modern innovation. The soft knit textile upper is detailed with subtle 3-Stripes and bold patch overlays. The Boost midsole provides responsive comfort and is accented with distinctive NMD plugs. Iconic 80s detail Midsole EVA plugs highlight a signature adidas design feature Endless energy Boost is our most responsive cushioning ever, delivering incredible energy return: The more energy you give, the more you get",
   "type": "Originals",
   "price": 140,
-  "weight": 305,
-  "composition": "Polyester",
+  "review_count": 305,
+  "rating": 4.5,
   "details": "Regular fit;Lace closure;Knit textile upper;Rubber outsole;Enjoy the comfort and performance of OrthoLite® sockliner; Responsive Boost midsole with EVA plugs;Soft feel;Imported;Product code: HS1243"
 },
 {
@@ -849,8 +849,8 @@ let sampleShoes = [
   "long_desc": "These neutral running shoes have a women-specific design, with a rounder heel that cradles the foot. The upper is made of lightweight stretch mesh for a barely there feel. Designed for indoor and outdoor running, the shoes feature springy cushioning to keep you comfortable over the miles.",
   "type": "Performance",
   "price": 100,
-  "weight": 295,
-  "composition": "Polyester",
+  "review_count": 295,
+  "rating": 2.75,
   "details": "Lace closure with wide laces;Stretch mesh upper;Rubber outsole;Flexible Bounce midsole cushioning;Lightweight feel;Midsole drop: 15 mm (heel: 30 mm / forefoot: 15 mm);Arch type: normal;Imported;Produce code: GS2341"
 },
 {
@@ -861,8 +861,8 @@ let sampleShoes = [
   "long_desc": "Ready for the streets. These shoes borrow their modern look and feel from lightweight runners. They have a flexible knit upper with floating 3-Stripes integrated into the lacing system. Pillow-soft midsole and outsole cushioning provides all-day comfort.",
   "type": "Performance",
   "price": 180,
-  "weight": 320,
-  "composition": "Polyester",
+  "review_count": 533,
+  "rating": 2.5,
   "details": "Regular fit;Lace closure;Adidas Primeknit textile upper;Flexible Stretchweb outsole, Continental Rubber outsole for extraordinary traction in wet and dry conditions; Midfoot cage;Responsive Boost midsole; Stabilizing Torsion System;Arch type: Normal; Fitcounter heel for unrestricted fit;Imported;Product code: UJ7649"
 },
 {
@@ -873,8 +873,8 @@ let sampleShoes = [
   "long_desc": "Ready for the streets. These shoes borrow their modern look and feel from lightweight runners. They have a flexible knit upper with floating 3-Stripes integrated into the lacing system. Pillow-soft midsole and outsole cushioning provides all-day comfort.",
   "type": "Originals",
   "price": 150,
-  "weight": 300,
-  "composition": "Polyester",
+  "review_count": 902,
+  "rating": 3.75,
   "details": "Regular fit;Lace closure;Adidas Primeknit textile upper;Flexible Stretchweb outsole, Continental Rubber outsole for extraordinary traction in wet and dry conditions; Midfoot cage;Responsive Boost midsole; Stabilizing Torsion System;Arch type: Normal; Fitcounter heel for unrestricted fit;Imported;Product code: UJ7649"
 },
 {
@@ -885,8 +885,8 @@ let sampleShoes = [
   "long_desc": "A go-to pair for all your runs, these shoes have Energized cushioning that works with a flexible outsole to deliver a smooth and comfortable ride. The breathable mesh upper is designed to support and stretch as you move for an optimal fit. Engineered fit adidas Primeknit upper wraps the foot with an engineered fit for targeted support that enhances movement",
   "type": "Performance",
   "price": 190,
-  "weight": 300,
-  "composition": "Polyester",
+  "review_count": 303,
+  "rating": 3.75,
   "details": "Regular fit;Lace closure;Adidas Primeknit textile upper;Flexible Stretchweb outsole, Continental Rubber outsole for extraordinary traction in wet and dry conditions; Midfoot cage;Responsive Boost midsole; Stabilizing Torsion System;Arch type: Normal; Fitcounter heel for unrestricted fit;Imported;Product code: UJ3321"
 },
 {
@@ -897,8 +897,8 @@ let sampleShoes = [
   "long_desc": "Exceptional comfort, inspired design. These guys shoes embrace your feet with a sock-like knit upper. Outsole cutouts flash a peek at the cloudfoam cushioning that delivers unmatched comfort.",
   "type": "Essentials",
   "price": 100,
-  "weight": 290,
-  "composition": "Polyester",
+  "review_count": 1043,
+  "rating": 3.75,
   "details": "Knit,sock-like upper;Seamless 3-Strips;Comfortable textile lining;Webbing tongue pull;cloudfoam ULTIMATE combines a cloudfoam midsole with a super-soft insert for enhanced comfort;Combined cloudfoam midsole and outsole for step-in comfort and superior cushioning you can see and feel;Textile and synthetic upper / Textile lining / Synthetic outsole;Imported;Product code: BC1231"
 },
 {
@@ -909,8 +909,8 @@ let sampleShoes = [
  "long_desc": "A go-to pair for all your runs, these shoes have Energized cushioning that works with a flexible outsole to deliver a smooth and comfortable ride. The breathable mesh upper is designed to support and stretch as you move for an optimal fit. Engineered fit adidas Primeknit upper wraps the foot with an engineered fit for targeted support that enhances movement",
  "type": "Performance",
  "price": 185,
- "weight": 320,
- "composition": "Polyster",
+ "review_count": 344,
+ "rating": 2.75,
  "details": "Regular fit;Lace closure;Adidas Primeknit textile upper;Flexible Stretchweb outsole, Continental Rubber outsole for extraordinary traction in wet and dry conditions; Midfoot cage;Responsive Boost midsole; Stabilizing Torsion System;Arch type: Normal; Fitcounter heel for unrestricted fit;Imported;Product code: BB92340"
 },
 {
@@ -921,8 +921,8 @@ let sampleShoes = [
  "long_desc": "A go-to pair for all your runs, these shoes have Energized cushioning that works with a flexible outsole to deliver a smooth and comfortable ride. The breathable mesh upper is designed to support and stretch as you move for an optimal fit. Engineered fit adidas Primeknit upper wraps the foot with an engineered fit for targeted support that enhances movement",
  "type": "Performance",
  "price": 180,
- "weight": 310,
- "composition": "Polyster",
+ "review_count": 310,
+ "rating": 2.75,
  "details": "Regular fit;Lace closure;Adidas Primeknit textile upper;Flexible Stretchweb outsole, Continental Rubber outsole for extraordinary traction in wet and dry conditions; Midfoot cage;Responsive Boost midsole; Stabilizing Torsion System;Arch type: Normal; Fitcounter heel for unrestricted fit;Imported;Product code: BB92340"
 },
 {
@@ -933,8 +933,8 @@ let sampleShoes = [
  "long_desc": "Designed in collaboration with ripper Dennis Busenitz, these next-level skate shoes are as tough as they are nimble. With solid skate-specific soles, heavy-duty heel and toe caps, and an abrasion-resistant leather upper, you get durability plus maximum board feel.",
  "type": "Originals",
  "price": 80,
- "weight": 340,
- "composition": "Nubuck Leather",
+ "review_count": 340,
+ "rating": 4.1,
  "details": "Regular fit;Lace closure;Nubuck and leather upper with Geofit padded collar;Synthetic lining; Rubber cupsole;Molded sockliner;Soft feel;Imported;Product Code: BA9342"
 },
 {
@@ -945,8 +945,8 @@ let sampleShoes = [
  "long_desc": "The definitive daily sneaker. These classic shoes for men are reworked with a modern shape and fresh materials. The casual denim upper is accented with stitched-on 3-Stripes for go-with-anything ease. A vulc-look outsole completes the package.",
  "type": "Originals",
  "price": 75,
- "weight": 330,
- "composition": "Polyester",
+ "review_count": 330,
+ "rating": 4.5,
  "details": "Denim upper;Comfortable textile lining;Synthetic leather 3-Strips;adidas wordmark on tongue label and synthetic leather heel tab;Rubber cupsole with vulcanized look;Main materials: Textile and synthetic upper / Textile lining / Rubber outsole;Imported;Product Code: JJ1923"
 },
 {
@@ -957,8 +957,8 @@ let sampleShoes = [
  "long_desc": "The definitive daily sneaker. These classic shoes for men are reworked with a modern shape and fresh materials. The casual denim upper is accented with stitched-on 3-Stripes for go-with-anything ease. A vulc-look outsole completes the package.",
  "type": "Originals",
  "price": 70,
- "weight": 330,
- "composition": "Polyester",
+ "review_count": 330,
+ "rating": 3.75,
  "details": "Denim upper;Comfortable textile lining;Synthetic leather 3-Strips;adidas wordmark on tongue label and synthetic leather heel tab;Rubber cupsole with vulcanized look;Main materials: Textile and synthetic upper / Textile lining / Rubber outsole;Imported;Product Code: JJ1923"
 },
 {
@@ -969,8 +969,8 @@ let sampleShoes = [
  "long_desc": "Exceptional comfort, inspired design. These guys shoes embrace your feet with a sock-like knit upper. Outsole cutouts flash a peek at the cloudfoam cushioning that delivers unmatched comfort.",
  "type": "Essentials",
  "price": 120,
- "weight": 290,
- "composition": "Polyester",
+ "review_count": 290,
+ "rating": 4.5,
  "details": "Knit,sock-like upper;Seamless 3-Strips;Comfortable textile lining;Webbing tongue pull;cloudfoam ULTIMATE combines a cloudfoam midsole with a super-soft insert for enhanced comfort;Combined cloudfoam midsole and outsole for step-in comfort and superior cushioning you can see and feel;Textile and synthetic upper / Textile lining / Synthetic outsole;Imported;Product code: BC1231"
 },
 {
@@ -981,8 +981,8 @@ let sampleShoes = [
  "long_desc": "Built to handle curbs, corners and uneven sidewalks, these natural running shoes have an expanded landing zone and a heel plate for added stability. A lightweight and stretchy knit upper supports your native stride. Energized cushioning works with the flexible outsole to give you a smooth and comfortable ride. Endless energy Boost is our most responsive cushioning ever, delivering incredible energy return: The more energy you give, the more you get",
  "type": "Performance",
  "price": 100,
- "weight": 300,
- "composition": "Polyester",
+ "review_count": 992,
+ "rating": 3.75,
  "details": "Regular fit;Lace closure;Knit upper;Flexible Stretchweb outsole;Responsive Boost midsole;Lightweight and supportive;Midsole drop: 8 mm (heel: 21 mm / forefoot: 13 mm);Arch type: Normal;Imported;Product code: B75822"
 },
 {
@@ -993,8 +993,8 @@ let sampleShoes = [
  "long_desc": "These running shoes were created using insights provided by London athletes and crafted at adidas innovative SPEEDFACTORY facility in Germany and assembled in the U.S. Built with Boost for an energized push-off with each footstrike, they feature a foot-hugging knit textile upper.",
  "type": "Performance",
  "price": 170,
- "weight": 300,
- "composition": "Polyester",
+ "review_count": 642,
+ "rating": 3.75,
  "details": "Regular fit;Lace closure;Mesh upper with forefoot ribbing;Flexible Stretchweb outsole; Continental™ Rubber outsole for extraordinary traction in wet and dry conditions;Recommended for: Road running; Arch type: Normal; Solar Propulsion Rail helps guide the foot; Stabilizing Torsion System; Fitcounter heel for unrestricted fit; Reflective details;Midsole drop: 10 mm (heel: 32 mm / forefoot 22 mm);Imported;Product code: AQ0332"
 },
 {
@@ -1005,8 +1005,8 @@ let sampleShoes = [
  "long_desc": "Ready for the streets. These shoes borrow their modern look and feel from lightweight runners. They have a flexible knit upper with floating 3-Stripes integrated into the lacing system. Pillow-soft midsole and outsole cushioning provides all-day comfort.",
  "type": "Originals",
  "price": 90,
- "weight": 310,
- "composition": "Nylon",
+ "review_count": 310,
+ "rating": 4.25,
  "details": "Regular fit;Lace closure;Responsive Boost midsole;Recommended for: Long, urban runs, Arch type: Normal, Stabilizing Torsion System;Supportive midfoot cage, Fitcounter heel for unrestricted fit;imported;Product code: BB1234"
 },
 {
@@ -1017,8 +1017,8 @@ let sampleShoes = [
  "long_desc": "A go-to pair for all your runs, these shoes have Energized cushioning that works with a flexible outsole to deliver a smooth and comfortable ride. The breathable mesh upper is designed to support and stretch as you move for an optimal fit.",
  "type": "Performance",
  "price": 170,
- "weight": 315,
- "composition": "Polyester",
+ "review_count": 315,
+ "rating": 2.5,
  "details": "Lace closer;Techfit upper; Stretch-mesh forefoot; Cushioned tongue for more precise fit;Responsive Boost midsole;Foot-hugging upper;Midsole drop: 10 mm (heel: 32 mm / forefoot: 22 mm);imported;Product code: BA2341"
 },
 {
@@ -1029,8 +1029,8 @@ let sampleShoes = [
  "long_desc": "With a nod to technical outerwear, these shoes blend heritage style with modern innovation. The soft knit textile upper is detailed with subtle 3-Stripes and bold patch overlays. The Boost midsole provides responsive comfort and is accented with distinctive NMD plugs. Iconic 80s detail Midsole EVA plugs highlight a signature adidas design feature Endless energy Boost is our most responsive cushioning ever, delivering incredible energy return: The more energy you give, the more you get",
  "type": "Originals",
  "price": 110,
- "weight": 300,
- "composition": "Polyester",
+ "review_count": 87,
+ "rating": 2.75,
  "details": "Regular fit;Lace closure;Knit textile upper;Rubber outsole;Enjoy the comfort and performance of OrthoLite® sockliner; Responsive Boost midsole with EVA plugs;Soft feel;Imported;Product code: HS2343"
 },
 {
@@ -1041,8 +1041,8 @@ let sampleShoes = [
  "long_desc": "These natural running shoes are designed for versatility and long-lasting comfort. They have an upper that hugs your foot in compressive support, and a flexible outsole that adapts to your unique foot strike.",
  "type": "Performance",
  "price": 100,
- "weight": 300,
- "composition": "Polyester",
+ "review_count": 235,
+ "rating": 2.75,
  "details": "Lace closure;Techfit upper;Stretch-mesh forefoot;Cushioned tongue for more precise fit;Flexible Stretch web outsole;Continental™ Rubber outsole for extraordinary traction in wet and dry conditions;Foot-hugging upper;Midsole drop: 10 mm (heel: 32 mm / forefoot: 22 mm);Imported;Product code: CQ3168"
 },
 {
@@ -1053,8 +1053,8 @@ let sampleShoes = [
  "long_desc": "Part of a statement collection inspired by Stella McCartney, these neutral running shoes are geared for gym floors or pavement. The women-specific design features a wide forefoot and heel platform to deliver stability while cross training. The shoes have a stretch mesh upper that offers foot-cradling comfort.",
  "type": "Performance",
  "price": 120,
- "weight": 300,
- "composition": "Nylon",
+ "review_count": 303,
+ "rating": 4.25,
  "details": "Women-specific fit; Slightly wider forefoot and heel;Lace closure;Seam-sealed stretch-mesh upper;Internal custom-fit sockliner, Durable Adiwear outsole;Flexible Bounce midsole cushioning;Supportive feel;Midsole drop: 10 mm (heel: 22.5 mm / forefoot: 12.5 mm);Recommended for: Indoor and outdoor running; Arch type: Normal;Imported;Product code: AC7104"
 },
   {
@@ -1065,8 +1065,8 @@ let sampleShoes = [
    "long_desc": "Leave the scissors in the drawer. Inspired by runners who cut off the cages of their shoes, adidas created a simplified design that gives you a feeling of free and unrestricted movement. The neutral shoes have an internally reinforced knit upper for a supportive fit. The responsive midsole and flexible outsole deliver a smooth and comfortable ride.",
    "type": "Performance",
    "price": 190,
-   "weight": 305,
-   "composition": "Polyester",
+   "review_count": 305,
+   "rating": 4.5,
    "details": "Lace closure;Seam-sealed stretch-mesh upper;Internal custom-fit sockliner, Durable Adiwear outsole;Flexible Bounce midsole cushioning;Supportive feel;Midsole drop: 10 mm (heel: 22.5 mm / forefoot: 12.5 mm);Recommended for: Indoor and outdoor running; Arch type: Normal;Imported;Product code: B37692"
   },
   {
@@ -1077,8 +1077,8 @@ let sampleShoes = [
    "long_desc": "A go-to pair for all your runs, these shoes have Energized cushioning that works with a flexible outsole to deliver a smooth and comfortable ride. The breathable mesh upper is designed to support and stretch as you move for an optimal fit. Engineered fit adidas Primeknit upper wraps the foot with an engineered fit for targeted support that enhances movement",
    "type": "Performance",
    "price": 180,
-   "weight": 320,
-   "composition": "Polyester",
+   "review_count": 340,
+   "rating": 3.75,
    "details": "Regular fit;Lace closure;Adidas Primeknit textile upper;Flexible Stretchweb outsole, Continental Rubber outsole for extraordinary traction in wet and dry conditions; Midfoot cage;Responsive Boost midsole; Stabilizing Torsion System;Arch type: Normal; Fitcounter heel for unrestricted fit;Imported;Product code: UJ3321"
   },
   {
@@ -1089,8 +1089,8 @@ let sampleShoes = [
    "long_desc": "A go-to pair for all your runs, these shoes have Energized cushioning that works with a flexible outsole to deliver a smooth and comfortable ride. The breathable mesh upper is designed to support and stretch as you move for an optimal fit. Engineered fit adidas Primeknit upper wraps the foot with an engineered fit for targeted support that enhances movement",
    "type": "Performance",
    "price": 180,
-   "weight": 320,
-   "composition": "Polyester",
+   "review_count": 934,
+   "rating": 3.75,
    "details": "Regular fit;Lace closure;Adidas Primeknit textile upper;Flexible Stretchweb outsole, Continental Rubber outsole for extraordinary traction in wet and dry conditions; Midfoot cage;Responsive Boost midsole; Stabilizing Torsion System;Arch type: Normal; Fitcounter heel for unrestricted fit;Imported;Product code: UJ3321"
   },
   {
@@ -1101,8 +1101,8 @@ let sampleShoes = [
    "long_desc": "A go-to pair for all your runs, these shoes have Energized cushioning that works with a flexible outsole to deliver a smooth and comfortable ride. The breathable mesh upper is designed to support and stretch as you move for an optimal fit. Engineered fit adidas Primeknit upper wraps the foot with an engineered fit for targeted support that enhances movement",
    "type": "Performance",
    "price": 180,
-   "weight": 320,
-   "composition": "Polyester",
+   "review_count": 1923,
+   "rating": 3.75,
    "details": "Regular fit;Lace closure;Adidas Primeknit textile upper;Flexible Stretchweb outsole, Continental Rubber outsole for extraordinary traction in wet and dry conditions; Midfoot cage;Responsive Boost midsole; Stabilizing Torsion System;Arch type: Normal; Fitcounter heel for unrestricted fit;Imported;Product code: UJ3321"
   },
   {
@@ -1113,8 +1113,8 @@ let sampleShoes = [
    "long_desc": "Leave the scissors in the drawer. Inspired by runners who cut off the cages of their shoes, adidas created a simplified design that gives you a feeling of free and unrestricted movement. The neutral shoes have an internally reinforced knit upper for a supportive fit. The responsive midsole and flexible outsole deliver a smooth and comfortable ride.",
    "type": "Performance",
    "price": 180,
-   "weight": 295,
-   "composition": "Polyester",
+   "review_count": 295,
+   "rating": 3.75,
    "details": "Lace closure;Seam-sealed stretch-mesh upper;Internal custom-fit sockliner, Durable Adiwear outsole;Flexible Bounce midsole cushioning;Supportive feel;Midsole drop: 10 mm (heel: 22.5 mm / forefoot: 12.5 mm);Recommended for: Indoor and outdoor running; Arch type: Normal;Imported;Product code: B37692"
   },
   {
@@ -1125,8 +1125,8 @@ let sampleShoes = [
    "long_desc": "Wet sidewalks, icy puddles and muddy park trails can't slow you down. These neutral running shoes have a water-repellent knit upper with a high collar that wraps the ankle like a warm scarf. An all-terrain outsole provides dependable traction on wet or slippery surfaces.",
    "type": "Performance",
    "price": 240,
-   "weight": 320,
-   "composition": "Polyester",
+   "review_count": 1555,
+   "rating": 4.5,
    "details": "Regular fit;Lace closure;Adidas Primeknit textile upper;Flexible Stretchweb outsole, Continental Rubber outsole for extraordinary traction in wet and dry conditions; Midfoot cage;Responsive Boost midsole; Stabilizing Torsion System;Arch type: Normal; Water-repellent film; Fitcounter heel for unrestricted fit;Imported;Product code: B37699"
   },
   {
@@ -1137,8 +1137,8 @@ let sampleShoes = [
    "long_desc": "These neutral running shoes were designed using motion capture technology to deliver an unrestricted feel. The laceless shoes have a stretchy knit upper that hugs the foot. A forged band at the midfoot provides a supportive fit. Responsive cushioning and a flexible outsole give you a smooth ride.\nEngineered fit\nadidas Primeknit upper wraps the foot with an engineered fit for targeted support that enhances movement",
    "type": "Performance",
    "price": 200,
-   "weight": 290,
-   "composition": "Polyester",
+   "review_count": 290,
+   "rating": 3.75,
    "details": "Regular fit;Laceless;Forged adidas Primeknit textile upper;Flexible Stretchweb outsole, Continental Rubber outsole for extraordinary traction in wet and dry conditions; Midfoot cage;Responsive Boost midsole; Stabilizing Torsion System;Arch type: Normal; Fitcounter heel for unrestricted fit;Imported;Product code: B37687"
   },
   {
@@ -1149,8 +1149,8 @@ let sampleShoes = [
    "long_desc": "The definitive daily sneaker. These classic shoes for men are reworked with a modern shape and fresh materials. The casual denim upper is accented with stitched-on 3-Stripes for go-with-anything ease. A vulc-look outsole completes the package.",
    "type": "Originals",
    "price": 90,
-   "weight": 330,
-   "composition": "Polyester",
+   "review_count": 330,
+   "rating": 4.5,
    "details": "Denim upper;Comfortable textile lining;Synthetic leather 3-Strips;adidas wordmark on tongue label and synthetic leather heel tab;Rubber cupsole with vulcanized look;Main materials: Textile and synthetic upper / Textile lining / Rubber outsole;Imported;Product Code: JJ1923"
   },
   {
@@ -1161,8 +1161,8 @@ let sampleShoes = [
    "long_desc": "Exceptional comfort, inspired design. These guys shoes embrace your feet with a sock-like knit upper. Outsole cutouts flash a peek at the cloudfoam cushioning that delivers unmatched comfort.",
    "type": "Essentials",
    "price": 80,
-   "weight": 300,
-   "composition": "Polyester",
+   "review_count": 303,
+   "rating": 4.75,
    "details": "Knit,sock-like upper;Seamless 3-Strips;Comfortable textile lining;Webbing tongue pull;cloudfoam ULTIMATE combines a cloudfoam midsole with a super-soft insert for enhanced comfort;Combined cloudfoam midsole and outsole for step-in comfort and superior cushioning you can see and feel;Textile and synthetic upper / Textile lining / Synthetic outsole;Imported;Product code: BC0018"
   },
   {
@@ -1173,8 +1173,8 @@ let sampleShoes = [
    "long_desc": "Designed in collaboration with ripper Dennis Busenitz, these next-level skate shoes are as tough as they are nimble. With solid skate-specific soles, heavy-duty heel and toe caps, and an abrasion-resistant leather upper, you get durability plus maximum board feel.",
    "type": "Originals",
    "price": 90,
-   "weight": 300,
-   "composition": "Polyester",
+   "review_count": 300,
+   "rating": 3.75,
    "details": "Regular fit;Lace closure;Nubuck and leather upper with Geofit padded collar;Synthetic lining; Rubber cupsole;Molded sockliner;Soft feel;Imported;Product Code: BA9342"
   },
   {
@@ -1185,8 +1185,8 @@ let sampleShoes = [
    "long_desc": "Wet sidewalks, icy puddles and muddy park trails can't slow you down. These neutral running shoes have a water-repellent knit upper with a high collar that wraps the ankle like a warm scarf. An all-terrain outsole provides dependable traction on wet or slippery surfaces.",
    "type": "Performance",
    "price": 260,
-   "weight": 320,
-   "composition": "Polyester",
+   "review_count": 542,
+   "rating": 2.75,
    "details": "Regular fit;Lace closure;Adidas Primeknit textile upper;Flexible Stretchweb outsole, Continental Rubber outsole for extraordinary traction in wet and dry conditions; Midfoot cage;Responsive Boost midsole; Stabilizing Torsion System;Arch type: Normal; Water-repellent film; Fitcounter heel for unrestricted fit;Imported;Product code: B37699"
   },
   {
@@ -1197,8 +1197,8 @@ let sampleShoes = [
    "long_desc": "A go-to pair for all your runs, these shoes have Energized cushioning that works with a flexible outsole to deliver a smooth and comfortable ride. The breathable mesh upper is designed to support and stretch as you move for an optimal fit. Engineered fit adidas Primeknit upper wraps the foot with an engineered fit for targeted support that enhances movement",
    "type": "Performance",
    "price": 180,
-   "weight": 320,
-   "composition": "Polyester",
+   "review_count": 320,
+   "rating": 3.5,
    "details": "Regular fit;Lace closure;Adidas Primeknit textile upper;Flexible Stretchweb outsole, Continental Rubber outsole for extraordinary traction in wet and dry conditions; Midfoot cage;Responsive Boost midsole; Stabilizing Torsion System;Arch type: Normal; Fitcounter heel for unrestricted fit;Imported;Product code: UJ3321"
   }
 ]
@@ -2526,19 +2526,19 @@ let sampleShares = [
   },
   {
     "id": 10,
-    "user1": "anonymouse",
-    "img1": "https://s3-us-west-1.amazonaws.com/adidas-shoe/share3.jpg",
-    "user2": "indigosparkle",
+    "user1": "cereal_killer",
+    "img1": "https://s3-us-west-1.amazonaws.com/adidas-shoe/share2.jpg",
+    "user2": "shaquille_oatmeal",
     "img2": "https://s3-us-west-1.amazonaws.com/adidas-shoe/share7.jpg",
     "user3": "weareliving",
     "img3": "https://s3-us-west-1.amazonaws.com/adidas-shoe/share1.jpg",
-    "user4": "urk3wl",
+    "user4": "iamsunshine",
     "img4": "https://s3-us-west-1.amazonaws.com/adidas-shoe/share5.jpg",
-    "user5": "cereal_killer",
+    "user5": "anonymouse",
     "img5": "https://s3-us-west-1.amazonaws.com/adidas-shoe/share3.jpg"
   },
   {
-    "user1": "iamcool",
+    "user1": "shaquille_oatmeal",
     "img1": "https://s3-us-west-1.amazonaws.com/adidas-shoe/share1.jpg",
     "user2": "plantifulsoul",
     "img2": "https://s3-us-west-1.amazonaws.com/adidas-shoe/share2.jpg",
@@ -2562,7 +2562,7 @@ let sampleShares = [
     "img5": "https://s3-us-west-1.amazonaws.com/adidas-shoe/share2.jpg"
   },
   {
-    "user1": "iamcool",
+    "user1": "shaquille_oatmeal",
     "img1": "https://s3-us-west-1.amazonaws.com/adidas-shoe/share2.jpg",
     "user2": "indigosparkle",
     "img2": "https://s3-us-west-1.amazonaws.com/adidas-shoe/share3.jpg",
@@ -2574,7 +2574,7 @@ let sampleShares = [
     "img5": "https://s3-us-west-1.amazonaws.com/adidas-shoe/share1.jpg"
   },
   {
-    "user1": "iamcool",
+    "user1": "shaquille_oatmeal",
     "img1": "https://s3-us-west-1.amazonaws.com/adidas-shoe/share3.jpg",
     "user2": "indigosparkle",
     "img2": "https://s3-us-west-1.amazonaws.com/adidas-shoe/share4.jpg",
@@ -2610,7 +2610,7 @@ let sampleShares = [
     "img5": "https://s3-us-west-1.amazonaws.com/adidas-shoe/share2.jpg"
   },
   {
-    "user1": "iamcool",
+    "user1": "shaquille_oatmeal",
     "img1": "https://s3-us-west-1.amazonaws.com/adidas-shoe/share6.jpg",
     "user2": "iamstellar",
     "img2": "https://s3-us-west-1.amazonaws.com/adidas-shoe/share7.jpg",
@@ -2648,7 +2648,7 @@ let sampleShares = [
   {
     "user1": "iamcool",
     "img1": "https://s3-us-west-1.amazonaws.com/adidas-shoe/share3.jpg",
-    "user2": "adidasaddict",
+    "user2": "shaquille_oatmeal",
     "img2": "https://s3-us-west-1.amazonaws.com/adidas-shoe/share7.jpg",
     "user3": "weareliving",
     "img3": "https://s3-us-west-1.amazonaws.com/adidas-shoe/share1.jpg",

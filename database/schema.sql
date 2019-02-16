@@ -15,8 +15,8 @@ CREATE TABLE shoes (
   long_desc VARCHAR(1000),
   type VARCHAR (70),
   price INT,
-  weight INT,
-  composition VARCHAR(70),
+  rating DECIMAL(5,2),
+  review_count INT,
   details VARCHAR (1000)
 );
 

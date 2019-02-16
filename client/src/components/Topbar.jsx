@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import menu from './data.js';
+import DropdownMenu from './DropdownMenu.jsx';
 
 class Topbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      shop: false
+      shop: false,
+
     }
   }
 
@@ -27,16 +30,49 @@ class Topbar extends Component {
           </div>
         </div>
         <div className="bBar">
-        <div className="row">
-          <img src="../images/adidas-logo-white.png" width="75" height="75" className="nav-logo d-inline-block align-top"></img>
-          <div className="choices white">
-            <li> MENS</li>
-            <li> WOMENS</li>
-            <li> KIDS</li>
-            <li> | </li>
-            <li> SPORTS</li>
-            <li> BRANDS</li>
-          </div>
+          <div className="row">
+            <img src="../images/adidas-logo-white.png" width="75" height="75" className="nav-logo d-inline-block align-top"></img>
+            <div className="choices">
+              <div className="dropdown">
+                <li className="choice-menu white" id="men-dropdown" data-toggle="dropdown"> MENS</li>
+                <div className="dropdown-menu bar-menu" aria-labelledby="dropdown-men">
+                  <div className="menu-men">
+                    <DropdownMenu title={'FEATURED'} options={menu.men.featured} />
+                    <DropdownMenu title={'SHOES'} options={menu.men.shoes} />
+                    <DropdownMenu title={'CLOTHING'} options={menu.men.clothing} />
+                    <DropdownMenu title={'ACCESORIES'} options={menu.men.accessories} />
+                    <DropdownMenu title={'SPORTS'} options={menu.men.sports} />
+                  </div>
+                </div>
+              </div>
+              <div className="dropdown">
+                <li className="choice-menu white" id="women-dropdown" data-toggle="dropdown"> WOMENS</li>
+                <div className="dropdown-menu bar-menu" aria-labelledby="dropdown-women">
+                  <div className="menu-men">
+                    <DropdownMenu title={'FEATURED'} options={menu.women.featured} />
+                    <DropdownMenu title={'SHOES'} options={menu.women.shoes} />
+                    <DropdownMenu title={'CLOTHING'} options={menu.women.clothing} />
+                    <DropdownMenu title={'ACCESORIES'} options={menu.women.accessories} />
+                    <DropdownMenu title={'SPORTS'} options={menu.women.sports} />
+                  </div>
+                </div>
+              </div>
+              <div className="dropdown">
+                <li className="choice-menu white" id="kids-dropdown" data-toggle="dropdown"> KIDS</li>
+                <div className="dropdown-menu bar-menu" aria-labelledby="dropdown-kids">
+                  <div className="menu-men">
+                    <DropdownMenu title={'FEATURED'} options={menu.kids.featured} />
+                    <DropdownMenu title={'YOUTH\n(8-14)'} options={menu.kids.youth} />
+                    <DropdownMenu title={'CHILDREN\n(4-8)'} options={menu.kids.children} />
+                    <DropdownMenu title={'BABY\n(0-4)'} options={menu.kids.baby} />
+                    <DropdownMenu title={'ACCESSORIES'} options={menu.kids.accessories} />
+                  </div>
+                </div>
+              </div>
+              <li className="gray"> | </li>
+              <li className="choice-menu white"> SPORTS</li>
+              <li className="choice-menu white"> BRANDS</li>
+            </div>
           </div>
           <div className="search white">
             <span id="search-box"><i className="material-icons">search</i></span>

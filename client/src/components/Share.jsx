@@ -104,6 +104,48 @@ class Share extends Component {
       </div>
     )
   }
+
+  // render() {
+  //   let class1 = this.state.user1 ? "share-username" : "share-username hidden";
+  //   let class2 = this.state.user2 ? "share-username" : "share-username hidden";
+  //   let class3 = this.state.user3 ? "share-username" : "share-username hidden";
+  //   let class4 = this.state.user4 ? "share-username" : "share-username hidden";
+  //   let class5 = this.state.user5 ? "share-username" : "share-username hidden";
+  //
+  //   return (
+  //     <div className="share">
+  //       <div className="title-1000">
+  //         <h1> SHARE HOW YOU WEAR IT </h1>
+  //         <p className="share-desc">Share a photo of your adidas favorite and appear in our showcase
+  //         below. Make sure to tag your image with @adidas</p>
+  //       </div>
+  //       <div className="col-2-12 justify-content-center share-photo">
+  //         <ul>
+  //           <li>
+  //             <div className="overlay-blk" onMouseEnter={this.handleEnter1} onMouseLeave={this.handleLeave1}>
+  //               <img className= "lrg-share img-fluid" src={this.props.shares.img1}></img>
+  //             </div>
+  //             <span className={class1}>{this.props.shares.user1}</span>
+  //           </li>
+  //
+  //         </ul>
+  //         <ul>
+  //           <li>
+  //             <div className="overlay-blk" onMouseEnter={this.handleEnter2} onMouseLeave={this.handleLeave2}>
+  //               <img className="sm-share img-fluid" src={this.props.shares.img2}></img>
+  //             </div>
+  //             <span className={class2}>{this.props.shares.user2}</span>
+  //           </li>
+  //           <li><div className="overlay-blk" onMouseEnter={this.handleEnter3} onMouseLeave={this.handleLeave3}> <img className="sm-share img-fluid" src={this.props.shares.img3}></img></div><span className={class3}>{this.props.shares.user3}</span></li>
+  //         </ul>
+  //         <ul>
+  //           <li><div className="overlay-blk" onMouseEnter={this.handleEnter4} onMouseLeave={this.handleLeave4}> <img className="sm-share img-fluid" src={this.props.shares.img4}></img></div><span className={class4}>{this.props.shares.user4}</span></li>
+  //           <li><div className="overlay-blk" onMouseEnter={this.handleEnter5} onMouseLeave={this.handleLeave5}> <img className="sm-share img-fluid" src={this.props.shares.img5}></img></div><span className={class5}>{this.props.shares.user5}</span></li>
+  //         </ul>
+  //       </div>
+  //     </div>
+  //   )
+  // }
 }
 
 export default Share;

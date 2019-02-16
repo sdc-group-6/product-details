@@ -18,8 +18,8 @@ let Shoes = db.define('Shoes', {
   long_desc: Sequelize.STRING(1000),
   type: Sequelize.STRING,
   price: Sequelize.INTEGER,
-  weight: Sequelize.INTEGER,
-  composition: Sequelize.STRING,
+  rating: Sequelize.DECIMAL,
+  review_count: Sequelize.INTEGER,
   details: Sequelize.STRING(1000)
 })
 

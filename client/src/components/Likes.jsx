@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Rating from 'react-rating';
+import LikeCard from './LikeCard.jsx'
 
 class Likes extends Component {
   constructor(props){
@@ -65,84 +65,16 @@ class Likes extends Component {
           </ol>
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <div id="likes">
-                {shoes1.map((shoe) => {
-                  return (
-                    <div className="card" onClick= {() => this.props.handleClick(shoe.id)} key={shoe.id}>
-                      <img className="card-img-top likes d-block" src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"></img>
-                      <div className="card-body">
-                        <span id="like-type">{shoe.type}</span><br></br>
-                        <span id="like-name">{shoe.name}</span><br></br>
-                        <span id="like-price">${shoe.price}</span><br></br>
-                        <div className="rating-review">
-                          <Rating emptySymbol="far fa-star" fullSymbol="fa fa-star" fractions={5} initialRating={Number(shoe.rating)} readonly={true}/>
-                          <span className="rating">{shoe.review_count}</span>
-                        </div>
-                      </div>
-                    </div>
-                  )
-                })}
-              </div>
+              <LikeCard shoes={shoes1} handleClick={this.props.handleClick} />
             </div>
             <div className="carousel-item">
-              <div id="likes">
-                {shoes2.map((shoe) => {
-                  return (
-                    <div className="card" onClick= {() => this.props.handleClick(shoe.id)} key={shoe.id}>
-                      <img className="card-img-top likes d-block" src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"></img>
-                      <div className="card-body">
-                        <span id="like-type">{shoe.type}</span><br></br>
-                        <span id="like-name">{shoe.name}</span><br></br>
-                        <span id="like-price">${shoe.price}</span><br></br>
-                        <div className="rating-review">
-                          <Rating emptySymbol="far fa-star" fullSymbol="fa fa-star" fractions={5} initialRating={Number(shoe.rating)} readonly={true}/>
-                          <span className="rating">{shoe.review_count}</span>
-                        </div>
-                      </div>
-                    </div>
-                  )
-                })}
-              </div>
+              <LikeCard shoes={shoes2} handleClick={this.props.handleClick} />
             </div>
             <div className="carousel-item">
-              <div id="likes">
-                {shoes3.map((shoe) => {
-                  return (
-                    <div className="card" onClick= {() => this.props.handleClick(shoe.id)} key={shoe.id}>
-                      <img className="card-img-top likes d-block" src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"></img>
-                      <div className="card-body">
-                        <span id="like-type">{shoe.type}</span><br></br>
-                        <span id="like-name">{shoe.name}</span><br></br>
-                        <span id="like-price">${shoe.price}</span><br></br>
-                        <div className="rating-review">
-                          <Rating emptySymbol="far fa-star" fullSymbol="fa fa-star" fractions={5} initialRating={Number(shoe.rating)} readonly={true}/>
-                          <span className="rating">{shoe.review_count}</span>
-                        </div>
-                      </div>
-                    </div>
-                  )
-                })}
-              </div>
+              <LikeCard shoes={shoes3} handleClick={this.props.handleClick} />
             </div>
             <div className="carousel-item">
-              <div id="likes">
-                {shoes4.map((shoe) => {
-                  return (
-                    <div className="card" onClick= {() => this.props.handleClick(shoe.id)} key={shoe.id}>
-                      <img className="card-img-top likes d-block" src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"></img>
-                      <div className="card-body">
-                        <span id="like-type">{shoe.type}</span><br></br>
-                        <span id="like-name">{shoe.name}</span><br></br>
-                        <span id="like-price">${shoe.price}</span><br></br>
-                        <div className="rating-review">
-                          <Rating emptySymbol="far fa-star" fullSymbol="fa fa-star" fractions={5} initialRating={Number(shoe.rating)} readonly={true}/>
-                          <span className="rating">{shoe.review_count}</span>
-                        </div>
-                      </div>
-                    </div>
-                  )
-                })}
-              </div>
+              <LikeCard shoes={shoes4} handleClick={this.props.handleClick} />
             </div>
           </div>
           <div className="control-icons">

@@ -51,24 +51,344 @@ exports[`Topbar/Navbar Component When cart has contents should match snapshot wh
         width="75"
       />
       <div
-        className="choices white"
+        className="choices"
       >
-        <li>
-           MENS
-        </li>
-        <li>
-           WOMENS
-        </li>
-        <li>
-           KIDS
-        </li>
-        <li>
+        <div
+          className="dropdown"
+        >
+          <li
+            className="choice-menu white"
+            data-toggle="dropdown"
+            id="men-dropdown"
+          >
+             MENS
+          </li>
+          <div
+            aria-labelledby="dropdown-men"
+            className="dropdown-menu bar-menu"
+          >
+            <div
+              className="menu-men"
+            >
+              <DropdownMenu
+                options={
+                  Array [
+                    "New Arrivals",
+                    "Best Sellers",
+                    "Release Dates",
+                    "____",
+                    "YEEZY",
+                    "Ultraboost",
+                    "Harden Vol.3",
+                    "NMD",
+                    "Statement Sneakers",
+                    "Workout Essentials",
+                    "____",
+                    "Sale",
+                  ]
+                }
+                title="FEATURED"
+              />
+              <DropdownMenu
+                options={
+                  Array [
+                    "Originals",
+                    "Running",
+                    "Soccer",
+                    "Basketball",
+                    "Football",
+                    "Skateboarding",
+                    "Workout",
+                    "Essentials",
+                    "Sandals & Sneakers",
+                    "Hiking",
+                    "Golf",
+                    "Tennis",
+                    "Basketball",
+                    "Sale Shoes",
+                  ]
+                }
+                title="SHOES"
+              />
+              <DropdownMenu
+                options={
+                  Array [
+                    "Pants",
+                    "Hoodies & Sweatshirts",
+                    "Jackets & Vests",
+                    "Track Suits",
+                    "Short Sleeve Shirts",
+                    "Graphic T-Shirts",
+                    "Long Sleeve Shirts",
+                    "Jerseys",
+                    "Tights",
+                    "Shorts",
+                    "Tank Tops",
+                    "Sale Apparel",
+                  ]
+                }
+                title="CLOTHING"
+              />
+              <DropdownMenu
+                options={
+                  Array [
+                    "Bags & Backpacks",
+                    "Hats & Beanies ",
+                    "Socks",
+                    "Phone Cases",
+                    "Sunglasses",
+                    "Balls",
+                    "Watches",
+                    "Gloves",
+                    "All Accessories",
+                    "Sale Accessories",
+                  ]
+                }
+                title="ACCESORIES"
+              />
+              <DropdownMenu
+                options={
+                  Array [
+                    "Running",
+                    "Soccer",
+                    "Basketball",
+                    "Football",
+                    "Skateboarding",
+                    "Training",
+                    "Outdoor",
+                    "Tennis",
+                    "Golf",
+                    "Hockey",
+                    "Baseball",
+                    "Lacrosse",
+                    "Volleyball",
+                    "Weightlifting",
+                    "College Gear",
+                  ]
+                }
+                title="SPORTS"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="dropdown"
+        >
+          <li
+            className="choice-menu white"
+            data-toggle="dropdown"
+            id="women-dropdown"
+          >
+             WOMENS
+          </li>
+          <div
+            aria-labelledby="dropdown-women"
+            className="dropdown-menu bar-menu"
+          >
+            <div
+              className="menu-men"
+            >
+              <DropdownMenu
+                options={
+                  Array [
+                    "New Arrivals",
+                    "Best Sellers",
+                    "Release Dates",
+                    "____",
+                    "YEEZY",
+                    "Ultraboost",
+                    "NMD",
+                    "Statement Sneakers",
+                    "Workout Essentials",
+                    "____",
+                    "Sale",
+                  ]
+                }
+                title="FEATURED"
+              />
+              <DropdownMenu
+                options={
+                  Array [
+                    "Originals",
+                    "Running",
+                    "Workout",
+                    "Essentials",
+                    "Sandals & Sneakers",
+                    "Hiking",
+                    "Golf",
+                    "Soccer",
+                    "Tennis",
+                    "Volleyball",
+                    "Sale Shoes",
+                  ]
+                }
+                title="SHOES"
+              />
+              <DropdownMenu
+                options={
+                  Array [
+                    "Hoodies & Sweatshirts",
+                    "Pants",
+                    "Leggings & Tights",
+                    "Sports Bras",
+                    "Jackets & Vests",
+                    "Track Suits",
+                    "Long Sleeve Shirts",
+                    "Dresses & Skirts",
+                    "Shorts",
+                    "Tank Tops",
+                    "Sale Apparel",
+                  ]
+                }
+                title="CLOTHING"
+              />
+              <DropdownMenu
+                options={
+                  Array [
+                    "Bags & Backpacks",
+                    "Hats & Beanies ",
+                    "Socks",
+                    "Phone Cases",
+                    "Sunglasses",
+                    "Balls",
+                    "Watches",
+                    "Gloves",
+                    "All Accessories",
+                    "Sale Accessories",
+                  ]
+                }
+                title="ACCESORIES"
+              />
+              <DropdownMenu
+                options={
+                  Array [
+                    "Running",
+                    "Training",
+                    "Soccer",
+                    "Basketball",
+                    "Skateboarding",
+                    "Outdoor",
+                    "Tennis",
+                    "Golf",
+                    "Yoga",
+                    "Lacrosse",
+                    "Volleyball",
+                    "Hockey",
+                    "College Gear",
+                  ]
+                }
+                title="SPORTS"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="dropdown"
+        >
+          <li
+            className="choice-menu white"
+            data-toggle="dropdown"
+            id="kids-dropdown"
+          >
+             KIDS
+          </li>
+          <div
+            aria-labelledby="dropdown-kids"
+            className="dropdown-menu bar-menu"
+          >
+            <div
+              className="menu-men"
+            >
+              <DropdownMenu
+                options={
+                  Array [
+                    "New Arrivals",
+                    "Best Sellers",
+                    "____",
+                    "Ultraboost",
+                    "NMD",
+                    "adicolor",
+                    "Statement Sneakers",
+                    "____",
+                    "Sale",
+                  ]
+                }
+                title="FEATURED"
+              />
+              <DropdownMenu
+                options={
+                  Array [
+                    "Boys Shoes",
+                    "Girls Shoes",
+                    "Original Shoes",
+                    "Sport Shoes",
+                    "____",
+                    "Boys Clothing",
+                    "Girls Clothing",
+                    "Hoodies & SweatShirts",
+                    "Pants & Shorts",
+                    "____",
+                    "Sale",
+                  ]
+                }
+                title="YOUTH
+(8-14)"
+              />
+              <DropdownMenu
+                options={
+                  Array [
+                    "Boys Shoes",
+                    "Girls Shoes",
+                    "Original Shoes",
+                    "Sport Shoes",
+                    "____",
+                    "Boys Clothing",
+                    "Girls Clothing",
+                    "____",
+                    "Sale",
+                  ]
+                }
+                title="CHILDREN
+(4-8)"
+              />
+              <DropdownMenu
+                options={
+                  Array [
+                    "Shoes",
+                    "Clothing",
+                    "____",
+                    "Sale",
+                  ]
+                }
+                title="BABY
+(0-4)"
+              />
+              <DropdownMenu
+                options={
+                  Array [
+                    "Socks",
+                    "Hats & Beanies",
+                    "Balls",
+                  ]
+                }
+                title="ACCESSORIES"
+              />
+            </div>
+          </div>
+        </div>
+        <li
+          className="gray"
+        >
            | 
         </li>
-        <li>
+        <li
+          className="choice-menu white"
+        >
            SPORTS
         </li>
-        <li>
+        <li
+          className="choice-menu white"
+        >
            BRANDS
         </li>
       </div>
@@ -189,24 +509,344 @@ exports[`Topbar/Navbar Component When cart is empty should match snapshot when c
         width="75"
       />
       <div
-        className="choices white"
+        className="choices"
       >
-        <li>
-           MENS
-        </li>
-        <li>
-           WOMENS
-        </li>
-        <li>
-           KIDS
-        </li>
-        <li>
+        <div
+          className="dropdown"
+        >
+          <li
+            className="choice-menu white"
+            data-toggle="dropdown"
+            id="men-dropdown"
+          >
+             MENS
+          </li>
+          <div
+            aria-labelledby="dropdown-men"
+            className="dropdown-menu bar-menu"
+          >
+            <div
+              className="menu-men"
+            >
+              <DropdownMenu
+                options={
+                  Array [
+                    "New Arrivals",
+                    "Best Sellers",
+                    "Release Dates",
+                    "____",
+                    "YEEZY",
+                    "Ultraboost",
+                    "Harden Vol.3",
+                    "NMD",
+                    "Statement Sneakers",
+                    "Workout Essentials",
+                    "____",
+                    "Sale",
+                  ]
+                }
+                title="FEATURED"
+              />
+              <DropdownMenu
+                options={
+                  Array [
+                    "Originals",
+                    "Running",
+                    "Soccer",
+                    "Basketball",
+                    "Football",
+                    "Skateboarding",
+                    "Workout",
+                    "Essentials",
+                    "Sandals & Sneakers",
+                    "Hiking",
+                    "Golf",
+                    "Tennis",
+                    "Basketball",
+                    "Sale Shoes",
+                  ]
+                }
+                title="SHOES"
+              />
+              <DropdownMenu
+                options={
+                  Array [
+                    "Pants",
+                    "Hoodies & Sweatshirts",
+                    "Jackets & Vests",
+                    "Track Suits",
+                    "Short Sleeve Shirts",
+                    "Graphic T-Shirts",
+                    "Long Sleeve Shirts",
+                    "Jerseys",
+                    "Tights",
+                    "Shorts",
+                    "Tank Tops",
+                    "Sale Apparel",
+                  ]
+                }
+                title="CLOTHING"
+              />
+              <DropdownMenu
+                options={
+                  Array [
+                    "Bags & Backpacks",
+                    "Hats & Beanies ",
+                    "Socks",
+                    "Phone Cases",
+                    "Sunglasses",
+                    "Balls",
+                    "Watches",
+                    "Gloves",
+                    "All Accessories",
+                    "Sale Accessories",
+                  ]
+                }
+                title="ACCESORIES"
+              />
+              <DropdownMenu
+                options={
+                  Array [
+                    "Running",
+                    "Soccer",
+                    "Basketball",
+                    "Football",
+                    "Skateboarding",
+                    "Training",
+                    "Outdoor",
+                    "Tennis",
+                    "Golf",
+                    "Hockey",
+                    "Baseball",
+                    "Lacrosse",
+                    "Volleyball",
+                    "Weightlifting",
+                    "College Gear",
+                  ]
+                }
+                title="SPORTS"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="dropdown"
+        >
+          <li
+            className="choice-menu white"
+            data-toggle="dropdown"
+            id="women-dropdown"
+          >
+             WOMENS
+          </li>
+          <div
+            aria-labelledby="dropdown-women"
+            className="dropdown-menu bar-menu"
+          >
+            <div
+              className="menu-men"
+            >
+              <DropdownMenu
+                options={
+                  Array [
+                    "New Arrivals",
+                    "Best Sellers",
+                    "Release Dates",
+                    "____",
+                    "YEEZY",
+                    "Ultraboost",
+                    "NMD",
+                    "Statement Sneakers",
+                    "Workout Essentials",
+                    "____",
+                    "Sale",
+                  ]
+                }
+                title="FEATURED"
+              />
+              <DropdownMenu
+                options={
+                  Array [
+                    "Originals",
+                    "Running",
+                    "Workout",
+                    "Essentials",
+                    "Sandals & Sneakers",
+                    "Hiking",
+                    "Golf",
+                    "Soccer",
+                    "Tennis",
+                    "Volleyball",
+                    "Sale Shoes",
+                  ]
+                }
+                title="SHOES"
+              />
+              <DropdownMenu
+                options={
+                  Array [
+                    "Hoodies & Sweatshirts",
+                    "Pants",
+                    "Leggings & Tights",
+                    "Sports Bras",
+                    "Jackets & Vests",
+                    "Track Suits",
+                    "Long Sleeve Shirts",
+                    "Dresses & Skirts",
+                    "Shorts",
+                    "Tank Tops",
+                    "Sale Apparel",
+                  ]
+                }
+                title="CLOTHING"
+              />
+              <DropdownMenu
+                options={
+                  Array [
+                    "Bags & Backpacks",
+                    "Hats & Beanies ",
+                    "Socks",
+                    "Phone Cases",
+                    "Sunglasses",
+                    "Balls",
+                    "Watches",
+                    "Gloves",
+                    "All Accessories",
+                    "Sale Accessories",
+                  ]
+                }
+                title="ACCESORIES"
+              />
+              <DropdownMenu
+                options={
+                  Array [
+                    "Running",
+                    "Training",
+                    "Soccer",
+                    "Basketball",
+                    "Skateboarding",
+                    "Outdoor",
+                    "Tennis",
+                    "Golf",
+                    "Yoga",
+                    "Lacrosse",
+                    "Volleyball",
+                    "Hockey",
+                    "College Gear",
+                  ]
+                }
+                title="SPORTS"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="dropdown"
+        >
+          <li
+            className="choice-menu white"
+            data-toggle="dropdown"
+            id="kids-dropdown"
+          >
+             KIDS
+          </li>
+          <div
+            aria-labelledby="dropdown-kids"
+            className="dropdown-menu bar-menu"
+          >
+            <div
+              className="menu-men"
+            >
+              <DropdownMenu
+                options={
+                  Array [
+                    "New Arrivals",
+                    "Best Sellers",
+                    "____",
+                    "Ultraboost",
+                    "NMD",
+                    "adicolor",
+                    "Statement Sneakers",
+                    "____",
+                    "Sale",
+                  ]
+                }
+                title="FEATURED"
+              />
+              <DropdownMenu
+                options={
+                  Array [
+                    "Boys Shoes",
+                    "Girls Shoes",
+                    "Original Shoes",
+                    "Sport Shoes",
+                    "____",
+                    "Boys Clothing",
+                    "Girls Clothing",
+                    "Hoodies & SweatShirts",
+                    "Pants & Shorts",
+                    "____",
+                    "Sale",
+                  ]
+                }
+                title="YOUTH
+(8-14)"
+              />
+              <DropdownMenu
+                options={
+                  Array [
+                    "Boys Shoes",
+                    "Girls Shoes",
+                    "Original Shoes",
+                    "Sport Shoes",
+                    "____",
+                    "Boys Clothing",
+                    "Girls Clothing",
+                    "____",
+                    "Sale",
+                  ]
+                }
+                title="CHILDREN
+(4-8)"
+              />
+              <DropdownMenu
+                options={
+                  Array [
+                    "Shoes",
+                    "Clothing",
+                    "____",
+                    "Sale",
+                  ]
+                }
+                title="BABY
+(0-4)"
+              />
+              <DropdownMenu
+                options={
+                  Array [
+                    "Socks",
+                    "Hats & Beanies",
+                    "Balls",
+                  ]
+                }
+                title="ACCESSORIES"
+              />
+            </div>
+          </div>
+        </div>
+        <li
+          className="gray"
+        >
            | 
         </li>
-        <li>
+        <li
+          className="choice-menu white"
+        >
            SPORTS
         </li>
-        <li>
+        <li
+          className="choice-menu white"
+        >
            BRANDS
         </li>
       </div>

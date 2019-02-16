@@ -103,12 +103,12 @@ exports[`Looks Components should display like snapshot 1`] = `
             className="col-sm look-desc"
           >
             <h5
-              id="look-shirt-name"
+              className="look-clothing-name"
             >
               OUTLINE TREFOIL TEE
             </h5>
             <h6
-              id="look-shirt-price"
+              className="look-clothing-price"
             >
               $
               40
@@ -220,12 +220,12 @@ exports[`Looks Components should display like snapshot 1`] = `
             className="col-sm look-desc"
           >
             <h5
-              id="look-shirt-name"
+              className="look-clothing-name"
             >
               SST WINDBREAKER
             </h5>
             <h6
-              id="look-shirt-price"
+              className="look-clothing-price"
             >
               $
               80
@@ -337,12 +337,12 @@ exports[`Looks Components should display like snapshot 1`] = `
             className="col-sm look-desc"
           >
             <h5
-              id="look-shirt-name"
+              className="look-clothing-name"
             >
               TREFOIL PANTS
             </h5>
             <h6
-              id="look-shirt-price"
+              className="look-clothing-price"
             >
               $
               75

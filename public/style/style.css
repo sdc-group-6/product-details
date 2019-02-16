@@ -136,7 +136,7 @@ button:focus {
   padding-bottom: 130px;
 }
 
-#likes {
+.likes-card {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -144,17 +144,17 @@ button:focus {
   margin-bottom: 60px;
 }
 
-#like-type {
+.like-type {
   font-size: 12px;
   color: #767677;
 }
 
-#like-name {
+.like-name {
   font-size: 12px;
   letter-spacing: 0.04em;
 }
 
-#like-price {
+.like-price {
   font-size: 12px;
 }
 
@@ -522,7 +522,7 @@ button:focus {
 }
 
 .control-row {
-  width: 502px;
+  width: 501px;
   height: 400px;
 }
 

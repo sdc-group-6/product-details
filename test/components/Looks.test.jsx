@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount, shallow, render } from 'enzyme';
 
-import Looks from '../../client/src/components/Looks';
+import Looks from '../../client/src/components/Complete-Look/Looks';
 
 describe('Looks Components', () => {
   let sample = {

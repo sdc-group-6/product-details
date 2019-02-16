@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount, shallow, render } from 'enzyme';
 
-import Description from '../../client/src/components/Description';
+import Description from '../../client/src/components/Product-Details/Description';
 
 describe('Description Component', () => {
   const desc = { short_desc: 'This is a short description',

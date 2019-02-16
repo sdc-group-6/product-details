@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Topbar from './Topbar.jsx';
-import Likes from './Likes.jsx';
-import Looks from './Looks.jsx';
-import Description from './Description.jsx';
-import Specification from './Specification.jsx';
-import Share from './Share.jsx';
+import Topbar from './Navbar/Topbar.jsx';
+import Likes from './Also-Like/Likes.jsx';
+import Looks from './Complete-Look/Looks.jsx';
+import Description from './Product-Details/Description.jsx';
+import Specification from './Product-Details/Specification.jsx';
+import Share from './Share/Share.jsx';
 import $ from 'jquery';
 
 class App extends Component {

@@ -1,0 +1,268 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LikeCard Component should match snapshot 1`] = `
+<div
+  className="likes-card"
+>
+  <div
+    className="card"
+    key="1"
+    onClick={[Function]}
+  >
+    <img
+      className="card-img-top likes d-block"
+      src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
+    />
+    <div
+      className="card-body"
+    >
+      <span
+        className="like-type"
+      >
+        Performance
+      </span>
+      <br />
+      <span
+        className="like-name"
+      >
+        SOLARBOOST
+      </span>
+      <br />
+      <span
+        className="like-price"
+      >
+        $
+        110
+      </span>
+      <br />
+      <div
+        className="rating-review"
+      >
+        <RatingAPILayer
+          direction="ltr"
+          emptySymbol="far fa-star"
+          fractions={4}
+          fullSymbol="fa fa-star"
+          initialRating={NaN}
+          onChange={[Function]}
+          onClick={[Function]}
+          onHover={[Function]}
+          placeholderSymbol={
+            Object {
+              "backgroundColor": "red",
+              "border": "5px double white",
+              "borderRadius": "50%",
+              "display": "inline-block",
+              "height": 30,
+              "width": 30,
+            }
+          }
+          quiet={false}
+          readonly={true}
+          start={0}
+          step={1}
+          stop={5}
+        />
+        <span
+          className="rating"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="card"
+    key="2"
+    onClick={[Function]}
+  >
+    <img
+      className="card-img-top likes d-block"
+      src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
+    />
+    <div
+      className="card-body"
+    >
+      <span
+        className="like-type"
+      >
+        Comfort
+      </span>
+      <br />
+      <span
+        className="like-name"
+      >
+        ANDALAX
+      </span>
+      <br />
+      <span
+        className="like-price"
+      >
+        $
+        115
+      </span>
+      <br />
+      <div
+        className="rating-review"
+      >
+        <RatingAPILayer
+          direction="ltr"
+          emptySymbol="far fa-star"
+          fractions={4}
+          fullSymbol="fa fa-star"
+          initialRating={NaN}
+          onChange={[Function]}
+          onClick={[Function]}
+          onHover={[Function]}
+          placeholderSymbol={
+            Object {
+              "backgroundColor": "red",
+              "border": "5px double white",
+              "borderRadius": "50%",
+              "display": "inline-block",
+              "height": 30,
+              "width": 30,
+            }
+          }
+          quiet={false}
+          readonly={true}
+          start={0}
+          step={1}
+          stop={5}
+        />
+        <span
+          className="rating"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="card"
+    key="3"
+    onClick={[Function]}
+  >
+    <img
+      className="card-img-top likes d-block"
+      src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
+    />
+    <div
+      className="card-body"
+    >
+      <span
+        className="like-type"
+      >
+        Originals
+      </span>
+      <br />
+      <span
+        className="like-name"
+      >
+        SOLAR GLIDE
+      </span>
+      <br />
+      <span
+        className="like-price"
+      >
+        $
+        130
+      </span>
+      <br />
+      <div
+        className="rating-review"
+      >
+        <RatingAPILayer
+          direction="ltr"
+          emptySymbol="far fa-star"
+          fractions={4}
+          fullSymbol="fa fa-star"
+          initialRating={NaN}
+          onChange={[Function]}
+          onClick={[Function]}
+          onHover={[Function]}
+          placeholderSymbol={
+            Object {
+              "backgroundColor": "red",
+              "border": "5px double white",
+              "borderRadius": "50%",
+              "display": "inline-block",
+              "height": 30,
+              "width": 30,
+            }
+          }
+          quiet={false}
+          readonly={true}
+          start={0}
+          step={1}
+          stop={5}
+        />
+        <span
+          className="rating"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="card"
+    key="4"
+    onClick={[Function]}
+  >
+    <img
+      className="card-img-top likes d-block"
+      src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
+    />
+    <div
+      className="card-body"
+    >
+      <span
+        className="like-type"
+      >
+        Performance
+      </span>
+      <br />
+      <span
+        className="like-name"
+      >
+        ULTRABOOST
+      </span>
+      <br />
+      <span
+        className="like-price"
+      >
+        $
+        95
+      </span>
+      <br />
+      <div
+        className="rating-review"
+      >
+        <RatingAPILayer
+          direction="ltr"
+          emptySymbol="far fa-star"
+          fractions={4}
+          fullSymbol="fa fa-star"
+          initialRating={NaN}
+          onChange={[Function]}
+          onClick={[Function]}
+          onHover={[Function]}
+          placeholderSymbol={
+            Object {
+              "backgroundColor": "red",
+              "border": "5px double white",
+              "borderRadius": "50%",
+              "display": "inline-block",
+              "height": 30,
+              "width": 30,
+            }
+          }
+          quiet={false}
+          readonly={true}
+          start={0}
+          step={1}
+          stop={5}
+        />
+        <span
+          className="rating"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

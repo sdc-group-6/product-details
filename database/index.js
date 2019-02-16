@@ -1,8 +1,10 @@
 const mysql = require('mysql');
 const config = require('../config.js');
+const dbUser = require('../config.js').user || process.env.DB_USER;
+const dbPw = require('../config.js').pw || process.env.DB_PW;
 const Sequelize = require('sequelize');
 
-const db = new Sequelize('adidas', config.user , config.pw, {
+const db = new Sequelize('adidas', dbUser, dbPw, {
   host: 'localhost',
   dialect: 'mysql',
   define: {

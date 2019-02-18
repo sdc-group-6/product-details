@@ -11,7 +11,7 @@ const Description = props => {
           <p className= "para">{props.shoe.long_desc}</p>
         </div>
         <div className="col-sm shoe-img">
-          <img src={props.shoe.img_url} width="420" height="420"></img>
+          <img src={props.shoe.img_url}></img>
         </div>
       </div>
     </div>

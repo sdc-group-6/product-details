@@ -28,7 +28,7 @@ exports[`Share Component should look like snapshot 1`] = `
         >
           <img
             className="lrg-share img-fluid"
-            src="https://photorankmedia-a.akamaihd.net/media/8/y/w/8ywuwc4/mobile.jpg"
+            src="https://s3-us-west-1.amazonaws.com/adidas-shoe/share3.jpg"
           />
         </div>
         <span

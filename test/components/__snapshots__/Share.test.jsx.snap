@@ -39,79 +39,36 @@ exports[`Share Component should look like snapshot 1`] = `
       </li>
     </ul>
     <ul>
-      <li>
-        <div
-          className="overlay-blk"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-          <img
-            className="sm-share img-fluid"
-            src="https://z3photorankmedia-a.akamaihd.net/media/3/f/7/3f7ywc4/mobile.jpg"
-          />
-        </div>
-        <span
-          className="share-username hidden"
-        >
-          indigosparkle
-        </span>
-      </li>
-      <li>
-        <div
-          className="overlay-blk"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-           
-          <img
-            className="sm-share img-fluid"
-            src="https://z3photorankmedia-a.akamaihd.net/media/3/f/7/3f7ywc4/mobile.jpg"
-          />
-        </div>
-        <span
-          className="share-username hidden"
-        >
-          weareliving
-        </span>
-      </li>
+      <SmPicture
+        class="share-username hidden"
+        enter={[Function]}
+        img="https://s3-us-west-1.amazonaws.com/adidas-shoe/share7.jpg"
+        leave={[Function]}
+        user="indigosparkle"
+      />
+      <SmPicture
+        class="share-username hidden"
+        enter={[Function]}
+        img="https://s3-us-west-1.amazonaws.com/adidas-shoe/share1.jpg"
+        leave={[Function]}
+        user="weareliving"
+      />
     </ul>
     <ul>
-      <li>
-        <div
-          className="overlay-blk"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-           
-          <img
-            className="sm-share img-fluid"
-            src="https://z3photorankmedia-a.akamaihd.net/media/3/f/7/3f7ywc4/mobile.jpg"
-          />
-        </div>
-        <span
-          className="share-username hidden"
-        >
-          urk3wl
-        </span>
-      </li>
-      <li>
-        <div
-          className="overlay-blk"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-        >
-           
-          <img
-            className="sm-share img-fluid"
-            src="https://z3photorankmedia-a.akamaihd.net/media/3/f/7/3f7ywc4/mobile.jpg"
-          />
-        </div>
-        <span
-          className="share-username hidden"
-        >
-          cereal_killer
-        </span>
-      </li>
+      <SmPicture
+        class="share-username hidden"
+        enter={[Function]}
+        img="https://s3-us-west-1.amazonaws.com/adidas-shoe/share5.jpg"
+        leave={[Function]}
+        user="urk3wl"
+      />
+      <SmPicture
+        class="share-username hidden"
+        enter={[Function]}
+        img="https://s3-us-west-1.amazonaws.com/adidas-shoe/share3.jpg"
+        leave={[Function]}
+        user="cereal_killer"
+      />
     </ul>
   </div>
 </div>

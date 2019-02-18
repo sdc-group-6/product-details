@@ -1,12 +1,12 @@
 import React from 'react';
 
-const DropdownMenu = (props) => {
+const DropdownMenu = props => {
   return (
     <div className="col-5">
       <ul>
         <li className="headline">{props.title}</li>
-        {props.options.map((op,i )=> {
-          if(op ==='____'){
+        {props.options.map((op,i ) => {
+          if(op === '____'){
             return (
               <li key = {op+i} className="gray">{op}</li>
             )
@@ -23,6 +23,6 @@ const DropdownMenu = (props) => {
       </ul>
     </div>
   )
-}
+};
 
 export default DropdownMenu;

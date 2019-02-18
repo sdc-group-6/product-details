@@ -1,11 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-
 import Specification from '../../client/src/components/Product-Details/Specification';
 
 describe('Specification Component', () => {
-  let sample = ['Lace closure', 'Seam-sealed stretch-mesh upper',
-  'Arch type: Normal', 'supportive feel', 'imported', 'Product Code: B31231'];
+  const sample = ['Lace closure', 'Seam-sealed stretch-mesh upper',
+    'Arch type: Normal', 'supportive feel', 'imported', 'Product Code: B31231'];
 
   const component = shallow(<Specification details={sample} />);
 
@@ -27,6 +26,4 @@ describe('Specification Component', () => {
     expect(component.find('li').at(0).text()).toBe('Lace closure');
     expect(component.find('li').at(2).text()).toBe('Arch type: Normal');
   });
-
-
-})
+});

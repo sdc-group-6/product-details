@@ -129,7 +129,6 @@ exports[`Looks Components should display like snapshot 1`] = `
                 >
                   SELECT SIZE
                 </span>
-                 
                 <i
                   className="arrow down"
                 />
@@ -246,7 +245,6 @@ exports[`Looks Components should display like snapshot 1`] = `
                 >
                   SELECT SIZE
                 </span>
-                 
                 <i
                   className="arrow down"
                 />
@@ -363,7 +361,6 @@ exports[`Looks Components should display like snapshot 1`] = `
                 >
                   SELECT SIZE
                 </span>
-                 
                 <i
                   className="arrow down"
                 />

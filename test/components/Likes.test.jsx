@@ -1,20 +1,15 @@
 import React from 'react';
-import { shallow, mount, render } from 'enzyme';
+import { shallow } from 'enzyme';
 
 import Likes from '../../client/src/components/Also-Like/Likes';
-import Description from '../../client/src/components/Product-Details/Description';
 import LikeCard from '../../client/src/components/Also-Like/LikeCard';
-import sampleShoes from './data.js';
+import sampleShoes from './data';
 
 describe('Likes component', () => {
-
   const component = shallow(<Likes shoes={sampleShoes} />);
-
-
   it('should display like snapshot', () => {
     expect(component).toMatchSnapshot();
-  })
-
+  });
   describe('Image Carousel', () => {
     it('should display carousel of shoes properly', () => {
       expect(component.find('div#carouselLikes')).toHaveLength(1);
@@ -27,12 +22,10 @@ describe('Likes component', () => {
 
     it('should display 4 pages of image cards', () => {
       expect(component.find('div.carousel-item')).toHaveLength(4);
-    })
+    });
 
     it('should have rendered LikeCard component correctly', () => {
       expect(component.find(LikeCard)).toHaveLength(4);
-    })
-  })
-
-
-})
+    });
+  });
+});

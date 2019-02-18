@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import menu from './data.js';
 import DropdownMenu from './DropdownMenu.jsx';
+import menu from './data.js';
 
 class Topbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
       shop: false,
-
     }
   }
 

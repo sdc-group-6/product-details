@@ -116,7 +116,7 @@ class App extends Component {
     return (
       <div>
         <Topbar cart={this.state.cart} />
-        <Looks looks={this.state.looks} add={this.addToCart} />
+        <Looks looks={this.state.looks} add={this.addToCart} /> 
         <div className="product">
           <div className="title-1000">
             <h1> PRODUCT DETAILS </h1>

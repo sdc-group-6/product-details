@@ -28,6 +28,7 @@
 body {
   font-family: 'adineue PRO Cyr Light Web';
   color: #000000;
+  font-size: 1.1rem;
 }
 
 h3 {
@@ -44,6 +45,7 @@ h1 {
   float: left;
   margin-bottom: 40px;
   margin-top: 50px;
+  font-size: 3.0rem;
 }
 
 a {
@@ -112,7 +114,7 @@ button:focus {
 }
 
 .card {
-  width: 15rem;
+  width: 16rem;
   border: none;
   margin: 5px 5px 5px 5px;
   border: 1px solid transparent;
@@ -209,7 +211,7 @@ button:focus {
 }
 
 .choices {
-  font-size: 15px;
+  font-size: 17px;
   margin-top: 0px;
   margin-left: 5px;
   display: flex;
@@ -219,10 +221,8 @@ button:focus {
 
 .choices li {
   margin-top: 10px;
-  padding: 10px 2px 10px 2px;
+  padding: 5px 2px 15px 2px;
   margin-right: -5px;
-  /* padding-top: 10px; */
-  /* padding-bottom: 10px; */
 }
 
 .gray {
@@ -263,13 +263,13 @@ button:focus {
 }
 
 .detail {
-  line-height: 45px;
+  line-height: 50px;
   text-align: center;
   font-family: 'adineue PRO Cyr Bold Web';
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 3px;
-  height: 45px;
-  width: 510px;
+  height: 50px;
+  width: 540px;
 }
 
 .selected {
@@ -298,7 +298,7 @@ button:focus {
 }
 
 .title-1000 {
-  width: 1000px;
+  width: 1080px;
 }
 
 .container {
@@ -307,12 +307,10 @@ button:focus {
 
 .detail-name {
   font-family: 'adineue PRO Cyr Bold Web';
-  font-size: 28px;
 }
 
 .short-desc {
   font-family: 'adineue PRO Cyr Bold Web';
-  font-size: 18px;
 }
 
 .col-sm {
@@ -321,13 +319,18 @@ button:focus {
 }
 
 .shoe-desc {
-  margin-top: 5%;
-  margin-left: 4%;
+  margin-top: 3%;
+  margin-left: 2%;
   max-width: 525px;
 }
 
 .shoe-img {
-  margin-left: 16%;
+  margin-left: 20%;
+}
+
+.shoe-img img {
+  width: 430px;
+  height: 430px;
 }
 
 .para {
@@ -413,8 +416,9 @@ button:focus {
 }
 
 .carousel-item img {
-  max-height: 237px;
-  max-width: 237px;
+  margin-left: 1px;
+  max-height: 250px;
+  max-width: 250px;
 }
 
 .carousel-control-prev-icon {
@@ -517,12 +521,12 @@ button:focus {
 .controls {
   display: flex;
   justify-content: center;
-  width: 1000px;
+  width: 1100px;
   margin-top: -600px;
 }
 
 .control-row {
-  width: 501px;
+  width: 531px;
   height: 400px;
 }
 
@@ -631,7 +635,7 @@ button:focus {
 
 .col-5 li {
   font-family: 'adihaus', sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   padding: 0px;
   justify-content: center;
   align-items: center;
@@ -866,7 +870,7 @@ button:focus {
 }
 
 .share-photo ul {
-  margin-right: -39px;
+  margin-right: -38.7px;
 }
 
 .sm-share {
@@ -896,7 +900,7 @@ button:focus {
   margin-top: -50%;
   font-family: 'adihaus', sans-serif;
   color: white;
-  margin-bottom: 41%;
+  margin-bottom: 40%;
 }
 
 .hidden {
@@ -938,6 +942,20 @@ button:focus {
   width: 10px;
   color: #767677;
   font-size: 0.58em;
+}
+
+.favorite {
+  height: 25px;
+  width: 25px;
+  color: #000000;
+  font-size: 1.3em;
+  padding: 2px 2px 2px 2px;
+}
+
+.favorite-heart {
+  margin-left: 195px;
+  margin-top: -220px;
+  margin-bottom: 220px;
 }
 
 .rating {
@@ -983,5 +1001,17 @@ button:focus {
     left:8px;
     margin-top: -12px;
     cursor: pointer;
+  }
+}
+
+@media (max-width: 625px) {
+  .share-username{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -53%;
+    font-family: 'adihaus', sans-serif;
+    color: white;
+    margin-bottom: 40%;
   }
 }

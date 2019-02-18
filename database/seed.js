@@ -1206,7 +1206,7 @@ let sampleShoes = [
 let sampleLooks = [
   {
     "id": 1,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "OUTLINE TEE",
@@ -1218,7 +1218,7 @@ let sampleLooks = [
   },
   {
     "id": 2,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "OUTLINE TEE",
@@ -1230,7 +1230,7 @@ let sampleLooks = [
   },
   {
     "id": 3,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "OUTLINE TEE",
@@ -1242,7 +1242,7 @@ let sampleLooks = [
   },
   {
     "id": 4,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "OUTLINE TEE",
@@ -1254,7 +1254,7 @@ let sampleLooks = [
   },
   {
     "id": 5,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "OUTLINE TEE",
@@ -1266,7 +1266,7 @@ let sampleLooks = [
   },
   {
     "id": 6,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "SPORT CLASSIC TEE",
@@ -1278,7 +1278,7 @@ let sampleLooks = [
   },
   {
     "id": 7,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "ESSENTIAL TEE",
@@ -1290,7 +1290,7 @@ let sampleLooks = [
   },
   {
     "id": 8,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "TREFOIL TEE",
@@ -1302,7 +1302,7 @@ let sampleLooks = [
   },
   {
     "id": 9,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "OUTLINE TREFOIL TEE",
@@ -1314,7 +1314,7 @@ let sampleLooks = [
   },
   {
     "id": 10,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "OUTLINE TREFOIL TEE",
@@ -1326,7 +1326,7 @@ let sampleLooks = [
   },
   {
     "id": 11,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "ESSENTIAL TEE",
@@ -1338,7 +1338,7 @@ let sampleLooks = [
   },
   {
     "id": 12,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "SPORT CLASSIC TEE",
@@ -1350,7 +1350,7 @@ let sampleLooks = [
   },
   {
     "id": 13,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "OUTLINE TREFOIL TEE",
@@ -1542,7 +1542,7 @@ let sampleLooks = [
   },
   {
     "id": 29,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 50,
     "shirt_name": "SPORT CLASSIC TEE",
@@ -1554,7 +1554,7 @@ let sampleLooks = [
   },
   {
     "id": 30,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 50,
     "shirt_name": "ESSENTIAL TEE",
@@ -1566,7 +1566,7 @@ let sampleLooks = [
   },
   {
     "id": 31,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "OUTLINE TEE",
@@ -1578,7 +1578,7 @@ let sampleLooks = [
   },
   {
     "id": 32,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "OUTLINE TEE",
@@ -1590,7 +1590,7 @@ let sampleLooks = [
   },
   {
     "id": 33,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "OUTLINE TEE",
@@ -1602,7 +1602,7 @@ let sampleLooks = [
   },
   {
     "id": 34,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "OUTLINE TEE",
@@ -1614,7 +1614,7 @@ let sampleLooks = [
   },
   {
     "id": 35,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "OUTLINE TEE",
@@ -1626,7 +1626,7 @@ let sampleLooks = [
   },
   {
     "id": 36,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "SPORT CLASSIC TEE",
@@ -1638,7 +1638,7 @@ let sampleLooks = [
   },
   {
     "id": 37,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "ESSENTIAL TEE",
@@ -1650,7 +1650,7 @@ let sampleLooks = [
   },
   {
     "id": 38,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "TREFOIL TEE",
@@ -1662,7 +1662,7 @@ let sampleLooks = [
   },
   {
     "id": 39,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "OUTLINE TREFOIL TEE",
@@ -1674,7 +1674,7 @@ let sampleLooks = [
   },
   {
     "id": 40,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "OUTLINE TREFOIL TEE",
@@ -1686,7 +1686,7 @@ let sampleLooks = [
   },
   {
     "id": 41,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "ESSENTIAL TEE",
@@ -1698,7 +1698,7 @@ let sampleLooks = [
   },
   {
     "id": 42,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "SPORT CLASSIC TEE",
@@ -1710,7 +1710,7 @@ let sampleLooks = [
   },
   {
     "id": 43,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "OUTLINE TREFOIL TEE",
@@ -1902,7 +1902,7 @@ let sampleLooks = [
   },
   {
     "id": 59,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 50,
     "shirt_name": "SPORT CLASSIC TEE",
@@ -1914,7 +1914,7 @@ let sampleLooks = [
   },
   {
     "id": 60,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 50,
     "shirt_name": "ESSENTIAL TEE",
@@ -1926,7 +1926,7 @@ let sampleLooks = [
   },
   {
     "id": 61,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "ESSENTIAL TEE",
@@ -1938,7 +1938,7 @@ let sampleLooks = [
   },
   {
     "id": 62,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "SPORT CLASSIC TEE",
@@ -1950,7 +1950,7 @@ let sampleLooks = [
   },
   {
     "id": 63,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "OUTLINE TREFOIL TEE",
@@ -2142,7 +2142,7 @@ let sampleLooks = [
   },
   {
     "id": 79,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 50,
     "shirt_name": "SPORT CLASSIC TEE",
@@ -2154,7 +2154,7 @@ let sampleLooks = [
   },
   {
     "id": 80,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 50,
     "shirt_name": "ESSENTIAL TEE",
@@ -2166,7 +2166,7 @@ let sampleLooks = [
   },
   {
     "id": 81,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "OUTLINE TEE",
@@ -2178,7 +2178,7 @@ let sampleLooks = [
   },
   {
     "id": 82,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "OUTLINE TEE",
@@ -2190,7 +2190,7 @@ let sampleLooks = [
   },
   {
     "id": 83,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "OUTLINE TEE",
@@ -2202,7 +2202,7 @@ let sampleLooks = [
   },
   {
     "id": 84,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "OUTLINE TEE",
@@ -2214,7 +2214,7 @@ let sampleLooks = [
   },
   {
     "id": 85,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "OUTLINE TEE",
@@ -2226,7 +2226,7 @@ let sampleLooks = [
   },
   {
     "id": 86,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "SPORT CLASSIC TEE",
@@ -2238,7 +2238,7 @@ let sampleLooks = [
   },
   {
     "id": 87,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "ESSENTIAL TEE",
@@ -2250,7 +2250,7 @@ let sampleLooks = [
   },
   {
     "id": 88,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "TREFOIL TEE",
@@ -2262,7 +2262,7 @@ let sampleLooks = [
   },
   {
     "id": 89,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "OUTLINE TREFOIL TEE",
@@ -2274,7 +2274,7 @@ let sampleLooks = [
   },
   {
     "id": 90,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "OUTLINE TREFOIL TEE",
@@ -2286,7 +2286,7 @@ let sampleLooks = [
   },
   {
     "id": 91,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "ESSENTIAL TEE",
@@ -2298,7 +2298,7 @@ let sampleLooks = [
   },
   {
     "id": 92,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "SPORT CLASSIC TEE",
@@ -2310,7 +2310,7 @@ let sampleLooks = [
   },
   {
     "id": 93,
-    "pant_name": "TREFOIL PANTS",
+    "pant_name": "TREFOIL SHORTS",
     "pant_url": "https://s3-us-west-1.amazonaws.com/adidas-shoe/pant1.jpg",
     "pant_price": 75,
     "shirt_name": "OUTLINE TREFOIL TEE",

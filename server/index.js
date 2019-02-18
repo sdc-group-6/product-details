@@ -1,8 +1,13 @@
 const express = require('express');
+const mysql = require('mysql');
+const cors = require('cors');
 const app = express();
 const { db , Shoes, Looks, Shares } = require('../database');
-const mysql = require('mysql');
 
+app.use(express.static(__dirname + '/../public'));
+app.use(cors({
+  'origin': '*',
+}));
 
 let randomId = () => {
   return Math.floor(Math.random() * (101));
@@ -81,8 +86,6 @@ app.get('/shares/:id', (req,res) => {
 })
 
 const PORT = 8001;
-
-app.use(express.static(__dirname + '/../public'));
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);

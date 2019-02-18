@@ -1,11 +1,11 @@
 import React from 'react';
-import { mount, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 
 import App from '../../client/src/components/App';
 import Description from '../../client/src/components/Product-Details/Description';
 import Likes from '../../client/src/components/Also-Like/Likes';
 import Looks from '../../client/src/components/Complete-Look/Looks';
-import Share from '../../client/src/components/Share/Share';
+import Share from '../../client/src/components/Share-Photos/Share';
 import Topbar from '../../client/src/components/Navbar/Topbar';
 import Specification from '../../client/src/components/Product-Details/Specification';
 
@@ -36,26 +36,19 @@ describe('App Component', () => {
   });
 
   it('should show Specification on click', () => {
-    const clickFn = jest.fn();
-    const component = shallow(<App specClick={clickFn} />);
-
-    component.find('div#spec').simulate('click')
-
+    component.find('div#spec').simulate('click');
     expect(component.find('div#spec')).toHaveLength(1);
     expect(component.find(Specification)).toHaveLength(1);
     expect(component.find(Description)).toHaveLength(0);
-  })
+  });
 
   it('should be able to toggle from Specification and Description', () => {
-    const clickFn = jest.fn();
-    const component2 = shallow(<App onClick={clickFn} />);
+    component.find('div#spec').simulate('click');
+    expect(component.find(Specification)).toHaveLength(1);
+    expect(component.find(Description)).toHaveLength(0);
 
-    component2.find('div#spec').simulate('click');
-    expect(component2.find(Specification)).toHaveLength(1);
-    expect(component2.find(Description)).toHaveLength(0);
-
-    component2.find('div#desc').simulate('click');
-    expect(component2.find(Specification)).toHaveLength(0);
-    expect(component2.find(Description)).toHaveLength(1);
-  })
-})
+    component.find('div#desc').simulate('click');
+    expect(component.find(Specification)).toHaveLength(0);
+    expect(component.find(Description)).toHaveLength(1);
+  });
+});

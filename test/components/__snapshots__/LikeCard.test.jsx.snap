@@ -10,6 +10,7 @@ exports[`LikeCard Component should match snapshot 1`] = `
     onClick={[Function]}
   >
     <img
+      alt="adidas shoe"
       className="card-img-top likes d-block"
       src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
     />
@@ -75,6 +76,7 @@ exports[`LikeCard Component should match snapshot 1`] = `
     onClick={[Function]}
   >
     <img
+      alt="adidas shoe"
       className="card-img-top likes d-block"
       src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
     />
@@ -140,6 +142,7 @@ exports[`LikeCard Component should match snapshot 1`] = `
     onClick={[Function]}
   >
     <img
+      alt="adidas shoe"
       className="card-img-top likes d-block"
       src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
     />
@@ -205,6 +208,7 @@ exports[`LikeCard Component should match snapshot 1`] = `
     onClick={[Function]}
   >
     <img
+      alt="adidas shoe"
       className="card-img-top likes d-block"
       src="https://www.adidas.com/dis/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dwa800131d/zoom/CM8322_00_plp_standard.jpg?sw=276&sh=276&sm=fit&hei=276&wid=276&strip=false"
     />

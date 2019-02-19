@@ -80,7 +80,7 @@ class Topbar extends Component {
             <div className={cartClass}><i className={iconClass}>shopping_cart</i><span className="cartNum">{cart}</span></div>
           </div>
         </div>
-        <div className="shipping">
+        <div className="shipping-bar">
           <h6>
             <i className="material-icons delivery" height="24" width="24">local_shipping</i>
             <span className="underline">FREE SHIPPING AND RETURNS</span>

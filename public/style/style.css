@@ -25,6 +25,10 @@
     font-style: normal;
 }
 
+#top-navbar {
+  margin-bottom: 650px;
+}
+
 body {
   font-family: 'adineue PRO Cyr Light Web';
   color: #000000;
@@ -114,7 +118,6 @@ button:focus {
 }
 
 .card {
-  width: 16rem;
   border: none;
   margin: 5px 5px 5px 5px;
   border: 1px solid transparent;
@@ -301,16 +304,22 @@ button:focus {
   width: 1080px;
 }
 
+.title-1000 h1 {
+  font-size: 3.0em;
+}
+
 .container {
   margin-top: 20px;
 }
 
 .detail-name {
   font-family: 'adineue PRO Cyr Bold Web';
+  font-size: 32px;
 }
 
 .short-desc {
   font-family: 'adineue PRO Cyr Bold Web';
+  font-size: 20px;
 }
 
 .col-sm {
@@ -340,7 +349,6 @@ button:focus {
 .row {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
 }
 
 .details {
@@ -358,6 +366,7 @@ button:focus {
 
 .col-sm li {
   margin-bottom: 25px;
+  font-size: 18px;
 }
 
 .first-col {
@@ -409,6 +418,7 @@ button:focus {
 .looks-pics h6 {
   font-family: 'adihaus';
   margin-right: 20px;
+  font-size: 15px !important;
 }
 
 .carousel-item {
@@ -669,10 +679,17 @@ button:focus {
   width: 500px;
 }
 
-.look-clothing-name {
+h5.look-clothing-name {
   font-family: 'adineue PRO Cyr Bold Web';
   letter-spacing: 2px;
+  font-size: 22px;
 }
+
+/* .look-clothing-name {
+  font-family: 'adineue PRO Cyr Bold Web';
+  letter-spacing: 2px;
+  font-size: 22px;
+} */
 
 .look-clothing-price {
   font-family: 'adihaus', sans-serif;
@@ -787,7 +804,7 @@ button:focus {
   color: #767677 !important;
 }
 
-.shipping {
+.shipping-bar {
   text-align: center;
   display: table;
   font-family: 'adihaus', sans-serif;
@@ -797,7 +814,7 @@ button:focus {
   border-bottom: 1px solid #c8cbcc;
 }
 
-.shipping h6 {
+.shipping-bar h6 {
   display: table-cell;
   vertical-align: middle;
   font-size: 12px;

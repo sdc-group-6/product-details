@@ -29,7 +29,7 @@ class Topbar extends Component {
           </div>
         </div>
         <div className="bBar">
-          <div className="row">
+          <div className="row width-100">
             <img src="https://s3-us-west-1.amazonaws.com/adidas-shoe/adidas-logo-white.png" width="75" height="75" className="nav-logo d-inline-block align-top"></img>
             <div className="choices">
               <div className="dropdown">
@@ -80,7 +80,7 @@ class Topbar extends Component {
             <div className={cartClass}><i className={iconClass}>shopping_cart</i><span className="cartNum">{cart}</span></div>
           </div>
         </div>
-        <div className="shipping">
+        <div className="shipping-bar">
           <h6>
             <i className="material-icons delivery" height="24" width="24">local_shipping</i>
             <span className="underline">FREE SHIPPING AND RETURNS</span>

@@ -351,6 +351,10 @@ button:focus {
   flex-wrap: wrap;
 }
 
+.width-100 {
+  width: 100% !important;
+}
+
 .details {
   font-family: 'adihaus', sans-serif;
 }
@@ -579,16 +583,12 @@ button:focus {
   height: 45px;
   width: 240px;
   outline: 1px solid black;
+  letter-spacing: 2px;
+  border-radius: 0px;
 }
 
 .select-size:hover {
   border-bottom: 2px solid black;
-}
-
-.dropdown button {
-  font-family: 'adihaus', sans-serif;
-  letter-spacing: 2px;
-  border-radius: 0px;
 }
 
 .dropdown-menu {
@@ -629,7 +629,6 @@ button:focus {
   min-width: 1100px;
   height: 100%;
   left: 0;
-  margin-top: 2%;
 }
 
 #women-dropdown .menu-men {

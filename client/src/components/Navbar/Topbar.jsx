@@ -29,7 +29,7 @@ class Topbar extends Component {
           </div>
         </div>
         <div className="bBar">
-          <div className="row">
+          <div className="row width-100">
             <img src="https://s3-us-west-1.amazonaws.com/adidas-shoe/adidas-logo-white.png" width="75" height="75" className="nav-logo d-inline-block align-top"></img>
             <div className="choices">
               <div className="dropdown">

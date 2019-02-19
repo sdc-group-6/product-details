@@ -38,7 +38,6 @@ class App extends Component {
       url: 'http://localhost:8001/shoes',
       method: 'GET',
       success: (shoes) => {
-        console.log('SUCCESS', shoes);
         this.setState({ shoes });
       },
       error: (err) => {
@@ -52,7 +51,6 @@ class App extends Component {
       url: `http://localhost:8001/shoes/${id}`,
       method: 'GET',
       success: (shoe) => {
-        console.log('SUCCESS', shoe);
         this.getLooks(id);
         this.getShares(id);
         this.getAll();
@@ -74,7 +72,6 @@ class App extends Component {
       url: `http://localhost:8001/looks/${id}`,
       method: 'GET',
       success: (looks) => {
-        console.log('SUCCESS', looks);
         this.setState({ looks });
       },
       error: (err) => {
@@ -88,7 +85,6 @@ class App extends Component {
       url: `http://localhost:8001/shares/${id}`,
       method: 'GET',
       success: (shares) => {
-        console.log('SUCCESS shares', shares);
         this.setState({ shares });
       },
       error: (err) => {
@@ -116,7 +112,7 @@ class App extends Component {
     return (
       <div>
         <Topbar cart={this.state.cart} />
-        <Looks looks={this.state.looks} add={this.addToCart} /> 
+        <Looks looks={this.state.looks} add={this.addToCart} />
         <div className="product">
           <div className="title-1000">
             <h1> PRODUCT DETAILS </h1>

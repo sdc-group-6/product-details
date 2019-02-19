@@ -30,7 +30,7 @@ class Topbar extends Component {
         </div>
         <div className="bBar">
           <div className="row">
-            <img src="../images/adidas-logo-white.png" width="75" height="75" className="nav-logo d-inline-block align-top"></img>
+            <img src="https://s3-us-west-1.amazonaws.com/adidas-shoe/adidas-logo-white.png" width="75" height="75" className="nav-logo d-inline-block align-top"></img>
             <div className="choices">
               <div className="dropdown">
                 <li className="choice-menu white" id="men-dropdown" data-toggle="dropdown"> MENS</li>
@@ -84,7 +84,7 @@ class Topbar extends Component {
           <h6>
             <i className="material-icons delivery" height="24" width="24">local_shipping</i>
             <span className="underline">FREE SHIPPING AND RETURNS</span>
-            <img className="creators"src="../images/adidas-icon-creator.png" width="24" height="24"></img>
+            <img className="creators"src="https://s3-us-west-1.amazonaws.com/adidas-shoe/adidas-icon-creator.png" width="24" height="24"></img>
             <span className="underline">CREATORS GET REWARDED - JOIN THE NEW ADIDAS CREATOR CLUB</span>
           </h6>
         </div>

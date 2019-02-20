@@ -105,12 +105,12 @@ class Looks extends Component {
                 <div className="col-sm look-desc">
                   <h5 className="look-clothing-name">{this.props.looks.shirt_name}</h5>
                   <h6 className="look-clothing-price">${this.props.looks.shirt_price}</h6>
-                  <div className="dropdown">
+                  <div className="dropdown dropdown-complete-look">
                     <button className="btn select-size-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <span className="float-left look-size">{this.state.sizeShirt}</span>
                       <i className="arrow down" />
                     </button>
-                    <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <div className="dropdown-menu select-size-dropdown" aria-labelledby="dropdownMenuButton">
                       <div className="select-size-menu">
                         <div className="select-size" onClick={this.selectSizeShirt}>S</div>
                         <div className="select-size" onClick={this.selectSizeShirt}>M</div>
@@ -143,7 +143,7 @@ class Looks extends Component {
                       <span className="float-left look-size">{this.state.sizeJacket}</span>
                       <i className="arrow down" />
                     </button>
-                    <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <div className="dropdown-menu select-size-dropdown" aria-labelledby="dropdownMenuButton">
                       <div className="select-size-menu">
                         <div className="select-size" onClick={this.selectSizeJacket}>S</div>
                         <div className="select-size" onClick={this.selectSizeJacket}>M</div>
@@ -176,7 +176,7 @@ class Looks extends Component {
                       <span className="float-left look-size">{this.state.sizePant}</span>
                       <i className="arrow down" />
                     </button>
-                    <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <div className="dropdown-menu select-size-dropdown" aria-labelledby="dropdownMenuButton">
                       <div className="select-size-menu">
                         <div className="select-size" onClick={this.selectSizePant}>S</div>
                         <div className="select-size" onClick={this.selectSizePant}>M</div>

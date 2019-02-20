@@ -150,17 +150,23 @@ button:focus {
 }
 
 .like-type {
+  font-family: 'adihaus';
   font-size: 12px;
   color: #767677;
+  line-height: 1.5;
 }
 
 .like-name {
+  font-family: 'adihaus';
   font-size: 12px;
   letter-spacing: 0.04em;
+  line-height: 1.5;
 }
 
 .like-price {
+  font-family: 'adihaus';
   font-size: 12px;
+  line-height: 1.5;
 }
 
 #carouselLikes {
@@ -325,6 +331,7 @@ button:focus {
 .col-sm {
   padding: 20px;
   margin-right: -10%;
+  width: 540px;
 }
 
 .shoe-desc {
@@ -344,11 +351,16 @@ button:focus {
 
 .para {
   font-family: 'adihaus', sans-serif;
+  font-size: 18px !important;
 }
 
 .row {
   display: flex;
   flex-wrap: wrap;
+}
+
+.detail-row {
+  width: 1080px;
 }
 
 .width-100 {
@@ -591,13 +603,13 @@ button:focus {
   border-bottom: 2px solid black;
 }
 
-.dropdown-menu {
-  border-radius: 0px;
-  border: 1px solid #000000;
-  width:240px;
-  height: 90px;
-  margin-top: -4px;
-  border-top-color: #dddddd;
+.select-size-dropdown {
+  border-radius: 0px !important;
+  border: 1px solid #000000 !important;
+  width:240px !important;
+  height: 90px !important;
+  margin-top: -4px !important;
+  border-top-color: #dddddd !important;
 }
 
 .dropdown:hover .bar-menu {
@@ -676,6 +688,12 @@ button:focus {
 .choice-menu .dropdown-menu {
   background-color: white;
   width: 500px;
+  border-radius: 0px;
+  border: 1px solid #000000;
+  width:240px;
+  height: 90px;
+  margin-top: -4px;
+  border-top-color: #dddddd;
 }
 
 h5.look-clothing-name {
@@ -683,12 +701,6 @@ h5.look-clothing-name {
   letter-spacing: 2px;
   font-size: 22px;
 }
-
-/* .look-clothing-name {
-  font-family: 'adineue PRO Cyr Bold Web';
-  letter-spacing: 2px;
-  font-size: 22px;
-} */
 
 .look-clothing-price {
   font-family: 'adihaus', sans-serif;
@@ -868,7 +880,7 @@ h5.look-clothing-name {
 
 .share-desc{
   font-family: 'adihaus', sans-serif;
-  font-size: 18px;
+  font-size: 18px !important;
   float: left;
 }
 
@@ -883,10 +895,12 @@ h5.look-clothing-name {
 .share-photo li {
   list-style-type: none;
   margin-bottom: 1px;
+  height: 250px;
 }
 
 .share-photo ul {
   margin-right: -38.7px;
+  height: 501px;
 }
 
 .sm-share {
@@ -917,6 +931,8 @@ h5.look-clothing-name {
   font-family: 'adihaus', sans-serif;
   color: white;
   margin-bottom: 40%;
+  font-size: 18px;
+  line-height: 1.5;
 }
 
 .hidden {

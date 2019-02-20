@@ -2,7 +2,7 @@ import React from 'react';
 
 const Specification = props => (
   <div className="details container">
-    <div className="row">
+    <div className="row detail-row">
       <div className="col-sm first-col">
         <ul>
           {props.details.slice(0, Math.floor(props.details.length / 2)).map((detail, i) => (

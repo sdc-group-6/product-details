@@ -134,6 +134,10 @@ button:focus {
   margin-left: -10px;
 }
 
+.card-body span {
+  line-height: 2;
+}
+
 .like {
   flex-direction: column;
   justify-content: center;
@@ -311,7 +315,7 @@ button:focus {
 }
 
 .title-1000 h1 {
-  font-size: 3.0em;
+  font-size: 55px !important;
 }
 
 .container {
@@ -641,6 +645,7 @@ button:focus {
   min-width: 1100px;
   height: 100%;
   left: 0;
+  overflow: visible !important ;
 }
 
 #women-dropdown .menu-men {
@@ -747,6 +752,7 @@ h5.look-clothing-name {
   height: 45px;
   box-shadow: inset 0 0 0 1px #767677;
   transform: translate(3px,3px);
+  cursor: not-allowed;
 }
 
 .bottom-bold {

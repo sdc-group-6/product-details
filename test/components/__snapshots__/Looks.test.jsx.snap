@@ -114,7 +114,7 @@ exports[`Looks Components should display like snapshot 1`] = `
               40
             </h6>
             <div
-              className="dropdown"
+              className="dropdown dropdown-complete-look"
             >
               <button
                 aria-expanded="false"
@@ -135,7 +135,7 @@ exports[`Looks Components should display like snapshot 1`] = `
               </button>
               <div
                 aria-labelledby="dropdownMenuButton"
-                className="dropdown-menu"
+                className="dropdown-menu select-size-dropdown"
               >
                 <div
                   className="select-size-menu"
@@ -251,7 +251,7 @@ exports[`Looks Components should display like snapshot 1`] = `
               </button>
               <div
                 aria-labelledby="dropdownMenuButton"
-                className="dropdown-menu"
+                className="dropdown-menu select-size-dropdown"
               >
                 <div
                   className="select-size-menu"
@@ -367,7 +367,7 @@ exports[`Looks Components should display like snapshot 1`] = `
               </button>
               <div
                 aria-labelledby="dropdownMenuButton"
-                className="dropdown-menu"
+                className="dropdown-menu select-size-dropdown"
               >
                 <div
                   className="select-size-menu"

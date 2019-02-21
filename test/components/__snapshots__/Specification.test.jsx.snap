@@ -5,7 +5,7 @@ exports[`Specification Component should display like snapshot 1`] = `
   className="details container"
 >
   <div
-    className="row"
+    className="row detail-row"
   >
     <div
       className="col-sm first-col"

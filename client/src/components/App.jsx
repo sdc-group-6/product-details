@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import $ from 'jquery';
+import axios from 'axios';
 import Topbar from './Navbar/Topbar';
 import Likes from './Also-Like/Likes';
 import Looks from './Complete-Look/Looks';
@@ -34,63 +34,55 @@ class App extends Component {
   }
 
   getAll() {
-    $.ajax({
-      url: 'http://localhost:8001/shoes',
-      method: 'GET',
-      success: (shoes) => {
-        this.setState({ shoes });
-      },
-      error: (err) => {
+    axios.get('/shoes')
+      .then(shoes => {
+        shoes = shoes.data;
+        this.setState({shoes});
+      })
+      .catch(err => {
         console.log('ERROR: ', err);
-      },
-    });
+      })
   }
 
   getOne(id) {
-    $.ajax({
-      url: `http://localhost:8001/shoes/${id}`,
-      method: 'GET',
-      success: (shoe) => {
-        this.getLooks(id);
-        this.getShares(id);
-        this.getAll();
-        this.setState({
-          details: shoe.details.split(';'),
-          shoe,
-          desc: true,
-          spec: false,
-        });
-      },
-      error: (err) => {
-        console.log('ERROR: ', err);
-      },
-    });
+    axios.get(`http://localhost:8001/shoes/${id}`)
+    .then( shoe => {
+      shoe = shoe.data;
+      this.getLooks(id);
+      this.getShares(id);
+      this.getAll();
+      this.setState({
+        details: shoe.details.split(';'),
+        shoe,
+        desc: true,
+        spec: false,
+      });
+    })
+    .catch( err => {
+      console.log('ERROR: ', err);
+    })
   }
 
   getLooks(id) {
-    $.ajax({
-      url: `http://localhost:8001/looks/${id}`,
-      method: 'GET',
-      success: (looks) => {
-        this.setState({ looks });
-      },
-      error: (err) => {
-        console.log('ERROR: ', err);
-      },
-    });
+    axios.get(`http://localhost:8001/looks/${id}`)
+    .then( looks => {
+      looks = looks.data;
+      this.setState({ looks });
+    })
+    .catch( err => {
+      console.log('ERROR: ', err);
+    })
   }
 
   getShares(id) {
-    $.ajax({
-      url: `http://localhost:8001/shares/${id}`,
-      method: 'GET',
-      success: (shares) => {
-        this.setState({ shares });
-      },
-      error: (err) => {
-        console.log('ERROR: ', err);
-      },
-    });
+    axios.get(`http://localhost:8001/shares/${id}`)
+    .then( shares => {
+      shares = shares.data;
+      this.setState({ shares });
+    })
+    .catch( err => {
+      console.log('ERROR: ', err);
+    })
   }
 
   descClick() {

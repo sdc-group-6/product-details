@@ -42,12 +42,12 @@ exports[`Topbar/Navbar Component When cart has contents should match snapshot wh
     className="bBar"
   >
     <div
-      className="row"
+      className="row width-100"
     >
       <img
         className="nav-logo d-inline-block align-top"
         height="75"
-        src="../images/adidas-logo-white.png"
+        src="https://s3-us-west-1.amazonaws.com/adidas-shoe/adidas-logo-white.png"
         width="75"
       />
       <div
@@ -427,7 +427,7 @@ exports[`Topbar/Navbar Component When cart has contents should match snapshot wh
     </div>
   </div>
   <div
-    className="shipping"
+    className="shipping-bar"
   >
     <h6>
       <i
@@ -445,7 +445,7 @@ exports[`Topbar/Navbar Component When cart has contents should match snapshot wh
       <img
         className="creators"
         height="24"
-        src="../images/adidas-icon-creator.png"
+        src="https://s3-us-west-1.amazonaws.com/adidas-shoe/adidas-icon-creator.png"
         width="24"
       />
       <span
@@ -500,12 +500,12 @@ exports[`Topbar/Navbar Component When cart is empty should match snapshot when c
     className="bBar"
   >
     <div
-      className="row"
+      className="row width-100"
     >
       <img
         className="nav-logo d-inline-block align-top"
         height="75"
-        src="../images/adidas-logo-white.png"
+        src="https://s3-us-west-1.amazonaws.com/adidas-shoe/adidas-logo-white.png"
         width="75"
       />
       <div
@@ -883,7 +883,7 @@ exports[`Topbar/Navbar Component When cart is empty should match snapshot when c
     </div>
   </div>
   <div
-    className="shipping"
+    className="shipping-bar"
   >
     <h6>
       <i
@@ -901,7 +901,7 @@ exports[`Topbar/Navbar Component When cart is empty should match snapshot when c
       <img
         className="creators"
         height="24"
-        src="../images/adidas-icon-creator.png"
+        src="https://s3-us-west-1.amazonaws.com/adidas-shoe/adidas-icon-creator.png"
         width="24"
       />
       <span

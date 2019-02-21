@@ -505,7 +505,7 @@ button:focus {
 .carousel-indicators li {
     display: inline-block;
     width: 20px;
-    height: 1px;
+    height: 1.5px;
     margin: 3px;
     text-indent: 0;
     cursor: pointer;
@@ -688,6 +688,7 @@ button:focus {
   margin-left: -150px;
   background-color: white;
   width: 100%;
+  margin-top: -10px;
 }
 
 .choice-menu .dropdown-menu {

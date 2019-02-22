@@ -451,51 +451,28 @@ button:focus {
   max-width: 250px;
 }
 
-.carousel-control-prev-icon {
- background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+.prev-icon {
+color: black;
  border: 2px solid white;
  background-color: white;
 }
 
-.carousel-control-next-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+.next-icon {
+  color: black;
   border: 2px solid white;
   background-color: white;
 }
 
-.carousel-control-next-icon:hover{
+.next-icon:hover{
+  color:white;
   background-color: black;
   border: 2px solid black;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }
 
-.carousel-control-prev-icon:hover{
+.prev-icon:hover{
+  color:white;
   background-color: black;
-  border: 2px solid black;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
-}
-
-.carousel-control-next-icon:after {
-  opacity: 100;
-  color: #000;
-}
-
-.carousel-control-prev-icon:after {
-  opacity: 100;
-  color: #000;
-}
-
-.carousel-control-next-icon:before {
-  opacity: 100;
-  background-color: white;
-  color: #000;
-}
-
-.carousel-control-prev-icon:before {
-  opacity: 100;
-  background-color: white;
-  color: #000;
-}
+  border: 2px solid black;}
 
 .carousel-indicators {
   margin-bottom: -100px;

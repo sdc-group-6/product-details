@@ -80,12 +80,12 @@ class Likes extends Component {
             <div className="controls">
               <div className="row control-row">
                 <a className={this.state.prev} href="#carouselLikes" role="button" data-slide="prev" onClick={this.handlePrev}>
-                  <span className="carousel-control-prev-icon" aria-hidden="true" />
+                  <i className="material-icons prev-icon">chevron_left</i>
                 </a>
               </div>
               <div className="row control-row next-pos">
                 <a className={this.state.next} href="#carouselLikes" role="button" data-slide="next" onClick={this.handleNext}>
-                  <span className="carousel-control-next-icon" aria-hidden="true" />
+                  <i className="material-icons next-icon">chevron_right</i>
                 </a>
               </div>
             </div>

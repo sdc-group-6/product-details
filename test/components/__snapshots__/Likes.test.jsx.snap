@@ -204,10 +204,11 @@ exports[`Likes component should display like snapshot 1`] = `
             onClick={[Function]}
             role="button"
           >
-            <span
-              aria-hidden="true"
-              className="carousel-control-prev-icon"
-            />
+            <i
+              className="material-icons prev-icon"
+            >
+              chevron_left
+            </i>
           </a>
         </div>
         <div
@@ -220,10 +221,11 @@ exports[`Likes component should display like snapshot 1`] = `
             onClick={[Function]}
             role="button"
           >
-            <span
-              aria-hidden="true"
-              className="carousel-control-next-icon"
-            />
+            <i
+              className="material-icons next-icon"
+            >
+              chevron_right
+            </i>
           </a>
         </div>
       </div>

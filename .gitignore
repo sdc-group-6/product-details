@@ -1,5 +1,6 @@
 public/bundle.js
 config.js
+sql-scripts
 ## MAC files ##
 .DS_Store
 

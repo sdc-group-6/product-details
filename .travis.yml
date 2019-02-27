@@ -9,3 +9,4 @@ cache:
 before_install:
 - openssl aes-256-cbc -K $encrypted_4aa93aae2784_key -iv $encrypted_4aa93aae2784_iv
   -in config.js.enc -out config.js -d
+- mysql -e 'CREATE DATABASE IF NOT EXISTS adidastest;'

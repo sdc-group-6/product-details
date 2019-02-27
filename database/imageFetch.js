@@ -15,7 +15,7 @@ const downloadAsync = (index, searchTerm) => {
 };
 
 const loop = (index) => {
-  let searchTerm = index % 2 === 0 ? 'adidas' : 'fashion';
+  let searchTerm = index % 2 === 0 ? 'clothing' : 'footwear';
   downloadAsync(index, searchTerm).then((index) => {
     if (index + 1 > 100) {
       console.log('done');

@@ -3640,6 +3640,7 @@ const insertSeed = () => {
   .then(() => {
     console.log('SUCCESS shares added');
   })
+  .then(() => db.close())
   .catch(err => {
     console.log('ERROR: ', err);
   })

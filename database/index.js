@@ -9,7 +9,7 @@ const db = new Sequelize('adidas', dbUser, dbPw, {
     timestamps: false,
   },
 });
-
+// test
 const Shoes = db.define('shoes', {
   id: { type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true },
   name: Sequelize.STRING,

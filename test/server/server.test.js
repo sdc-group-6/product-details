@@ -2,6 +2,8 @@ const request = require('supertest');
 const app = require('../../server/index.js');
 require('iconv-lite').encodingExists('foo');
 
+afterAll(() => app.close());
+
 describe('Express server should route properly', () => {
   it('should respond to GET shoes', (done) => {
     request(app)

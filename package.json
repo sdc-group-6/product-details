@@ -67,6 +67,9 @@
     "testPathIgnorePatterns": [
       "<rootDir>/node_modules/"
     ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
     "transform": {
       "^.+\\.jsx?$": "babel-jest"
     },

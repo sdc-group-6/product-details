@@ -26,3 +26,8 @@ const loop = (index) => {
 };
 
 loop(1);
+
+/*
+50 images loaded based on each of the following search terms:
+['adidas', 'basketball', 'clothing', 'fashion', 'footwear', 'hat', 'nike', 'running', 'shirt', 'shoe', 'shoes', 'shorts', 'sketchers', 'sneakers', 'soccer', 'sports', 'style', 'tennis', 'training', 'uniform', ];
+*/

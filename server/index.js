@@ -1,6 +1,8 @@
+/* eslint-disable no-console */
 const express = require('express');
 const mysql = require('mysql');
 const cors = require('cors');
+
 const app = express();
 const { db , Shoes, Looks, Shares } = require('../database');
 
@@ -85,10 +87,12 @@ app.get('/shares/:id', (req,res) => {
   })
 })
 
-const PORT = 8001;
+const PORT = process.env.PORT || 8001;
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
-})
+});
 
 module.exports = app;
+
+//  misc comment

@@ -1,6 +1,13 @@
 language: node_js
 node_js:
-  - "6.13.0"
+- 6.13.0
+services:
+  - mysql
 cache:
   directories:
-    - "node_modules"
+  - node_modules
+before_install:
+- openssl aes-256-cbc -K $encrypted_4aa93aae2784_key -iv $encrypted_4aa93aae2784_iv
+  -in config.js.enc -out config.js -d
+- mysql -u root < database/schema.sql
+- node database/seed.js

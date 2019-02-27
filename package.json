@@ -11,7 +11,8 @@
     "start": "nodemon server/index.js",
     "dev:react": "webpack -d --watch",
     "db:setup": "node database/seed.js",
-    "test": "jest --watchAll --forceExit",
+    "test": "jest --forceExit",
+    "test:kelly": "jest --watchAll --forceExit",
     "debug": "jest --debug",
     "jest:cache": "jest --clearCache"
   },

@@ -52,6 +52,7 @@
     "eslint-plugin-react": "^7.12.4",
     "jest": "^24.1.0",
     "jsdom": "^13.2.0",
+    "request": "^2.88.0",
     "supertest": "^3.4.2",
     "webpack": "^4.29.1",
     "webpack-cli": "^3.2.3"
@@ -66,9 +67,6 @@
     ],
     "testPathIgnorePatterns": [
       "<rootDir>/node_modules/"
-    ],
-    "moduleDirectories": [
-      "node_modules"
     ],
     "transform": {
       "^.+\\.jsx?$": "babel-jest"

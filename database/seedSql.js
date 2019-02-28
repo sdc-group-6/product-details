@@ -26,5 +26,7 @@ const executeSeed = (remaining, position, env) => {
   });
 };
 
-executeSeed(10000, 1, knexTest);
+module.exports = executeSeed;
+
+// executeSeed(10000, 1, knexTest);
 

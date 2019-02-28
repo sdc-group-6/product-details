@@ -2,6 +2,10 @@ const request = require('supertest');
 const app = require('../../server/server.js');
 require('iconv-lite').encodingExists('foo');
 const db = require('../../database/index.js');
+const config = require('../../knexfile.js');
+const configTest = config.test;
+const knexTest = require('knex')(configTest);
+const executeSeed = require('../../database/seedSql');
 
 const PORT = process.env.PORT || 3000;
 let server;
@@ -9,6 +13,11 @@ let server;
 beforeAll(() => {
   server = app.listen(PORT, () => {
     console.log(`listening on ${PORT}`);
+  });
+  return db.migrate.rollback([config]).then(() => {
+    return db.migrate.latest([config]);
+  }).then(() => {
+    executeSeed(2500, 1, knexTest);
   });
 });
 

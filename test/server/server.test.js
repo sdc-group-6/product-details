@@ -1,6 +1,20 @@
 const request = require('supertest');
-const app = require('../../server/index.js');
+const app = require('../../server/server.js');
 require('iconv-lite').encodingExists('foo');
+
+const PORT = process.env.PORT || 3000;
+let server;
+
+beforeAll(() => {
+  server = app.listen(PORT, () => {
+    console.log(`listening on ${PORT}`);
+  });
+});
+
+afterAll((done) => {
+  server.close();
+  done();
+});
 
 describe('Express server should route properly', () => {
   it('should respond to GET shoes', (done) => {
@@ -18,7 +32,7 @@ describe('Express server should route properly', () => {
     .get('/shoes/shoe3')
     .expect( res => {
       expect(res.statusCode).toBe(200);
-      expect(Object.keys(JSON.parse(res.text)).length).toBe(10);
+      expect(Object.keys(JSON.parse(res.text)).length).toBe(11);
     })
     .end(done);
   })
@@ -28,7 +42,7 @@ describe('Express server should route properly', () => {
     .get('/looks/jacket5')
     .expect( res => {
       expect(res.statusCode).toBe(200);
-      expect(Object.keys(JSON.parse(res.text)).length).toBeGreaterThan(4)
+      expect(Object.keys(JSON.parse(res.text)).length).toBeGreaterThan(3)
     })
     .end(done);
   })
@@ -38,7 +52,7 @@ describe('Express server should route properly', () => {
     .get('/shares/shirt20')
     .expect( res => {
       expect(res.statusCode).toBe(200);
-      expect(Object.keys(JSON.parse(res.text)).length).toBeGreaterThan(5)
+      expect(Object.keys(JSON.parse(res.text)).length).toBeGreaterThan(4)
     })
     .end(done);
   })

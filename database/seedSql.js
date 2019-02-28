@@ -6,8 +6,8 @@ const knexTest = require('knex')(configTest);
 const seedGenerator = require('./seedGenerator.js');
 
 const executeSeed = (remaining, position, env) => {
-  let chunkSize = 40; //must be multiple of 4
-  let chunk = Math.min(remaining, 400);
+  let chunkSize = 400; //must be multiple of 4
+  let chunk = Math.min(remaining, chunkSize);
   let data = seedGenerator(chunk, position, true);
   return env.batchInsert('products', data.products).then(() => {
     return env.batchInsert('looks', data.looks);

@@ -112,7 +112,7 @@ const seedGenerator = (recordCount, idStart, sql = true) => {
         id: type + (i + idStart),
         type: type,
         name: getProdName(),
-        imgfile: getImageUrl(),
+        img_url: getImageUrl(),
         short_desc: getDesc(1),
         long_desc: getDesc(7),
         category: getCategory(),
@@ -179,10 +179,19 @@ const seedGenerator = (recordCount, idStart, sql = true) => {
 
   looksTableData();
 
+  const sharesTableData = () => {
+    shares = [];
+    for (let i = 0; i < recordCount; i++) {
+      shares.push({ usr: getUsername(), img: getImageUrl() });
+    }
+  };
+
+  sharesTableData();
+
   return { products, looks, shares };
 };
 
 module.exports = seedGenerator;
 
 // console.log(seedGenerator(10, 1));
-console.log(seedGenerator(10, 1, false).products[2]);
+// console.log(seedGenerator(10, 1, false).products[2]);

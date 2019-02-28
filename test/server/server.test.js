@@ -1,6 +1,7 @@
 const request = require('supertest');
 const app = require('../../server/server.js');
 require('iconv-lite').encodingExists('foo');
+const db = require('../../database/index.js');
 
 const PORT = process.env.PORT || 3000;
 let server;
@@ -13,6 +14,7 @@ beforeAll(() => {
 
 afterAll((done) => {
   server.close();
+  db.destroy();
   done();
 });
 

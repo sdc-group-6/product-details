@@ -29,8 +29,11 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const id = Math.floor(Math.random() * (101));
-    this.getOne(11);
+    const randomShoe = 'shoe' + Math.ceil(Math.random() * 2500);
+    const query = window.location.search || `?p=${randomShoe}`;
+    const queryStart = query.indexOf('=') + 1;
+    const productId = queryStart === 0 ? query.substring(1) : query.substring(queryStart);
+    this.getOne(productId);
   }
 
   getAll() {
@@ -41,7 +44,7 @@ class App extends Component {
       })
       .catch(err => {
         console.log('ERROR: ', err);
-      })
+      });
   }
 
   getOne(id) {
@@ -66,7 +69,17 @@ class App extends Component {
   getLooks(id) {
     axios.get(`http://localhost:8001/looks/${id}`)
     .then( looks => {
-      looks = looks.data;
+      looks = {
+        pant_name: looks.data[1].name,
+        pant_url: looks.data[1].img_url,
+        pant_price: looks.data[1].price,
+        shirt_name: looks.data[2].name,
+        shirt_url: looks.data[2].img_url,
+        shirt_price: looks.data[2].price,
+        jacket_name: looks.data[0].name,
+        jacket_url: looks.data[0].img_url,
+        jacket_price: looks.data[0].price
+      };
       this.setState({ looks });
     })
     .catch( err => {
@@ -77,7 +90,19 @@ class App extends Component {
   getShares(id) {
     axios.get(`http://localhost:8001/shares/${id}`)
     .then( shares => {
-      shares = shares.data;
+      console.log('shares: ', shares.data);
+      shares = {
+        user1: shares.data[0].user,
+        img1: shares.data[0].img,
+        user2: shares.data[1].user,
+        img2: shares.data[1].img,
+        user3: shares.data[2].user,
+        img3: shares.data[2].img,
+        user4: shares.data[3].user,
+        img4: shares.data[3].img,
+        user5: shares.data[4].user,
+        img5: shares.data[4].img,
+      };
       this.setState({ shares });
     })
     .catch( err => {

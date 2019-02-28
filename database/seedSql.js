@@ -5,7 +5,7 @@ const knexDev = require('knex')(configDev);
 const knexTest = require('knex')(configTest);
 const seedGenerator = require('./seedGenerator.js');
 
-const executeSeed = (remaining, position, env) => {
+const executeSeed = (remaining, position, env, callback = () => console.log('Database seeded!')) => {
   let chunkSize = 400; //must be multiple of 4
   let chunk = Math.min(remaining, chunkSize);
   let data = seedGenerator(chunk, position, true);
@@ -17,14 +17,15 @@ const executeSeed = (remaining, position, env) => {
     let newRemaining = remaining - chunk;
     let newPosition = position + chunkSize / 4;
     if (newRemaining === 0) {
-      console.log('database seed complete!');
       env.destroy();
-      return;
+      callback();
     } else {
-      executeSeed(newRemaining, newPosition, env);
+      executeSeed(newRemaining, newPosition, env, callback);
     }
   });
 };
 
-executeSeed(10000, 1, knexTest);
+module.exports = executeSeed;
+
+// executeSeed(10000, 1, knexTest);
 

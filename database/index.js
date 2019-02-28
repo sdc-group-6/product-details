@@ -11,6 +11,6 @@ var knex = require('knex')(configEnv);
 
 module.exports = knex;
 
-// if (process.env.NODE_ENV !== 'test') {
-//   knex.migrate.latest([config]);
-// }
+if (process.env.NODE_ENV !== 'test') {
+  knex.migrate.latest([config]);
+}

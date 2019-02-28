@@ -10,9 +10,10 @@ app.use(cors({
 }));
 
 let randomImg = () => {
+  let randomMax = process.env.NODE_ENV === 'test' ? 200 : 10000000;
   var arr = [];
   for (var i = 0; i < 18; i++) {
-    arr.push('shoe' + Math.ceil(Math.random() * 2500));
+    arr.push('shoe' + Math.ceil(Math.random() * randomMax));
   }
   return arr;
 };
@@ -51,7 +52,12 @@ app.get('/looks/:id', (req, res) => {
 });
 
 app.get('/shares/:id', (req,res) => {
-  let startIndex = Math.ceil(Math.random() * 2500);
+  let startIndex;
+  if (process.env.NODE_ENV === 'test') {
+    startIndex = Math.ceil(Math.random() * 200);
+  } else {
+    startIndex = Math.ceil(Math.random() * 1000000);
+  }
   return db.select().from('shares').limit(5).offset(startIndex).then((share) => {
     res.json(share);
   }).catch((err) => {

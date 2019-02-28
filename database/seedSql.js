@@ -18,6 +18,7 @@ const executeSeed = (remaining, position, env) => {
     let newPosition = position + chunkSize / 4;
     if (newRemaining === 0) {
       console.log('database seed complete!');
+      env.destroy();
       return;
     } else {
       executeSeed(newRemaining, newPosition, env);
@@ -25,5 +26,5 @@ const executeSeed = (remaining, position, env) => {
   });
 };
 
-executeSeed(100000, 1, knexDev);
+executeSeed(10000, 1, knexTest);
 

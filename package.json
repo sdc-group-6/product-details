@@ -10,7 +10,7 @@
   "scripts": {
     "start": "nodemon server/index.js",
     "dev:react": "webpack -d --watch",
-    "db:setup": "node database/seed.js",
+    "sql:setup": "node database/seedSql.js",
     "test": "jest --forceExit",
     "test:kelly": "jest --watchAll --forceExit",
     "debug": "jest --debug",

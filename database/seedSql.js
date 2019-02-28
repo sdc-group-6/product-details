@@ -24,8 +24,8 @@ const executeSeed = (remaining, position, env, callback = () => console.log('Dat
     }
   });
 };
+executeSeed(10000000, 1, knexDev);
 
 module.exports = executeSeed;
 
-// executeSeed(10000, 1, knexTest);
 

@@ -21,6 +21,7 @@ exports.up = function(knex, Promise) {
       table.string('jacket_id', 15).references('id').inTable('products');
     }),
     knex.schema.createTable('shares', (table) => {
+      table.increments('shareId').primary();
       table.string('user', 40);
       table.string('img', 100);
     })

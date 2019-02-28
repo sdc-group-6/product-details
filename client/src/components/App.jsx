@@ -33,6 +33,7 @@ class App extends Component {
     const query = window.location.search || `?p=${randomShoe}`;
     const queryStart = query.indexOf('=') + 1;
     const productId = queryStart === 0 ? query.substring(1) : query.substring(queryStart);
+    console.log('SERVING PAGE FOR PRODUCT ID: ', productId);
     this.getOne(productId);
   }
 
@@ -90,7 +91,6 @@ class App extends Component {
   getShares(id) {
     axios.get(`http://localhost:8001/shares/${id}`)
     .then( shares => {
-      console.log('shares: ', shares.data);
       shares = {
         user1: shares.data[0].user,
         img1: shares.data[0].img,

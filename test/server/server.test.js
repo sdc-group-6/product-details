@@ -15,7 +15,7 @@ describe('Express server should route properly', () => {
 
   it('should respond to GET /shoes/:shoeId', (done) => {
     request(app)
-    .get('/shoes/3')
+    .get('/shoes/shoe3')
     .expect( res => {
       expect(res.statusCode).toBe(200);
       expect(Object.keys(JSON.parse(res.text)).length).toBe(10);
@@ -25,17 +25,17 @@ describe('Express server should route properly', () => {
 
   it('should respond to GET /looks/:id', (done) => {
     request(app)
-    .get('/looks/5')
+    .get('/looks/jacket5')
     .expect( res => {
       expect(res.statusCode).toBe(200);
-      expect(Object.keys(JSON.parse(res.text)).length).toBeGreaterThan(5)
+      expect(Object.keys(JSON.parse(res.text)).length).toBeGreaterThan(4)
     })
     .end(done);
   })
 
   it('should respond to GET /shares/:id', (done) => {
     request(app)
-    .get('/shares/20')
+    .get('/shares/shirt20')
     .expect( res => {
       expect(res.statusCode).toBe(200);
       expect(Object.keys(JSON.parse(res.text)).length).toBeGreaterThan(5)

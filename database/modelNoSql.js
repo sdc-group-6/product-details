@@ -32,7 +32,7 @@ let products = new mongoose.Schema({
 });
 
 let shares = new mongoose.Schema({
-  id: { type: Number, default: 0 },
+  id: { type: Number, index: true },
   user: String,
   img: String
 });

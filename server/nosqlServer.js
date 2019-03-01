@@ -33,55 +33,47 @@ app.get('/shoes', (req, res) => {
   });
 });
 
-/*
 app.get('/shoes/:shoeId', (req, res) => {
   let queryStartTime = new Date();
   let id = req.params.shoeId;
-  return db.first().from('products').where('id', id).then((shoe) => {
-    res.json(shoe);
-    console.log(`Product Details SQL Query Time: ${new Date() - queryStartTime}ms for product id: ${id}`);
-  }).catch((err) => {
-    console.log('ERROR: ', err);
+  Product.findOne({ id: id }, (err, shoe) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.json(shoe);
+      console.log(`Product Details SQL Query Time: ${new Date() - queryStartTime}ms for product id: ${id}`);
+    }
   });
 });
 
 app.get('/looks/:id', (req, res) => {
   let queryStartTime = new Date();
   let id = req.params.id;
-  let idType = id.slice(0, 4) === 'shoe' ? 'shoe' :
-               id.slice(0, 4) === 'shir' ? 'shirt' :
-               id.slice(0, 4) === 'pant' ? 'pant' : 'jacket';
-  return db.first().from('looks').where(idType + '_id', id).then((looks) => {
-    let search = [looks.shoe_id, looks.shirt_id, looks.pant_id, looks.jacket_id];
-    return db.select('type', 'name', 'img_url', 'price').from('products').whereIn('id', search);
-  }).then((look) => {
-    res.json(look);
-    console.log(`Looks SQL Query Time: ${new Date() - queryStartTime}ms for product id: ${id}`);
-  }).catch((err) => {
-    console.log('ERROR: ', err);
+  Product.findOne({ id: id }, (err, shoe) => {
+    if (err) {
+      console.log(err);
+    } else {
+      let formattedResponse = [
+        { type: shoe.completeLook[0].type1, name: shoe.completeLook[0].name1, img_url: shoe.completeLook[0].img_url1, price: shoe.completeLook[0].price1 },
+        { type: shoe.completeLook[0].type2, name: shoe.completeLook[0].name2, img_url: shoe.completeLook[0].img_url2, price: shoe.completeLook[0].price2 },
+        { type: shoe.completeLook[0].type3, name: shoe.completeLook[0].name3, img_url: shoe.completeLook[0].img_url3, price: shoe.completeLook[0].price3 }
+      ];
+      res.json(formattedResponse);
+      console.log(`Looks SQL Query Time: ${new Date() - queryStartTime}ms for product id: ${id}`);
+    }
   });
 });
 
 app.get('/shares/:id', (req,res) => {
   let queryStartTime = new Date();
-  let maxIndex;
-  let selections = [];
-  if (process.env.NODE_ENV === 'test') {
-    maxIndex = 200;
-  } else {
-    maxIndex = 1000000;
-  }
-  for (let i = 0; i < 5; i++) {
-    selections.push(Math.ceil(Math.random() * maxIndex));
-  }
-  return db.select().from('shares').whereIn('shareId', selections).then((share) => {
-    res.json(share);
-    console.log(`Shares SQL Query Time: ${new Date() - queryStartTime}ms for 5 random shares`);
-  }).catch((err) => {
-    console.log('ERROR: ', err);
+  Share.aggregate([{ $sample: { size: 5 } }], (err, share) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.json(share);
+      console.log(`Shares SQL Query Time: ${new Date() - queryStartTime}ms for 5 random shares`);
+    }
   });
 });
-
-*/
 
 module.exports = app;

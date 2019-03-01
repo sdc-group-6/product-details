@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 let databaseName = process.env.NODE_ENV === 'test' ? 'adidasnewtest' : 'adidasnewdev';
 
-mongoose.connect(`mongodb://localhost/${databaseName}`);
+mongoose.connect(`mongodb://localhost/${databaseName}`, { useNewUrlParser: true });
  
 const db = mongoose.connection;
 

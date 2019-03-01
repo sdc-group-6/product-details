@@ -194,7 +194,11 @@ const seedGenerator = (recordCount, idStart, sql = true) => {
   const sharesTableData = () => {
     shares = [];
     for (let i = 0; i < recordCount; i++) {
-      shares.push({ user: getUsername(), img: getImageUrl() });
+      if (sql) {
+        shares.push({ user: getUsername(), img: getImageUrl() });
+      } else {
+        shares.push({ id: i + idStart, user: getUsername(), img: getImageUrl() });
+      }
     }
   };
 

@@ -17,13 +17,13 @@ Abibas is a recreation of Adidas that designs and manufactures shoes, clothing, 
 
 ## API
 
-> /shoes (GET) - Details on 18 products including name, description, image url, etc.
-> /shoes/:productId (GET) - Details on product ID in query
-> /looks/:productId (GET) - Suggested products to round out the outfit
-> /shares (GET) - Mock instagram (picture and username)
-> /shoes/:productId (POST) - Add a product to the database
-> /shoes/:productId (PATCH) - Make partial modifications to the specified product
-> /shoes/:productId (DELETE) - Delete the specified product from the database
+- /shoes (GET) - Details on 18 products including name, description, image url, etc.
+- /shoes/:productId (GET) - Details on product ID in query
+- /looks/:productId (GET) - Suggested products to round out the outfit
+- /shares (GET) - Mock instagram (picture and username)
+- /shoes/:productId (POST) - Add a product to the database
+- /shoes/:productId (PATCH) - Make partial modifications to the specified product
+- /shoes/:productId (DELETE) - Delete the specified product from the database
 
 ## Requirements
 

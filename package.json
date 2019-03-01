@@ -2,14 +2,17 @@
   "name": "adidas-product-specs",
   "version": "1.0.0",
   "description": "",
-  "author": "Kelly Hudiono",
+  "author": "Ronny Woods",
   "license": "ISC",
   "engines": {
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "nodemon server/index.js",
-    "dev:react": "webpack -d --watch",
+    "start:dev": "nodemon server/index.js",
+    "start": "node server/index.js",
+    "react:dev": "webpack -d --watch",
+    "sql:refresh": "knex migrate:rollback | knex migrate:latest",
+    "sql:refresh-test": "knex migrate:rollback --env test | knex migrate:latest --env test",
     "sql:setup": "node database/seedSql.js",
     "test": "jest --forceExit",
     "test:kelly": "jest --watchAll --forceExit",
@@ -26,13 +29,11 @@
     "jquery": "^3.3.1",
     "knex": "^0.16.3",
     "mysql": "^2.16.0",
-    "mysql2": "^1.6.4",
     "prop-types": "^15.7.2",
     "react": "^16.7.0",
     "react-bootstrap": "^1.0.0-beta.5",
     "react-dom": "^16.7.0",
-    "react-rating": "^1.6.2",
-    "sequelize": "^4.42.0"
+    "react-rating": "^1.6.2"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",

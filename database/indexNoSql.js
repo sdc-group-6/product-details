@@ -4,5 +4,5 @@ let databaseName = process.env.NODE_ENV === 'test' ? 'adidasnewtest' : 'adidasne
 mongoose.connect(`mongodb://localhost/${databaseName}`);
  
 const db = mongoose.connection;
- 
+
 module.exports = db;

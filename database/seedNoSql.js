@@ -1,52 +1,14 @@
 const mongoose = require('mongoose');
 const db = require('./indexNoSql');
 const seedGenerator = require('./seedGenerator.js');
+const Product = require('./modelNoSql').Product;
+const Share = require('./modelNoSql').Share;
 
 db.on('error', function (err) {
   console.log('Mongo connection error', err);
 });
 db.once('open', function () {
   console.log('Connected to Mongo');
-  
-  let products = new mongoose.Schema({
-    id: String,
-    type: String,
-    name: String,
-    img_url: String,
-    short_desc: String,
-    long_desc: String,
-    category: String,
-    price: Number,
-    rating: Number,
-    review_count: Number,
-    details: String,
-    completeLook: [{
-      id1: String,
-      type1: String,
-      name1: String,
-      img_url1: String,
-      price1: Number,
-      id2: String,
-      type2: String,
-      name2: String,
-      img_url2: String,
-      price2: Number,
-      id3: String,
-      type3: String,
-      name3: String,
-      img_url3: String,
-      price3: Number
-    }]
-  });
-
-  let shares = new mongoose.Schema({
-    id: Number,
-    user: String,
-    img: String
-  });
-
-  let Product = mongoose.model('Product', products);
-  let Share = mongoose.model('Share', shares);
   
   const executeSeed = (remaining, position, callback = () => console.log('Database seeded!')) => {
     let chunkSize = 800; //must be multiple of 4

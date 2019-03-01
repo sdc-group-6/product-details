@@ -1,4 +1,6 @@
-const db = require('./db');
+const mongoose = require('mongoose');
+const db = require('./indexNoSql');
+const seedGenerator = require('./seedGenerator.js');
 
 db.on('error', function (err) {
   console.log('Mongo connection error', err);
@@ -36,6 +38,34 @@ db.once('open', function () {
       price3: Number
     }]
   });
+
+  let shares = new mongoose.Schema({
+    id: Number,
+    user: String,
+    img: String
+  });
+
+  let Product = mongoose.model('Product', products);
+  let Share = mongoose.model('Share', shares);
+  
+  const executeSeed = (remaining, position, callback = () => console.log('Database seeded!')) => {
+    let chunkSize = 800; //must be multiple of 4
+    let chunk = Math.min(remaining, chunkSize);
+    let data = seedGenerator(chunk, position, false);
+    return Product.insertMany(data.products).then(() => {
+      return Share.insertMany(data.shares);
+    }).then(() => {
+      let newRemaining = remaining - chunk;
+      let newPosition = position + chunkSize / 4;
+      if (newRemaining === 0) {
+        db.close();
+        callback();
+      } else {
+        executeSeed(newRemaining, newPosition, callback);
+      }
+    });
+  };
+  executeSeed(10000000, 1);
 
 });
 

@@ -14,6 +14,7 @@
     "sql:refresh": "knex migrate:rollback | knex migrate:latest",
     "sql:refresh-test": "knex migrate:rollback --env test | knex migrate:latest --env test",
     "sql:setup": "node database/seedSql.js",
+    "nosql:setup": "node database/seedNoSql.js",
     "test": "jest --forceExit",
     "test:kelly": "jest --watchAll --forceExit",
     "debug": "jest --debug",

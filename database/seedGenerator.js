@@ -150,28 +150,40 @@ const seedGenerator = (recordCount, idStart, sql = true) => {
         let product = products[i];
         if (i < shirtBeginIndex) {
           let prodNum = i + 1;
-          let shirtComplete = prodNum <= shirtCount ? products[shirtBeginIndex + prodNum - 1] : products[shirtBeginIndex];
-          let pantComplete = prodNum <= pantCount ? products[pantBeginIndex + prodNum - 1] : products[pantBeginIndex];
-          let jacketComplete = prodNum <= jacketCount ? products[jacketBeginIndex + prodNum - 1] : products[jacketBeginIndex];
-          product.completeLook = [shirtComplete, pantComplete, jacketComplete];
+          let shirt = prodNum <= shirtCount ? products[shirtBeginIndex + prodNum - 1] : products[shirtBeginIndex];
+          let pant = prodNum <= pantCount ? products[pantBeginIndex + prodNum - 1] : products[pantBeginIndex];
+          let jacket = prodNum <= jacketCount ? products[jacketBeginIndex + prodNum - 1] : products[jacketBeginIndex];
+          let shirtComplete = [shirt.id, shirt.type, shirt.name, shirt.img_url, shirt.price];
+          let pantComplete = [pant.id, pant.type, pant.name, pant.img_url, pant.price];
+          let jacketComplete = [jacket.id, jacket.type, jacket.name, jacket.img_url, jacket.price];
+          product.completeLook = [...shirtComplete, ...pantComplete, ...jacketComplete];
         } else if (i < shoeCount + shirtCount) {
           let prodNum = i + 1 - shoeCount;
-          let shoeComplete = prodNum <= shoeCount ? products[shoeBeginIndex + prodNum - 1] : products[shoeBeginIndex];
-          let pantComplete = prodNum <= pantCount ? products[pantBeginIndex + prodNum - 1] : products[pantBeginIndex];
-          let jacketComplete = prodNum <= jacketCount ? products[jacketBeginIndex + prodNum - 1] : products[jacketBeginIndex];
-          product.completeLook = [shoeComplete, pantComplete, jacketComplete];
+          let shoe = prodNum <= shoeCount ? products[shoeBeginIndex + prodNum - 1] : products[shoeBeginIndex];
+          let pant = prodNum <= pantCount ? products[pantBeginIndex + prodNum - 1] : products[pantBeginIndex];
+          let jacket = prodNum <= jacketCount ? products[jacketBeginIndex + prodNum - 1] : products[jacketBeginIndex];
+          let shoeComplete = [shoe.id, shoe.type, shoe.name, shoe.img_url, shoe.price];
+          let pantComplete = [pant.id, pant.type, pant.name, pant.img_url, pant.price];
+          let jacketComplete = [jacket.id, jacket.type, jacket.name, jacket.img_url, jacket.price];
+          product.completeLook = [...shoeComplete, ...pantComplete, ...jacketComplete];
         } else if (i < shoeCount + shirtCount + pantCount) {
           let prodNum = i + 1 - shoeCount - shirtCount;
-          let shoeComplete = prodNum <= shoeCount ? products[shoeBeginIndex + prodNum - 1] : products[shoeBeginIndex];
-          let shirtComplete = prodNum <= shirtCount ? products[shirtBeginIndex + prodNum - 1] : products[shirtBeginIndex];
-          let jacketComplete = prodNum <= jacketCount ? products[jacketBeginIndex + prodNum - 1] : products[jacketBeginIndex];
-          product.completeLook = [shoeComplete, shirtComplete, jacketComplete];
+          let shoe = prodNum <= shoeCount ? products[shoeBeginIndex + prodNum - 1] : products[shoeBeginIndex];
+          let shirt = prodNum <= shirtCount ? products[shirtBeginIndex + prodNum - 1] : products[shirtBeginIndex];
+          let jacket = prodNum <= jacketCount ? products[jacketBeginIndex + prodNum - 1] : products[jacketBeginIndex];
+          let shoeComplete = [shoe.id, shoe.type, shoe.name, shoe.img_url, shoe.price];
+          let shirtComplete = [shirt.id, shirt.type, shirt.name, shirt.img_url, shirt.price];
+          let jacketComplete = [jacket.id, jacket.type, jacket.name, jacket.img_url, jacket.price];
+          product.completeLook = [...shoeComplete, ...shirtComplete, ...jacketComplete];
         } else {
           let prodNum = i + 1 - shoeCount - shirtCount - pantCount;
-          let shoeComplete = prodNum <= shoeCount ? products[shoeBeginIndex + prodNum - 1] : products[shoeBeginIndex];
-          let shirtComplete = prodNum <= shirtCount ? products[shirtBeginIndex + prodNum - 1] : products[shirtBeginIndex];
-          let pantComplete = prodNum <= pantCount ? products[pantBeginIndex + prodNum - 1] : products[pantBeginIndex];
-          product.completeLook = [shoeComplete, shirtComplete, pantComplete];
+          let shoe = prodNum <= shoeCount ? products[shoeBeginIndex + prodNum - 1] : products[shoeBeginIndex];
+          let shirt = prodNum <= shirtCount ? products[shirtBeginIndex + prodNum - 1] : products[shirtBeginIndex];
+          let pant = prodNum <= pantCount ? products[pantBeginIndex + prodNum - 1] : products[pantBeginIndex];
+          let shoeComplete = [shoe.id, shoe.type, shoe.name, shoe.img_url, shoe.price];
+          let shirtComplete = [shirt.id, shirt.type, shirt.name, shirt.img_url, shirt.price];
+          let pantComplete = [pant.id, pant.type, pant.name, pant.img_url, pant.price];
+          product.completeLook = [...shoeComplete, ...shirtComplete, ...pantComplete];
         }
       }
     }

@@ -153,25 +153,25 @@ const seedGenerator = (recordCount, idStart, sql = true) => {
           let shirtComplete = prodNum <= shirtCount ? products[shirtBeginIndex + prodNum - 1] : products[shirtBeginIndex];
           let pantComplete = prodNum <= pantCount ? products[pantBeginIndex + prodNum - 1] : products[pantBeginIndex];
           let jacketComplete = prodNum <= jacketCount ? products[jacketBeginIndex + prodNum - 1] : products[jacketBeginIndex];
-          product.completeLook = { shirtComplete, pantComplete, jacketComplete };
+          product.completeLook = [shirtComplete, pantComplete, jacketComplete];
         } else if (i < shoeCount + shirtCount) {
           let prodNum = i + 1 - shoeCount;
           let shoeComplete = prodNum <= shoeCount ? products[shoeBeginIndex + prodNum - 1] : products[shoeBeginIndex];
           let pantComplete = prodNum <= pantCount ? products[pantBeginIndex + prodNum - 1] : products[pantBeginIndex];
           let jacketComplete = prodNum <= jacketCount ? products[jacketBeginIndex + prodNum - 1] : products[jacketBeginIndex];
-          product.completeLook = { shoeComplete, pantComplete, jacketComplete };
+          product.completeLook = [shoeComplete, pantComplete, jacketComplete];
         } else if (i < shoeCount + shirtCount + pantCount) {
           let prodNum = i + 1 - shoeCount - shirtCount;
           let shoeComplete = prodNum <= shoeCount ? products[shoeBeginIndex + prodNum - 1] : products[shoeBeginIndex];
           let shirtComplete = prodNum <= shirtCount ? products[shirtBeginIndex + prodNum - 1] : products[shirtBeginIndex];
           let jacketComplete = prodNum <= jacketCount ? products[jacketBeginIndex + prodNum - 1] : products[jacketBeginIndex];
-          product.completeLook = { shoeComplete, shirtComplete, jacketComplete };
+          product.completeLook = [shoeComplete, shirtComplete, jacketComplete];
         } else {
           let prodNum = i + 1 - shoeCount - shirtCount - pantCount;
           let shoeComplete = prodNum <= shoeCount ? products[shoeBeginIndex + prodNum - 1] : products[shoeBeginIndex];
           let shirtComplete = prodNum <= shirtCount ? products[shirtBeginIndex + prodNum - 1] : products[shirtBeginIndex];
           let pantComplete = prodNum <= pantCount ? products[pantBeginIndex + prodNum - 1] : products[pantBeginIndex];
-          product.completeLook = { shoeComplete, shirtComplete, pantComplete };
+          product.completeLook = [shoeComplete, shirtComplete, pantComplete];
         }
       }
     }

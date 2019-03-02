@@ -109,7 +109,7 @@ app.post('/product', urlencodedParser, (req, res) => {
     new Product(newProd).save((err, product) => {
       if (err) {
         console.log('Error: ', err);
-        res.status(406).send('Error: ', err);
+        res.status(406).send();
       } else {
         res.sendStatus(201);
         console.log(`Time to Post a new product: ${new Date() - queryStartTime}ms`);
@@ -125,7 +125,7 @@ app.put('/product/:id', urlencodedParser, (req, res) => {
   Product.findOne({ id: id }, (err, product) => {
     if (err) {
       console.log('Error: ', err);
-      res.status(404).send('Error: ', err);
+      res.status(404).send();
     } else {
       for (var key in update) {
         product[key] = update[key];
@@ -133,7 +133,7 @@ app.put('/product/:id', urlencodedParser, (req, res) => {
       product.save((err, product) => {
         if (err) {
           console.log('Error: ', err);
-          res.status(406).send('Error: ', err);
+          res.status(406).send();
         } else {
           res.sendStatus(200);
           console.log(`Time to Update a product: ${new Date() - queryStartTime}ms`);
@@ -149,7 +149,7 @@ app.delete('/product/:id', (req, res) => {
   Product.deleteMany({ id: id }, (err, product) => {
     if (err) {
       console.log('Error: ', err);
-      res.status(404).send('Error: ', err);
+      res.status(404).send();
     } else {
       res.sendStatus(202);
       console.log(`Time to Delete a product: ${new Date() - queryStartTime}ms`);

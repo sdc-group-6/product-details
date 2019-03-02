@@ -30,7 +30,7 @@ app.get('/shoes', (req, res) => {
       console.log(err);
     } else {
       res.json(shoes);
-      console.log(`Shoes SQL Query Time: ${new Date() - queryStartTime}ms for 18 randomized shoes`);
+      console.log(`Shoes noSQL Query Time: ${new Date() - queryStartTime}ms for 18 randomized shoes`);
     }
   });
 });
@@ -45,7 +45,7 @@ app.get('/shoes/:shoeId', (req, res) => {
       res.sendStatus(404);
     } else {
       res.json(shoe);
-      console.log(`Product Details SQL Query Time: ${new Date() - queryStartTime}ms for product id: ${id}`);
+      console.log(`Product Details noSQL Query Time: ${new Date() - queryStartTime}ms for product id: ${id}`);
     }
   });
 });
@@ -66,7 +66,7 @@ app.get('/looks/:id', (req, res) => {
         { type: shoe.completeLook[0].type3, name: shoe.completeLook[0].name3, img_url: shoe.completeLook[0].img_url3, price: shoe.completeLook[0].price3 }
       ];
       res.json(formattedResponse);
-      console.log(`Looks SQL Query Time: ${new Date() - queryStartTime}ms for product id: ${id}`);
+      console.log(`Looks noSQL Query Time: ${new Date() - queryStartTime}ms for product id: ${id}`);
     }
   });
 });
@@ -88,7 +88,7 @@ app.get('/shares/:id', (req, res) => {
       console.log(err);
     } else {
       res.json(share);
-      console.log(`Shares SQL Query Time: ${new Date() - queryStartTime}ms for 5 random shares`);
+      console.log(`Shares noSQL Query Time: ${new Date() - queryStartTime}ms for 5 random shares`);
     }
   });
 });

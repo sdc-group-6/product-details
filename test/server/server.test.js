@@ -1,37 +1,42 @@
 const request = require('supertest');
-const app = require('../../server/server.js');
+const app = require('../../server/nosqlServer.js');
 require('iconv-lite').encodingExists('foo');
 // const db = require('../../database/index.js');
-const config = require('../../knexfile.js');
-const configTest = config.test;
-const knexTest = require('knex')(configTest);
-const executeSeed = require('../../database/seedSql');
+// const config = require('../../knexfile.js');
+// const configTest = config.test;
+// const knexTest = require('knex')(configTest);
+const mongoose = require('mongoose');
+const seedNoSql = require('../../database/seedNoSql.js');
+const Product = require('../../database/modelNoSql').Product;
+const Share = require('../../database/modelNoSql').Share;
 
-const PORT = process.env.PORT || 3000;
-let server;
+// const PORT = process.env.PORT || 3000;
+// let server;
 
-const executeSeedAsync = (records) => {
-  return new Promise((resolve) => {
-    executeSeed(records, 1, knexTest, resolve);
-  });
-};
+// beforeEach((done) => {
+//   server = app.listen(PORT, () => {
+//     console.log(`listening on ${PORT}`);
+//     done();
+//   });
+// });
 
-server = app.listen(PORT, () => {
-  console.log(`listening on ${PORT}`);
-});
+// afterEach((done) => {
+//   server.close(() => done());
+// });
 
-beforeAll(() => {
-  return knexTest.migrate.rollback([config]).then(() => {
-    return knexTest.migrate.latest([config]);
-  }).then(() => {
-    return executeSeedAsync(255);
+beforeAll((done) => {
+  seedNoSql(400, 1, () => {
+    console.log('Database Seeded!');
+    done();
   });
 });
 
 afterAll((done) => {
-  server.close();
-  knexTest.destroy();
-  done();
+  Product.deleteMany({}, () => {
+    Share.deleteMany({}, () => {
+      mongoose.disconnect(() => done());
+    });
+  });
 });
 
 describe('Express server should route properly', () => {
@@ -50,7 +55,7 @@ describe('Express server should route properly', () => {
     .get('/shoes/shoe3')
     .expect( res => {
       expect(res.statusCode).toBe(200);
-      expect(Object.keys(JSON.parse(res.text)).length).toBe(11);
+      expect(Object.keys(JSON.parse(res.text)).length).toBe(14);
     })
     .end(done);
   })
@@ -60,7 +65,7 @@ describe('Express server should route properly', () => {
     .get('/looks/jacket5')
     .expect( res => {
       expect(res.statusCode).toBe(200);
-      expect(Object.keys(JSON.parse(res.text)).length).toBeGreaterThan(3)
+      expect(JSON.parse(res.text).length).toBe(3);
     })
     .end(done);
   })

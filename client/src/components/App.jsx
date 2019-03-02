@@ -30,7 +30,7 @@ class App extends Component {
 
   componentDidMount() {
     const randomShoe = 'shoe' + Math.ceil(Math.random() * 2500);
-    const query = window.location.search || `?p=${randomShoe}`;
+    const query = typeof window === 'undefined' ? `?p=${randomShoe}` : window.location.search || `?p=${randomShoe}`;
     const queryStart = query.indexOf('=') + 1;
     const productId = queryStart === 0 ? query.substring(1) : query.substring(queryStart);
     console.log('SERVING PAGE FOR PRODUCT ID: ', productId);

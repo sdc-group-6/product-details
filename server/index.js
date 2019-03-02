@@ -1,4 +1,5 @@
-const app = require('./server.js');
+// const app = require('./server.js');
+const app = require('./nosqlServer.js');
 
 const PORT = process.env.NODE_ENV === 'test' ? process.env.PORT || 3000 : process.env.PORT || 8001;
 

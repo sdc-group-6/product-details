@@ -55,7 +55,7 @@ describe('Express server should route properly', () => {
     .get('/shoes/shoe3')
     .expect( res => {
       expect(res.statusCode).toBe(200);
-      expect(Object.keys(JSON.parse(res.text)).length).toBe(14);
+      expect(Object.keys(JSON.parse(res.text)).length).toBe(13);
     })
     .end(done);
   })

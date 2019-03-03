@@ -25,7 +25,7 @@ let randomImg = () => {
 app.get('/shoes', (req, res) => {
   let queryStartTime = new Date();
   let shoes = randomImg();
-  Product.find().where('id').in(shoes).exec((err, shoes) => {
+  Product.find().where('_id').in(shoes).exec((err, shoes) => {
     if (err) {
       console.log(err);
     } else {
@@ -38,7 +38,7 @@ app.get('/shoes', (req, res) => {
 app.get('/shoes/:shoeId', (req, res) => {
   let queryStartTime = new Date();
   let id = req.params.shoeId;
-  Product.findOne({ id: id }, (err, shoe) => {
+  Product.findOne({ _id: id }, (err, shoe) => {
     if (err) {
       console.log(err);
     } else if (!shoe) {
@@ -54,7 +54,7 @@ app.get('/shoes/:shoeId', (req, res) => {
 app.get('/looks/:id', (req, res) => {
   let queryStartTime = new Date();
   let id = req.params.id;
-  Product.findOne({ id: id }, (err, shoe) => {
+  Product.findOne({ _id: id }, (err, shoe) => {
     if (err) {
       console.log(err);
     } else if (!shoe) {
@@ -83,7 +83,7 @@ app.get('/shares/:id', (req, res) => {
   for (let i = 0; i < 5; i++) {
     selections.push(Math.ceil(Math.random() * maxIndex));
   }
-  Share.find().where('id').in(selections).exec((err, share) => {
+  Share.find().where('_id').in(selections).exec((err, share) => {
     if (err) {
       console.log(err);
     } else {
@@ -103,7 +103,7 @@ app.post('/product', urlencodedParser, (req, res) => {
     newProd.completeLook = [{ id1: 'shoe1', type1: 'shoe', img1: 'https://s3-us-west-2.amazonaws.com/shoeimagestresrayas/shoe1', price1: 100, id2: 'shoe2', type2: 'shoe', img2: 'https://s3-us-west-2.amazonaws.com/shoeimagestresrayas/shoe2', price2: 100, id3: 'shoe3', type3: 'shoe', img3: 'https://s3-us-west-2.amazonaws.com/shoeimagestresrayas/shoe3', price3: 100 }]
   }
   // make sure necessary data is included
-  if (!newProd.id || !newProd.type || !newProd.name || !newProd.img_url || !newProd.short_desc || !newProd.long_desc || !newProd.category || !newProd.price || !newProd.details) {
+  if (!newProd._id || !newProd.type || !newProd.name || !newProd.img_url || !newProd.short_desc || !newProd.long_desc || !newProd.category || !newProd.price || !newProd.details) {
     res.status(400).send('Please include all required fields');
   } else {
     new Product(newProd).save((err, product) => {
@@ -122,7 +122,7 @@ app.put('/product/:id', urlencodedParser, (req, res) => {
   let queryStartTime = new Date();
   let id = req.params.id;
   let update = req.body;
-  Product.findOne({ id: id }, (err, product) => {
+  Product.findOne({ _id: id }, (err, product) => {
     if (err) {
       console.log('Error: ', err);
       res.status(404).send();
@@ -146,7 +146,7 @@ app.put('/product/:id', urlencodedParser, (req, res) => {
 app.delete('/product/:id', (req, res) => {
   let queryStartTime = new Date();
   let id = req.params.id;
-  Product.deleteMany({ id: id }, (err, product) => {
+  Product.deleteMany({ _id: id }, (err, product) => {
     if (err) {
       console.log('Error: ', err);
       res.status(404).send();

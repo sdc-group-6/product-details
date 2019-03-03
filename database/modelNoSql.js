@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 let products = new mongoose.Schema({
-  id: { type: String, index: true },
+  _id: String,
   type: String,
   name: String,
   img_url: String,
@@ -32,7 +32,7 @@ let products = new mongoose.Schema({
 });
 
 let shares = new mongoose.Schema({
-  id: { type: Number, index: true },
+  _id: Number,
   user: String,
   img: String
 });

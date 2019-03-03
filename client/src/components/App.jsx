@@ -29,11 +29,11 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const randomShoe = 'shoe' + Math.ceil(Math.random() * 2500);
+    const randomShoeMax = process.env.NODE_ENV === 'test' ? 100 : 2499999;
+    const randomShoe = 'shoe' + Math.ceil(Math.random() * randomShoeMax);
     const query = typeof window === 'undefined' ? `?p=${randomShoe}` : window.location.search || `?p=${randomShoe}`;
     const queryStart = query.indexOf('=') + 1;
     const productId = queryStart === 0 ? query.substring(1) : query.substring(queryStart);
-    console.log('SERVING PAGE FOR PRODUCT ID: ', productId);
     this.getOne(productId);
   }
 
@@ -49,8 +49,10 @@ class App extends Component {
   }
 
   getOne(id) {
-    axios.get(`http://localhost:8001/shoes/${id}`)
+    // axios.get(`http://localhost:8001/shoes/${id}`)
+    axios.get(`/shoes/${id}`)
     .then( shoe => {
+      console.log('SHOE: ', shoe);
       shoe = shoe.data;
       this.getLooks(id);
       this.getShares(id);
@@ -68,7 +70,8 @@ class App extends Component {
   }
 
   getLooks(id) {
-    axios.get(`http://localhost:8001/looks/${id}`)
+    // axios.get(`http://localhost:8001/looks/${id}`)
+    axios.get(`/looks/${id}`)
     .then( looks => {
       looks = {
         pant_name: looks.data[1].name,
@@ -89,7 +92,8 @@ class App extends Component {
   }
 
   getShares(id) {
-    axios.get(`http://localhost:8001/shares/${id}`)
+    // axios.get(`http://localhost:8001/shares/${id}`)
+    axios.get(`/shares/${id}`)
     .then( shares => {
       shares = {
         user1: shares.data[0].user,

@@ -5,7 +5,7 @@ import Rating from 'react-rating';
 const LikeCard = props => (
   <div className="likes-card">
     {props.shoes.map(shoe => (
-      <div className="card" onClick={() => props.handleClick(shoe.id)} key={shoe.id}>
+      <div className="card" onClick={() => props.handleClick(shoe._id)} key={shoe._id}>
         <img className="card-img-top likes d-block" src={shoe.img_url} alt="adidas shoe" />
         <div className="card-body">
           <span className="like-type">{shoe.category}</span>

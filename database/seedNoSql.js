@@ -13,8 +13,8 @@ const seedNoSql = (remaining, position, callback = () => console.log('MongoDB se
     console.log('Connected to Mongo');
     
     const executeSeed = (remaining, position, callback) => {
-      console.log('executeSeed running');
-      let chunkSize = 800; //must be multiple of 4
+      console.log(`On item ${position * 4}`);
+      let chunkSize = 5000; // MUST be multiple of 4
       let chunk = Math.min(remaining, chunkSize);
       let data = seedGenerator(chunk, position, false);
       return Product.insertMany(data.products).then(() => {
@@ -23,7 +23,6 @@ const seedNoSql = (remaining, position, callback = () => console.log('MongoDB se
         let newRemaining = remaining - chunk;
         let newPosition = position + chunkSize / 4;
         if (newRemaining === 0) {
-          // db.close(() => callback());
           callback();
         } else {
           executeSeed(newRemaining, newPosition, callback);
@@ -35,9 +34,14 @@ const seedNoSql = (remaining, position, callback = () => console.log('MongoDB se
 
 };
 
+if (process.env.NODE_ENV !== 'test') {
+  seedNoSql(100000, 1, () => {
+    db.close(() => console.log('database seeded and closed!'));
+  });
+}
+
 module.exports = seedNoSql;
 
-// seedNoSql(10000000, 1);
 
 
 

@@ -109,7 +109,7 @@ const seedGenerator = (recordCount, idStart, sql = true) => {
   const prodTableData = (arr, numToAdd, type) => {
     for (let i = 0; i < numToAdd; i++) {
       arr.push({
-        id: type + (i + idStart),
+        _id: type + (i + idStart),
         type: type,
         name: getProdName(),
         img_url: getImageUrl(),
@@ -153,36 +153,36 @@ const seedGenerator = (recordCount, idStart, sql = true) => {
           let shirt = prodNum <= shirtCount ? products[shirtBeginIndex + prodNum - 1] : products[shirtBeginIndex];
           let pant = prodNum <= pantCount ? products[pantBeginIndex + prodNum - 1] : products[pantBeginIndex];
           let jacket = prodNum <= jacketCount ? products[jacketBeginIndex + prodNum - 1] : products[jacketBeginIndex];
-          let shirtComplete = { id1: shirt.id, type1: shirt.type, name1: shirt.name, img_url1: shirt.img_url, price1: shirt.price };
-          let pantComplete = { id2: pant.id, type2: pant.type, name2: pant.name, img_url2: pant.img_url, price2: pant.price };
-          let jacketComplete = { id3: jacket.id, type3: jacket.type, name3: jacket.name, img_url3: jacket.img_url, price3: jacket.price };
+          let shirtComplete = { id1: shirt._id, type1: shirt.type, name1: shirt.name, img_url1: shirt.img_url, price1: shirt.price };
+          let pantComplete = { id2: pant._id, type2: pant.type, name2: pant.name, img_url2: pant.img_url, price2: pant.price };
+          let jacketComplete = { id3: jacket._id, type3: jacket.type, name3: jacket.name, img_url3: jacket.img_url, price3: jacket.price };
           product.completeLook = [ Object.assign(shirtComplete, pantComplete, jacketComplete) ];
         } else if (i < shoeCount + shirtCount) {
           let prodNum = i + 1 - shoeCount;
           let shoe = prodNum <= shoeCount ? products[shoeBeginIndex + prodNum - 1] : products[shoeBeginIndex];
           let pant = prodNum <= pantCount ? products[pantBeginIndex + prodNum - 1] : products[pantBeginIndex];
           let jacket = prodNum <= jacketCount ? products[jacketBeginIndex + prodNum - 1] : products[jacketBeginIndex];
-          let shoeComplete = { id1: shoe.id, type1: shoe.type, name1: shoe.name, img_url1: shoe.img_url, price1: shoe.price };
-          let pantComplete = { id2: pant.id, type2: pant.type, name2: pant.name, img_url2: pant.img_url, price2: pant.price };
-          let jacketComplete = { id3: jacket.id, type3: jacket.type, name3: jacket.name, img_url3: jacket.img_url, price3: jacket.price };
+          let shoeComplete = { id1: shoe._id, type1: shoe.type, name1: shoe.name, img_url1: shoe.img_url, price1: shoe.price };
+          let pantComplete = { id2: pant._id, type2: pant.type, name2: pant.name, img_url2: pant.img_url, price2: pant.price };
+          let jacketComplete = { id3: jacket._id, type3: jacket.type, name3: jacket.name, img_url3: jacket.img_url, price3: jacket.price };
           product.completeLook = [ Object.assign(shoeComplete, pantComplete, jacketComplete) ];
         } else if (i < shoeCount + shirtCount + pantCount) {
           let prodNum = i + 1 - shoeCount - shirtCount;
           let shoe = prodNum <= shoeCount ? products[shoeBeginIndex + prodNum - 1] : products[shoeBeginIndex];
           let shirt = prodNum <= shirtCount ? products[shirtBeginIndex + prodNum - 1] : products[shirtBeginIndex];
           let jacket = prodNum <= jacketCount ? products[jacketBeginIndex + prodNum - 1] : products[jacketBeginIndex];
-          let shoeComplete = { id1: shoe.id, type1: shoe.type, name1: shoe.name, img_url1: shoe.img_url, price1: shoe.price };
-          let shirtComplete = { id2: shirt.id, type2: shirt.type, name2: shirt.name, img_url2: shirt.img_url, price2: shirt.price };
-          let jacketComplete = { id3: jacket.id, type3: jacket.type, name3: jacket.name, img_url3: jacket.img_url, price3: jacket.price };
+          let shoeComplete = { id1: shoe._id, type1: shoe.type, name1: shoe.name, img_url1: shoe.img_url, price1: shoe.price };
+          let shirtComplete = { id2: shirt._id, type2: shirt.type, name2: shirt.name, img_url2: shirt.img_url, price2: shirt.price };
+          let jacketComplete = { id3: jacket._id, type3: jacket.type, name3: jacket.name, img_url3: jacket.img_url, price3: jacket.price };
           product.completeLook = [ Object.assign(shoeComplete, shirtComplete, jacketComplete) ];
         } else {
           let prodNum = i + 1 - shoeCount - shirtCount - pantCount;
           let shoe = prodNum <= shoeCount ? products[shoeBeginIndex + prodNum - 1] : products[shoeBeginIndex];
           let shirt = prodNum <= shirtCount ? products[shirtBeginIndex + prodNum - 1] : products[shirtBeginIndex];
           let pant = prodNum <= pantCount ? products[pantBeginIndex + prodNum - 1] : products[pantBeginIndex];
-          let shoeComplete = { id1: shoe.id, type1: shoe.type, name1: shoe.name, img_url1: shoe.img_url, price1: shoe.price };
-          let shirtComplete = { id2: shirt.id, type2: shirt.type, name2: shirt.name, img_url2: shirt.img_url, price2: shirt.price };
-          let pantComplete = { id3: pant.id, type3: pant.type, name3: pant.name, img_url3: pant.img_url, price3: pant.price };
+          let shoeComplete = { id1: shoe._id, type1: shoe.type, name1: shoe.name, img_url1: shoe.img_url, price1: shoe.price };
+          let shirtComplete = { id2: shirt._id, type2: shirt.type, name2: shirt.name, img_url2: shirt.img_url, price2: shirt.price };
+          let pantComplete = { id3: pant._id, type3: pant.type, name3: pant.name, img_url3: pant.img_url, price3: pant.price };
           product.completeLook = [ Object.assign(shoeComplete, shirtComplete, pantComplete) ];
         }
       }
@@ -197,7 +197,7 @@ const seedGenerator = (recordCount, idStart, sql = true) => {
       if (sql) {
         shares.push({ user: getUsername(), img: getImageUrl() });
       } else {
-        shares.push({ id: i + idStart, user: getUsername(), img: getImageUrl() });
+        shares.push({ _id: i + (idStart - 1) * 4 + 1, user: getUsername(), img: getImageUrl() });
       }
     }
   };

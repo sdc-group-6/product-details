@@ -75,7 +75,7 @@ describe('Express server should route properly', () => {
     .get('/shares/shirt20')
     .expect( res => {
       expect(res.statusCode).toBe(200);
-      expect(Object.keys(JSON.parse(res.text)).length).toBeGreaterThan(4)
+      expect(Object.keys(JSON.parse(res.text)).length).toBeGreaterThan(4);
     })
     .end(done);
   })

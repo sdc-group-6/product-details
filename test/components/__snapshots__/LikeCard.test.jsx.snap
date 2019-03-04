@@ -6,7 +6,6 @@ exports[`LikeCard Component should match snapshot 1`] = `
 >
   <div
     className="card"
-    key="1"
     onClick={[Function]}
   >
     <img
@@ -72,7 +71,6 @@ exports[`LikeCard Component should match snapshot 1`] = `
   </div>
   <div
     className="card"
-    key="2"
     onClick={[Function]}
   >
     <img
@@ -138,7 +136,6 @@ exports[`LikeCard Component should match snapshot 1`] = `
   </div>
   <div
     className="card"
-    key="3"
     onClick={[Function]}
   >
     <img
@@ -204,7 +201,6 @@ exports[`LikeCard Component should match snapshot 1`] = `
   </div>
   <div
     className="card"
-    key="4"
     onClick={[Function]}
   >
     <img

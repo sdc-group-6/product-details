@@ -76,7 +76,7 @@ app.get('/shares/:id', (req, res) => {
   let maxIndex;
   let selections = [];
   if (process.env.NODE_ENV === 'test') {
-    maxIndex = 200;
+    maxIndex = 190;
   } else {
     maxIndex = 1000000;
   }

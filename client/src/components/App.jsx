@@ -52,7 +52,6 @@ class App extends Component {
     // axios.get(`http://localhost:8001/shoes/${id}`)
     axios.get(`/shoes/${id}`)
     .then( shoe => {
-      console.log('SHOE: ', shoe);
       shoe = shoe.data;
       this.getLooks(id);
       this.getShares(id);

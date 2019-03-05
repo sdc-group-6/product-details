@@ -8,7 +8,7 @@ const dbPw = process.env.NODE_ENV === 'test' ? credentials.testpw : credentials.
 // mongoose.connect(`mongodb://localhost/${databaseName}`, { useNewUrlParser: true });
 
 // using EC2 DB instance:
-mongoose.connect(`mongodb://${dbUser}:${dbPw}@3.94.57.92/${databaseName}`, { useNewUrlParser: true });
+mongoose.connect(`mongodb://${dbUser}:${dbPw}@3.90.50.238/${databaseName}`, { useNewUrlParser: true });
  
 const db = mongoose.connection;
 

@@ -8,8 +8,8 @@ services:
 cache:
   directories:
   - node_modules
-# before_script:
-# - mysql -e 'create database adidasnewtest;' -u root
+before_script:
+- mongo mydb_test --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
 before_install:
 - openssl aes-256-cbc -K $encrypted_4aa93aae2784_key -iv $encrypted_4aa93aae2784_iv
   -in config.js.enc -out config.js -d

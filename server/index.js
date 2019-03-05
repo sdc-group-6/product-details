@@ -1,3 +1,4 @@
+require('newrelic');
 // const app = require('./server.js');
 const app = require('./nosqlServer.js');
 

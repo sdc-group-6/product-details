@@ -28,6 +28,7 @@
     "express": "^4.16.4",
     "jquery": "^3.3.1",
     "mongoose": "^5.4.16",
+    "newrelic": "^5.6.0",
     "prop-types": "^15.7.2",
     "react": "^16.7.0",
     "react-bootstrap": "^1.0.0-beta.5",

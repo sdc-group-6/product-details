@@ -3,8 +3,6 @@ let databaseName = process.env.NODE_ENV === 'test' ? 'adidasnewtest' : 'adidasne
 const credentials = require('../config.js');
 const dbUser = process.env.NODE_ENV === 'test' ? credentials.testuser : credentials.user;
 const dbPw = process.env.NODE_ENV === 'test' ? credentials.testpw : credentials.pw;
-console.log('dbUser: ', dbUser);
-console.log('dbPw: ', dbPw);
 
 // using local database:
 // mongoose.connect(`mongodb://localhost/${databaseName}`, { useNewUrlParser: true });

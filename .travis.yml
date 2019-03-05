@@ -9,7 +9,8 @@ cache:
   directories:
   - node_modules
 before_script:
-- mongo mydb_test --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
+- sleep 15
+- mongo adidasnewtest --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
 before_install:
 - openssl aes-256-cbc -K $encrypted_4aa93aae2784_key -iv $encrypted_4aa93aae2784_iv
   -in config.js.enc -out config.js -d

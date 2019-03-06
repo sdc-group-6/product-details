@@ -49,16 +49,26 @@ class App extends Component {
   }
 
   getOne(id) {
-    // axios.get(`http://localhost:8001/shoes/${id}`)
     axios.get(`/shoes/${id}`)
     .then( shoe => {
       shoe = shoe.data;
-      this.getLooks(id);
+      let looks = {
+        pant_name: shoe.completeLook[0].name1,
+        pant_url: shoe.completeLook[0].img_url1,
+        pant_price: shoe.completeLook[0].price1,
+        shirt_name: shoe.completeLook[0].name2,
+        shirt_url: shoe.completeLook[0].img_url2,
+        shirt_price: shoe.completeLook[0].price2,
+        jacket_name: shoe.completeLook[0].name3,
+        jacket_url: shoe.completeLook[0].img_url3,
+        jacket_price: shoe.completeLook[0].price3
+      };
       this.getShares(id);
       this.getAll();
       this.setState({
         details: shoe.details.split(';'),
         shoe,
+        looks,
         desc: true,
         spec: false,
       });
@@ -68,30 +78,7 @@ class App extends Component {
     })
   }
 
-  getLooks(id) {
-    // axios.get(`http://localhost:8001/looks/${id}`)
-    axios.get(`/looks/${id}`)
-    .then( looks => {
-      looks = {
-        pant_name: looks.data[1].name,
-        pant_url: looks.data[1].img_url,
-        pant_price: looks.data[1].price,
-        shirt_name: looks.data[2].name,
-        shirt_url: looks.data[2].img_url,
-        shirt_price: looks.data[2].price,
-        jacket_name: looks.data[0].name,
-        jacket_url: looks.data[0].img_url,
-        jacket_price: looks.data[0].price
-      };
-      this.setState({ looks });
-    })
-    .catch( err => {
-      console.log('ERROR: ', err);
-    })
-  }
-
   getShares(id) {
-    // axios.get(`http://localhost:8001/shares/${id}`)
     axios.get(`/shares/${id}`)
     .then( shares => {
       shares = {

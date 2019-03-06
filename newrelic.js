@@ -51,5 +51,10 @@ exports.config = {
       'response.headers.setCookie*',
       'response.headers.x*'
     ]
+  },
+
+  error_collector: {
+    enabled: true,
+    ignore_status_codes: []
   }
 }

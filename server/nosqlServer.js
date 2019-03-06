@@ -23,20 +23,17 @@ let randomImg = () => {
 };
 
 app.get('/shoes', (req, res) => {
-  let queryStartTime = new Date();
   let shoes = randomImg();
   Product.find().where('_id').in(shoes).exec((err, shoes) => {
     if (err) {
       console.log(err);
     } else {
       res.json(shoes);
-      console.log(`Shoes noSQL Query Time: ${new Date() - queryStartTime}ms for 18 randomized shoes`);
     }
   });
 });
 
 app.get('/shoes/:shoeId', (req, res) => {
-  let queryStartTime = new Date();
   let id = req.params.shoeId;
   Product.findOne({ _id: id }, (err, shoe) => {
     if (err) {
@@ -45,34 +42,11 @@ app.get('/shoes/:shoeId', (req, res) => {
       res.sendStatus(404);
     } else {
       res.json(shoe);
-      console.log(`Product Details noSQL Query Time: ${new Date() - queryStartTime}ms for product id: ${id}`);
-    }
-  });
-});
-
-// this is unnecessary and can ultimately be removed (client recieves necessary data from shoes/shoeId API)
-app.get('/looks/:id', (req, res) => {
-  let queryStartTime = new Date();
-  let id = req.params.id;
-  Product.findOne({ _id: id }, (err, shoe) => {
-    if (err) {
-      console.log(err);
-    } else if (!shoe) {
-      res.sendStatus(404);
-    } else {
-      let formattedResponse = [
-        { type: shoe.completeLook[0].type1, name: shoe.completeLook[0].name1, img_url: shoe.completeLook[0].img_url1, price: shoe.completeLook[0].price1 },
-        { type: shoe.completeLook[0].type2, name: shoe.completeLook[0].name2, img_url: shoe.completeLook[0].img_url2, price: shoe.completeLook[0].price2 },
-        { type: shoe.completeLook[0].type3, name: shoe.completeLook[0].name3, img_url: shoe.completeLook[0].img_url3, price: shoe.completeLook[0].price3 }
-      ];
-      res.json(formattedResponse);
-      console.log(`Looks noSQL Query Time: ${new Date() - queryStartTime}ms for product id: ${id}`);
     }
   });
 });
 
 app.get('/shares/:id', (req, res) => {
-  let queryStartTime = new Date();
   let maxIndex;
   let selections = [];
   if (process.env.NODE_ENV === 'test') {
@@ -88,13 +62,11 @@ app.get('/shares/:id', (req, res) => {
       console.log(err);
     } else {
       res.json(share);
-      console.log(`Shares noSQL Query Time: ${new Date() - queryStartTime}ms for 5 random shares`);
     }
   });
 });
 
 app.post('/product', urlencodedParser, (req, res) => {
-  let queryStartTime = new Date();
   let newProd = req.body;
   // add defaults
   newProd.rating = 0;
@@ -112,14 +84,12 @@ app.post('/product', urlencodedParser, (req, res) => {
         res.status(406).send();
       } else {
         res.sendStatus(201);
-        console.log(`Time to Post a new product: ${new Date() - queryStartTime}ms`);
       }
     });
   }
 });
 
 app.put('/product/:id', urlencodedParser, (req, res) => {
-  let queryStartTime = new Date();
   let id = req.params.id;
   let update = req.body;
   Product.findOne({ _id: id }, (err, product) => {
@@ -136,7 +106,6 @@ app.put('/product/:id', urlencodedParser, (req, res) => {
           res.status(406).send();
         } else {
           res.sendStatus(200);
-          console.log(`Time to Update a product: ${new Date() - queryStartTime}ms`);
         }
       });
     }
@@ -144,7 +113,6 @@ app.put('/product/:id', urlencodedParser, (req, res) => {
 });
 
 app.delete('/product/:id', (req, res) => {
-  let queryStartTime = new Date();
   let id = req.params.id;
   Product.deleteMany({ _id: id }, (err, product) => {
     if (err) {
@@ -152,7 +120,6 @@ app.delete('/product/:id', (req, res) => {
       res.status(404).send();
     } else {
       res.sendStatus(202);
-      console.log(`Time to Delete a product: ${new Date() - queryStartTime}ms`);
     }
   });
 });

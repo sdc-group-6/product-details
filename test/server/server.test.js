@@ -1,28 +1,10 @@
 const request = require('supertest');
 const app = require('../../server/nosqlServer.js');
 require('iconv-lite').encodingExists('foo');
-// const db = require('../../database/index.js');
-// const config = require('../../knexfile.js');
-// const configTest = config.test;
-// const knexTest = require('knex')(configTest);
 const mongoose = require('mongoose');
 const seedNoSql = require('../../database/seedNoSql.js');
 const Product = require('../../database/modelNoSql').Product;
 const Share = require('../../database/modelNoSql').Share;
-
-// const PORT = process.env.PORT || 3000;
-// let server;
-
-// beforeEach((done) => {
-//   server = app.listen(PORT, () => {
-//     console.log(`listening on ${PORT}`);
-//     done();
-//   });
-// });
-
-// afterEach((done) => {
-//   server.close(() => done());
-// });
 
 beforeAll((done) => {
   seedNoSql(400, 1, () => {
@@ -56,16 +38,6 @@ describe('Express server should route properly', () => {
     .expect( res => {
       expect(res.statusCode).toBe(200);
       expect(Object.keys(JSON.parse(res.text)).length).toBe(13);
-    })
-    .end(done);
-  })
-
-  it('should respond to GET /looks/:id', (done) => {
-    request(app)
-    .get('/looks/jacket5')
-    .expect( res => {
-      expect(res.statusCode).toBe(200);
-      expect(JSON.parse(res.text).length).toBe(3);
     })
     .end(done);
   })

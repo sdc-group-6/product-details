@@ -11,14 +11,8 @@
     "start:dev": "nodemon server/index.js",
     "start": "node server/index.js",
     "react:dev": "webpack -d --watch",
-    "sql:refresh": "knex migrate:rollback | knex migrate:latest",
-    "sql:refresh-test": "knex migrate:rollback --env test | knex migrate:latest --env test",
-    "sql:setup": "node database/seedSql.js",
     "db:setup": "node database/seedNoSql.js",
     "test": "jest --forceExit",
-    "test:kelly": "jest --watchAll --forceExit",
-    "debug": "jest --debug",
-    "jest:cache": "jest --clearCache",
     "loadtest": "artillery run loadtest.yml"
   },
   "dependencies": {

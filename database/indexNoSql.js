@@ -5,10 +5,10 @@ const dbUser = process.env.NODE_ENV === 'test' ? credentials.testuser : credenti
 const dbPw = process.env.NODE_ENV === 'test' ? credentials.testpw : credentials.pw;
 
 // using local database:
-// mongoose.connect(`mongodb://localhost/${databaseName}`, { useNewUrlParser: true });
+mongoose.connect(`mongodb://localhost/${databaseName}`, { useNewUrlParser: true });
 
 // using EC2 DB instance:
-mongoose.connect(`mongodb://${dbUser}:${dbPw}@3.90.50.238/${databaseName}`, { useNewUrlParser: true });
+// mongoose.connect(`mongodb://${dbUser}:${dbPw}@3.90.50.238/${databaseName}`, { useNewUrlParser: true });
  
 const db = mongoose.connection;
 

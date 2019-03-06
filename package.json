@@ -18,7 +18,8 @@
     "test": "jest --forceExit",
     "test:kelly": "jest --watchAll --forceExit",
     "debug": "jest --debug",
-    "jest:cache": "jest --clearCache"
+    "jest:cache": "jest --clearCache",
+    "loadtest": "artillery run loadtest.yml"
   },
   "dependencies": {
     "antd": "^3.13.2",

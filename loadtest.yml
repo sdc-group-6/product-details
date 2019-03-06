@@ -1,0 +1,40 @@
+config:
+  target: 'http://localhost:8001'
+  phases:
+    - duration: 60
+      arrivalCount: 5 #4RPS
+      name: 'Warm up the application'
+    # - duration: 60
+    #   arrivalCount: 500 #12RPS
+    #   name: 'ramp up phase'
+    # - duration: 60
+    #   arrivalRate: 10
+    #   rampTo: 40
+    #   name: 'push limits'
+    # - duration: 60
+    #   arrivalRate: 80
+    #   name: 'sustained heavy load'
+scenarios:
+  - flow:
+    - loop:
+      - get:
+          url: "/shoes/{{ $loopElement }}"
+      - get:
+          url: "/looks/{{ $loopElement }}"
+      - get:
+          url: "/shares/{{ $loopElement }}"
+      - get:
+          url: "/shoes"
+      over:
+        - shoe1
+        - shirt1
+        - pant1
+        - jacket1
+        - shoe1000000
+        - shirt1000000
+        - pant1000000
+        - jacket1000000
+        - shoe2499999
+        - shirt2499999
+        - pant2499999
+        - jacket2599999

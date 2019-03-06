@@ -52,10 +52,10 @@ app.get('/shares/:id', (req, res) => {
   if (process.env.NODE_ENV === 'test') {
     maxIndex = 190;
   } else {
-    maxIndex = 1000000;
+    maxIndex = 10000000;
   }
   for (let i = 0; i < 5; i++) {
-    selections.push(Math.ceil(Math.random() * maxIndex));
+    selections.push(Math.floor(Math.random() * maxIndex) + 1);
   }
   Share.find().where('_id').in(selections).exec((err, share) => {
     if (err) {

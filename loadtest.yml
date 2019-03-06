@@ -3,20 +3,41 @@ config:
   processor: './loadtestFunc.js'
   phases:
     - duration: 60
-      arrivalCount: 5 #4RPS
+      arrivalCount: 5
       name: 'Warm up the application'
-    # - duration: 60
-    #   arrivalCount: 500 #12RPS
-    #   name: 'ramp up phase'
-    # - duration: 60
-    #   arrivalRate: 10
-    #   rampTo: 40
-    #   name: 'push limits'
-    # - duration: 60
-    #   arrivalRate: 80
-    #   name: 'sustained heavy load'
+    - duration: 60
+      arrivalRate: 1
+      name: 'ready for ramp'
+    - duration: 1200
+      arrivalRate: 1
+      rampTo: 25
+      name: 'ramp up phase'
+    - duration: 120
+      arrivalRate: 25
+      ranpTo: 30
+      name: 'sustained heavy load'
 scenarios:
   - flow:
+    - get:
+        url: "/"
+    - get:
+        url: "/bootstrap-4.2.1/css/bootstrap.css"
+    - get:
+        url: "/style/style.css"
+    - get:
+        url: "/bundle.js"
+    - get:
+        url: "/bootstrap-4.2.1/js/bootstrap.min.js"
+    - get:
+        url: "/style/fonts/AdihausDIN.ttf"
+    - get:
+        url: "/style/fonts/adineuePRO/adineuePROCyr-BoldWeb.woff"
+    - get:
+        url: "/style/fonts/adineuePRO/adineuePROCyr-LightWeb.woff"
+    - get:
+        url: "/bootstrap-4.2.1/js/bootstrap.min.js.map"
+    - get:
+        url: "/bootstrap-4.2.1/css/bootstrap.css.map"
     - loop:
       - function: 'generateRandomProduct'
       - get:

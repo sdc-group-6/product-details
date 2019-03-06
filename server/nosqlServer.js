@@ -27,6 +27,7 @@ app.get('/shoes', (req, res) => {
   Product.find().where('_id').in(shoes).exec((err, shoes) => {
     if (err) {
       console.log(err);
+      res.sendStatus(503);
     } else {
       res.json(shoes);
     }
@@ -38,6 +39,7 @@ app.get('/shoes/:shoeId', (req, res) => {
   Product.findOne({ _id: id }, (err, shoe) => {
     if (err) {
       console.log(err);
+      res.sendStatus(503);
     } else if (!shoe) {
       res.sendStatus(404);
     } else {
@@ -59,6 +61,7 @@ app.get('/shares/:id', (req, res) => {
   Share.find().where('_id').in(selections).exec((err, share) => {
     if (err) {
       console.log(err);
+      res.sendStatus(503);
     } else {
       res.json(share);
     }

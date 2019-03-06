@@ -52,11 +52,10 @@ app.get('/shares/:id', (req, res) => {
   if (process.env.NODE_ENV === 'test') {
     maxIndex = 190;
   } else {
-    maxIndex = 10000000;
+    maxIndex = 10000990;
   }
-  for (let i = 0; i < 5; i++) {
-    selections.push(Math.floor(Math.random() * maxIndex) + 1);
-  }
+  let startId = Math.floor(Math.random() * maxIndex) + 1;
+  selections = [startId, startId + 1, startId + 2, startId + 3, startId + 4];
   Share.find().where('_id').in(selections).exec((err, share) => {
     if (err) {
       console.log(err);

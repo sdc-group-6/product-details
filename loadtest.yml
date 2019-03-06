@@ -1,5 +1,6 @@
 config:
   target: 'http://localhost:8001'
+  processor: './loadtestFunc.js'
   phases:
     - duration: 60
       arrivalCount: 5 #4RPS
@@ -17,24 +18,11 @@ config:
 scenarios:
   - flow:
     - loop:
+      - function: 'generateRandomProduct'
       - get:
-          url: "/shoes/{{ $loopElement }}"
+          url: "/shoes/{{ product }}"
       - get:
-          url: "/looks/{{ $loopElement }}"
-      - get:
-          url: "/shares/{{ $loopElement }}"
+          url: "/shares/{{ product }}"
       - get:
           url: "/shoes"
-      over:
-        - shoe1
-        - shirt1
-        - pant1
-        - jacket1
-        - shoe1000000
-        - shirt1000000
-        - pant1000000
-        - jacket1000000
-        - shoe2499999
-        - shirt2499999
-        - pant2499999
-        - jacket2599999
+      count: 10

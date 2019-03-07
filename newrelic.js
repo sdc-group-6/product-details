@@ -55,6 +55,6 @@ exports.config = {
 
   error_collector: {
     enabled: true,
-    ignore_status_codes: []
+    ignore_status_codes: [404]
   }
 }

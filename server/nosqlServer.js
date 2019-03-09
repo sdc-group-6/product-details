@@ -8,19 +8,72 @@ const Share = require('../database/modelNoSql').Share;
 var bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
-app.use(express.static(path.join(__dirname, '/../public')));
-app.use(cors({
-  'origin': '*',
-}));
+const randomProdNum = () => {
+  let max = process.env.NODE_ENV === 'test' ? 100 : 2499900;
+  return Math.floor(Math.random() * max) + 1;
+};
 
-let randomImg = () => {
-  let randomMax = process.env.NODE_ENV === 'test' ? 200 : 2500000;
+const randomImg = () => {
   var arr = [];
   for (var i = 0; i < 18; i++) {
-    arr.push('shoe' + Math.ceil(Math.random() * randomMax));
+    arr.push('shoe' + randomProdNum());
   }
   return arr;
 };
+
+const generateProps = (prodId) => {
+  let product;
+  let shares;
+  let products;
+  let looks;
+  Product.findOne({ _id: prodId }, (err, prod) => {
+    if (err) {
+      return 404;
+    }
+    product = prod;
+    let startId = randomProdNum() * 4;
+    Share.find().where('_id').in([startId, startId + 1, startId + 2, startId + 3, startId + 4]).exec((err, share) => {
+      if (err) {
+        return 503;
+      }
+      shares = {
+        user1: shares[0].user,
+        img1: shares[0].img,
+        user2: shares[1].user,
+        img2: shares[1].img,
+        user3: shares[2].user,
+        img3: shares[2].img,
+        user4: shares[3].user,
+        img4: shares[3].img,
+        user5: shares[4].user,
+        img5: shares[4].img
+      };
+      Product.find().where('_id').in(randomImg()).exec((err, shoes) => {
+        if (err) {
+          return 503;
+        }
+        products = shoes;
+        looks = {
+          pant_name: product.completeLook[0].name1,
+          pant_url: product.completeLook[0].img_url1,
+          pant_price: product.completeLook[0].price1,
+          shirt_name: product.completeLook[0].name2,
+          shirt_url: product.completeLook[0].img_url2,
+          shirt_price: product.completeLook[0].price2,
+          jacket_name: product.completeLook[0].name3,
+          jacket_url: product.completeLook[0].img_url3,
+          jacket_price: product.completeLook[0].price3
+        };
+        return { product, shares, products, looks };
+      });
+    });
+  });
+};
+
+app.use('/assets', express.static(path.join(__dirname, '/../public')));
+app.use(cors({
+  'origin': '*',
+}));
 
 app.get('/shoes', (req, res) => {
   let shoes = randomImg();
@@ -54,7 +107,7 @@ app.get('/shares/:id', (req, res) => {
   if (process.env.NODE_ENV === 'test') {
     maxIndex = 190;
   } else {
-    maxIndex = 10000990;
+    maxIndex = 9999990;
   }
   let startId = Math.floor(Math.random() * maxIndex) + 1;
   selections = [startId, startId + 1, startId + 2, startId + 3, startId + 4];

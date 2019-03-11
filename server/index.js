@@ -1,6 +1,5 @@
 require('newrelic');
-// const app = require('./server.js');
-const app = require('./nosqlServer.js');
+import app from './nosqlServer';
 
 const PORT = process.env.NODE_ENV === 'test' ? process.env.PORT || 3000 : process.env.PORT || 8001;
 

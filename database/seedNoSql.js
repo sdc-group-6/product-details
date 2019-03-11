@@ -16,7 +16,7 @@ const seedNoSql = (remaining, position, callback = () => console.log('MongoDB se
       if (((position - 1) * 4) % 100000 === 0) {
         console.log(`On item ${(position - 1) * 4 + 1}`);
       }
-      let chunkSize = 5000; // MUST be multiple of 4
+      let chunkSize = 400; // MUST be multiple of 4
       let chunk = Math.min(remaining, chunkSize);
       let data = seedGenerator(chunk, position, false);
       return Product.insertMany(data.products).then(() => {
@@ -37,26 +37,9 @@ const seedNoSql = (remaining, position, callback = () => console.log('MongoDB se
 };
 
 if (process.env.NODE_ENV !== 'test') {
-  seedNoSql(9999200, 201, () => {
+  seedNoSql(500000, 1, () => {
     db.close(() => console.log('database seeded and closed!'));
   });
 }
 
 module.exports = seedNoSql;
-
-
-
-
-/*
-table.string('id', 15).primary();
-table.string('type', 8);
-table.string('name', 40);
-table.string('img_url', 100);
-table.string('short_desc', 100);
-table.string('long_desc', 600);
-table.string('category', 15);
-table.integer('price');
-table.decimal('rating', 3, 1);
-table.integer('review_count');
-table.string('details', 200);
-*/

@@ -12,9 +12,9 @@ import Layout from './layout';
 import bodyParser from 'body-parser';
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
-// need to adjust max back to 100 : 2499990 once database fully operational
+// need to adjust max back to 100 : 2499990 once database fully seeded
 const randomProdNum = () => {
-  let max = process.env.NODE_ENV === 'test' ? 100 : 2499990;
+  let max = process.env.NODE_ENV === 'test' ? 100 : 24990;
   return Math.floor(Math.random() * max) + 1;
 };
 

@@ -1,5 +1,5 @@
 config:
-  target: 'http://ec2-54-165-205-234.compute-1.amazonaws.com:8001/'
+  target: 'http://localhost:8001'
   processor: './loadtestFunc.js'
   phases:
     - duration: 60
@@ -18,26 +18,29 @@ config:
       name: 'sustained heavy load'
 scenarios:
   - flow:
+    - function: 'generateRandomProduct'
     - get:
-        url: "/"
+        url: "/{{ product }}"
+    # - get:
+    #     url: "https://d23lkqa0hnre2j.cloudfront.net/bootstrap.css"
+    # - get:
+    #     url: "https://s3.amazonaws.com/abibasstatics/style.css"
+    # - get:
+    #     url: "https://s3.amazonaws.com/abibasstatics/adineuePROCyr-LightWeb.woff"
+    # - get:
+    #     url: "https://s3.amazonaws.com/abibasstatics/adineuePROCyr-BoldWeb.woff"
+    # - get:
+    #     url: "https://s3.amazonaws.com/abibasstatics/AdihausDIN.ttf"
+    # - get:
+    #     url: "https://s3.amazonaws.com/abibasstatics/bundle.js"
     - get:
-        url: "/bootstrap-4.2.1/css/bootstrap.css"
+        url: "/shoes/{{ product }}"
     - get:
-        url: "/style/style.css"
+        url: "/shares/{{ product }}"
     - get:
-        url: "/bundle.js"
-    - get:
-        url: "/bootstrap-4.2.1/js/bootstrap.min.js"
-    - get:
-        url: "/style/fonts/AdihausDIN.ttf"
-    - get:
-        url: "/style/fonts/adineuePRO/adineuePROCyr-BoldWeb.woff"
-    - get:
-        url: "/style/fonts/adineuePRO/adineuePROCyr-LightWeb.woff"
-    - get:
-        url: "/bootstrap-4.2.1/js/bootstrap.min.js.map"
-    - get:
-        url: "/bootstrap-4.2.1/css/bootstrap.css.map"
+        url: "/shoes"
+    # - get:
+    #     url: "https://d23lkqa0hnre2j.cloudfront.net/bootstrap.min.js"
     - loop:
       - function: 'generateRandomProduct'
       - get:
@@ -46,4 +49,4 @@ scenarios:
           url: "/shares/{{ product }}"
       - get:
           url: "/shoes"
-      count: 10
+      count: 9

@@ -1,26 +1,26 @@
 @font-face {
     font-family: 'adineue PRO Cyr Light Web';
-    src: url('fonts/adineuePRO/adineuePROCyr-LightWeb.eot');
-    src: url('fonts/adineuePRO/adineuePROCyr-LightWeb.eot?#iefix') format('embedded-opentype'),
-        url('fonts/adineuePRO/adineuePROCyr-LightWeb.woff') format('woff'),
-        url('fonts/adineuePRO/adineuePROCyr-LightWeb.ttf') format('truetype');
+    src: url('https://s3.amazonaws.com/abibasstatics/adineuePROCyr-LightWeb.eot');
+    src: url('https://s3.amazonaws.com/abibasstatics/adineuePROCyr-LightWeb.eot?#iefix') format('embedded-opentype'),
+        url('https://s3.amazonaws.com/abibasstatics/adineuePROCyr-LightWeb.woff') format('woff'),
+        url('https://s3.amazonaws.com/abibasstatics/adineuePROCyr-LightWeb.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'adineue PRO Cyr Bold Web';
-    src: url('fonts/adineuePRO/adineuePROCyr-BoldWeb.eot');
-    src: url('fonts/adineuePRO/adineuePROCyr-BoldWeb.eot?#iefix') format('embedded-opentype'),
-        url('fonts/adineuePRO/adineuePROCyr-BoldWeb.woff') format('woff'),
-        url('fonts/adineuePRO/adineuePROCyr-BoldWeb.ttf') format('truetype');
+    src: url('https://s3.amazonaws.com/abibasstatics/adineuePROCyr-BoldWeb.eot.eot');
+    src: url('https://s3.amazonaws.com/abibasstatics/adineuePROCyr-BoldWeb.eot?#iefix') format('embedded-opentype'),
+        url('https://s3.amazonaws.com/abibasstatics/adineuePROCyr-BoldWeb.woff') format('woff'),
+        url('https://s3.amazonaws.com/abibasstatics/adineuePROCyr-BoldWeb.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'adihaus';
-    src: url('fonts/AdihausDIN.ttf') format('truetype');
+    src: url('https://s3.amazonaws.com/abibasstatics/AdihausDIN.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }

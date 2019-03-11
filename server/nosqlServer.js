@@ -1,15 +1,20 @@
-const express = require('express');
-const cors = require('cors');
+import express from 'express';
+import cors from 'cors';
 const app = express();
-const path = require('path');
-const db = require('../database/indexNoSql.js');
-const Product = require('../database/modelNoSql').Product;
-const Share = require('../database/modelNoSql').Share;
-var bodyParser = require('body-parser');
-var urlencodedParser = bodyParser.urlencoded({ extended: false });
+import path from 'path';
+import db from '../database/indexNoSql.js';
+import { Product, Share } from '../database/modelNoSql';
+import React from 'react';
+// import ReactDOM from 'react-dom';
+import ReactDOMServer from 'react-dom/server';
+import PageApp from '../client/src/components/App';
+import Layout from './layout';
+import bodyParser from 'body-parser';
+const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
+// need to adjust max back to 100 : 2499990 once database fully operational
 const randomProdNum = () => {
-  let max = process.env.NODE_ENV === 'test' ? 100 : 2499900;
+  let max = process.env.NODE_ENV === 'test' ? 100 : 2499990;
   return Math.floor(Math.random() * max) + 1;
 };
 
@@ -21,36 +26,37 @@ const randomImg = () => {
   return arr;
 };
 
-const generateProps = (prodId) => {
+const renderToHTML = (prodId, callback) => {
   let product;
   let shares;
   let products;
   let looks;
   Product.findOne({ _id: prodId }, (err, prod) => {
     if (err) {
-      return 404;
+      callback(404);
+      //return?
     }
     product = prod;
     let startId = randomProdNum() * 4;
     Share.find().where('_id').in([startId, startId + 1, startId + 2, startId + 3, startId + 4]).exec((err, share) => {
       if (err) {
-        return 503;
+        callback(503);
       }
       shares = {
-        user1: shares[0].user,
-        img1: shares[0].img,
-        user2: shares[1].user,
-        img2: shares[1].img,
-        user3: shares[2].user,
-        img3: shares[2].img,
-        user4: shares[3].user,
-        img4: shares[3].img,
-        user5: shares[4].user,
-        img5: shares[4].img
+        user1: share[0].user,
+        img1: share[0].img,
+        user2: share[1].user,
+        img2: share[1].img,
+        user3: share[2].user,
+        img3: share[2].img,
+        user4: share[3].user,
+        img4: share[3].img,
+        user5: share[4].user,
+        img5: share[4].img
       };
       Product.find().where('_id').in(randomImg()).exec((err, shoes) => {
         if (err) {
-          return 503;
+          callback(503);
         }
         products = shoes;
         looks = {
@@ -64,7 +70,9 @@ const generateProps = (prodId) => {
           jacket_url: product.completeLook[0].img_url3,
           jacket_price: product.completeLook[0].price3
         };
-        return { product, shares, products, looks };
+        let propsForRender = { product: product, shares: shares, products: products, looks: looks };
+        let component = React.createElement(PageApp, propsForRender);
+        callback(null, Layout(JSON.stringify(propsForRender), ReactDOMServer.renderToString(component)));
       });
     });
   });
@@ -83,6 +91,18 @@ app.get('/shoes', (req, res) => {
       res.sendStatus(503);
     } else {
       res.json(shoes);
+    }
+  });
+});
+
+app.get('/:shoeId', (req, res) => {
+  let prodId = req.params.shoeId;
+  renderToHTML(prodId, (err, result) => {
+    if (err) {
+      console.log(err);
+      res.status(503).send();
+    } else {
+      res.status(200).send(result);
     }
   });
 });
@@ -179,79 +199,4 @@ app.delete('/product/:id', (req, res) => {
   });
 });
 
-module.exports = app;
-
-/*
-Test post request:
-
-This in form-urlencoded:
-id:test
-type:shoe
-name:test
-img_url:www.no
-short_desc:String
-long_desc:String
-category:String
-price:50
-details:String
-
-Results in:
-var settings = {
-  "async": true,
-  "crossDomain": true,
-  "url": "http://localhost:8001/product/add",
-  "method": "POST",
-  "headers": {
-    "Content-Type": "application/x-www-form-urlencoded",
-    "cache-control": "no-cache",
-    "Postman-Token": "aa97c768-7473-4bfb-a63a-90268163369d"
-  },
-  "data": {
-    "id": 'test',
-    "type": 'shoe',
-    "name": 'test',
-    "img_url": 'www.no',
-    "short_desc": 'String',
-    "long_desc": 'String',
-    "category": 'String',
-    "price": 50,
-    "details": 'String'
-  }
-}
-
-$.ajax(settings).done(function (response) {
-  console.log(response);
-});
-
-
-{
-id: 'test',
-type: 'shoe',
-name: 'test',
-img_url: 'www.no',
-short_desc: 'String',
-long_desc: 'String',
-category: 'String',
-price: 50,
-rating: 0,
-review_count: 0,
-details: 'String',
-completeLook: [{
-  id1: 'test',
-  type1: 'jacket',
-  name1: 'test',
-  img_url1: 'www.no',
-  price1: 70,
-  id2: 'test',
-  type2: 'shirt',
-  name2: 'test',
-  img_url2: 'www.no',
-  price2: 80,
-  id3: 'test',
-  type3: 'pant',
-  name3: 'test',
-  img_url3: 'www.no',
-  price3: 100
-}]
-}
-*/
+export default app;

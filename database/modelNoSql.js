@@ -37,5 +37,9 @@ let shares = new mongoose.Schema({
   img: String
 });
 
+// May need to toggle while seeding:
 module.exports.Product = mongoose.model('Product', products);
+// export const Product = mongoose.model('Product', products);
+
 module.exports.Share = mongoose.model('Share', shares);
+// export const Share = mongoose.model('Share', shares);

@@ -7,7 +7,7 @@ import Description from './Product-Details/Description';
 import Specification from './Product-Details/Specification';
 import Share from './Share-Photos/Share';
 
-class App extends Component {
+class PageApp extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -26,15 +26,6 @@ class App extends Component {
     this.addToCart = this.addToCart.bind(this);
     this.getOne = this.getOne.bind(this);
     this.getShares = this.getShares.bind(this);
-  }
-
-  componentDidMount() {
-    const randomShoeMax = process.env.NODE_ENV === 'test' ? 100 : 2499999;
-    const randomShoe = 'shoe' + Math.ceil(Math.random() * randomShoeMax);
-    const query = typeof window === 'undefined' ? `?p=${randomShoe}` : window.location.search || `?p=${randomShoe}`;
-    const queryStart = query.indexOf('=') + 1;
-    const productId = queryStart === 0 ? query.substring(1) : query.substring(queryStart);
-    this.getOne(productId);
   }
 
   getAll() {
@@ -111,16 +102,21 @@ class App extends Component {
   addToCart() {
     this.setState({ cart: ++this.state.cart });
   }
-
+  
   render() {
     const descClass = this.state.desc ? 'detail selected' : 'detail unselected';
     const specClass = this.state.spec ? 'detail selected' : 'detail unselected';
+    
+    let looksRender = Object.keys(this.state.looks).length === 0 ? this.props.looks : this.state.looks;
+    let shoesRender = this.state.shoes.length === 0 ? this.props.products : this.state.shoes;
+    let shoeRender = Object.keys(this.state.shoe).length === 0 ? this.props.product : this.state.shoe;
+    let sharesRender = Object.keys(this.state.shares).length === 0 ? this.props.shares : this.state.shares;
 
     return (
       <div>
         <Topbar cart={this.state.cart} />
         <div id="top-navbar"></div>
-        <Looks looks={this.state.looks} add={this.addToCart} />
+        <Looks looks={looksRender} add={this.addToCart} />
         <div className="product">
           <div className="title-1000">
             <h1> PRODUCT DETAILS </h1>
@@ -129,18 +125,18 @@ class App extends Component {
             <div className={descClass} id="desc" onClick={this.descClick}>DESCRIPTION</div>
             <div className={specClass} id="spec" onClick={this.specClick}>SPECIFICATIONS</div>
           </div>
-          {this.state.desc ? <Description shoe={this.state.shoe} /> : <Specification details={this.state.details} />}
+          {this.state.desc ? <Description shoe={shoeRender} /> : <Specification details={shoeRender.details.split(';')} />}
         </div>
         <div className="product">
           <div className="title-1000">
             <h1> YOU MAY ALSO LIKE </h1>
           </div>
         </div>
-        <Likes shoes={this.state.shoes} handleClick={this.getOne} />
-        <Share shares={this.state.shares} />
+        <Likes shoes={shoesRender} handleClick={this.getOne} />
+        <Share shares={sharesRender} />
       </div>
     );
   }
 }
 
-export default App;
+export default PageApp;

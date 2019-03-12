@@ -12,12 +12,14 @@
     "start": "node server/serverbundle.js",
     "react:dev": "webpack -d --watch",
     "db:setup": "node database/seedNoSql.js",
+    "redis:local": "redis-server /usr/local/etc/redis.conf",
     "test": "jest --forceExit",
     "loadtest": "artillery run loadtest.yml"
   },
   "dependencies": {
     "antd": "^3.13.2",
     "axios": "^0.18.0",
+    "bluebird": "^3.5.3",
     "bootstrap": "^4.2.1",
     "cors": "^2.8.5",
     "express": "^4.16.4",
@@ -28,7 +30,8 @@
     "react": "^16.7.0",
     "react-bootstrap": "^1.0.0-beta.5",
     "react-dom": "^16.7.0",
-    "react-rating": "^1.6.2"
+    "react-rating": "^1.6.2",
+    "redis": "^2.8.0"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",

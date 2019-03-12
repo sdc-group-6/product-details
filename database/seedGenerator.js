@@ -119,6 +119,7 @@ const seedGenerator = (recordCount, idStart, sql = true) => {
         price: getRandomNumber(150),
         rating: getRandomNumber(50) / 10,
         review_count: getRandomNumber(1000),
+        view_count: 0,
         details: getDetails()
       });
     }

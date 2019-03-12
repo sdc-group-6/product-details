@@ -11,6 +11,7 @@ let products = new mongoose.Schema({
   price: Number,
   rating: Number,
   review_count: Number,
+  view_count: Number,
   details: String,
   completeLook: [{
     id1: String,

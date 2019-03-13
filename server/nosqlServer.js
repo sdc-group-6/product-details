@@ -24,9 +24,7 @@ app.use(cors({
   'origin': '*',
 }));
 
-app.get('/loaderio-68aa1390a20a25fe7d36d7e5f8dfa743.txt', (req, res) => {
-  res.sendFile('../public/loaderio-68aa1390a20a25fe7d36d7e5f8dfa743.txt');
-});
+app.use('/', express.static(path.join(__dirname, '/../public')));
 
 app.get('/shoes', (req, res) => {
   return dataStore.serveCacheAsync().then((shoes) => {

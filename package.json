@@ -19,7 +19,6 @@
   "dependencies": {
     "antd": "^3.13.2",
     "axios": "^0.18.0",
-    "bluebird": "^3.5.3",
     "bootstrap": "^4.2.1",
     "cors": "^2.8.5",
     "express": "^4.16.4",

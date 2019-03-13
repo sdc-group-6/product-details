@@ -1,8 +1,8 @@
 import cache from '../database/indexRedis.js';
-import { Product } from '../database/modelNoSql';
+import { Product, Share } from '../database/modelNoSql';
 
 
-const data = {
+const dataStore = {
   
   minViewedCacheItem: {},
   
@@ -40,7 +40,17 @@ const data = {
   
   // Increments view-count in mongoDB and returns promise with details on product from mongoDB (including updated viewcount)
   findProductAndIncrementAsync: (prodId, increment) => {
-    return Product.findOneAndUpdate({ _id: prodId }, { $inc: { view_count: increment } }, { new: true }).exec();
+    let foundProduct;
+    return Product.findOneAndUpdate({ _id: prodId }, { $inc: { view_count: increment } }, { new: true }).lean().exec().then((product) => {
+      foundProduct = product;
+      if (product.view_count > dataStore.minViewedCacheItem.view_count + dataStore.minViewedCacheItem.cached_views) {
+        return dataStore.replaceProdInCache(dataStore.minViewedCacheItem._id, product);
+      } else {
+        return;
+      }
+    }).then(() => {
+      return foundProduct;
+    });
   },
 
   // Updates mongoDB with incremental cache views for all items in the cache.  Used prior to cache update.
@@ -49,20 +59,18 @@ const data = {
     let updates = [];
     items.forEach((item) => {
       if (item.cached_views) {
-        promisified.push(this.findProductAndIncrementAsync(item._id, item.cached_views));
-      } else {
-        promisified.push(this.findProductAndIncrementAsync(item._id, 1));
+        updates.push(dataStore.findProductAndIncrementAsync(item._id, item.cached_views));
       }
     });
     return Promise.all(updates);
   },
 
   findMinViewedCacheItem: (cacheData) => {
-    if (this.minViewedCacheItem.view_count) {
-      let currMinViews = this.minViewedCacheItem.view_count + this.minViewedCacheItem.cached_views;
+    if (dataStore.minViewedCacheItem.view_count) {
+      let currMinViews = dataStore.minViewedCacheItem.view_count + dataStore.minViewedCacheItem.cached_views;
       for (let i = 0; i < cacheData.length; i++) {
         if (cacheData[i].view_count + cacheData[i].cached_views < currMinViews) {
-          this.minViewedCacheItem = cacheData[i];
+          dataStore.minViewedCacheItem = cacheData[i];
           return;
         }
       }
@@ -70,7 +78,7 @@ const data = {
       let currMinViews = Infinity;
       for (let i = 0; i < cacheData.length; i++) {
         if (cacheData[i].view_count + cacheData[i].cached_views < currMinViews) {
-          this.minViewedCacheItem = cacheData[i];
+          dataStore.minViewedCacheItem = cacheData[i];
           currMinViewes = cacheData[i].view_count + cacheData[i].cached_views;
         }
       }
@@ -82,84 +90,96 @@ const data = {
       product.cached_views = 0;
     }
     return new Promise((resolve, reject) => {
-      cache.set(product._id, JSON.stringify(product), (product) => resolve(product));
+      cache.set(product._id, JSON.stringify(product), (err, product) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(product);
+        }
+      });
     });
   },
 
   replaceProdInCache: (removeProdId, addProd) => {
-    return this.setProdInCache(addProd).then(() => {
+    return dataStore.setProdInCache(addProd).then(() => {
       cache.del(removeProdId);
       return;
     }).then(() => {
-      return this.getCacheKeysAsync();
+      return dataStore.getCacheKeysAsync();
     }).then((keys) => {
-      return this.getCacheDataAsync(keys);
+      return dataStore.getCacheDataAsync(keys);
     }).then((cacheData) => {
-      return this.findMinViewedCacheItem(cacheData, addProd.view_count);
+      return dataStore.findMinViewedCacheItem(cacheData);
     }).catch((err) => console.log(`There was an issue replacing a product in the cache: ${err}`));
   },
 
   flushCacheAsync: () => {
     return new Promise((resolve, reject) => {
       cache.flushdb(() => {
-        if (err) {
-          reject(err);
-        } else {
-          resolve(succeeded);
-        }
+        resolve();
       });
     });
   },
   
   // Get top 18 most-viewed from mongoDB
   buildCacheAsync: () => {
-    return this.getCacheKeysAsync().then((keys) => {
-      return this.getCacheDataAsync(keys);
+    return dataStore.getCacheKeysAsync().then((keys) => {
+      return dataStore.getCacheDataAsync(keys);
     }).then((cacheData) => {
-      return this.updateMongoWithCacheItems(cacheData);
+      return dataStore.updateMongoWithCacheItems(cacheData);
     }).then(() => {
-      return this.flushCacheAsync();
+      return dataStore.flushCacheAsync();
     }).then(() => {
-      return Product.find().sort({ 'view_count': -1 }).limit(18).exec();
+      return Product.find({}).sort({ 'view_count': -1 }).limit(18).lean().exec();
     }).then((topProducts) => {
-      minViewedCacheItem = topProducts[17];
+      console.log(`found ${topProducts.length} top products`);
+      dataStore.minViewedCacheItem = topProducts[17];
       let updates = [];
       topProducts.forEach((product) => {
         let update = new Promise((resolve, reject) => {
+          product.cached_views = 0;
           cache.set(product._id, JSON.stringify(product), () => resolve());
         });
         updates.push(update);
       });
       return Promise.all(updates);
+    }).then(() => {
+      return dataStore.getCacheKeysAsync();
+    }).then((keys) => {
+      return dataStore.getCacheDataAsync(keys);
+    }).then((data) => {
+      console.log(`Redis cache updated with ${data}`);
+      return;
     }).catch((err) => console.log(`There was an issue building cache: ${err}`));
   },
 
   // Get all 18 cached items for 'Also Likes' request
   serveCacheAsync: () => {
-    return this.getCacheKeysAsync().then((keys) => {
+    return dataStore.getCacheKeysAsync().then((keys) => {
       if (keys.length < 18) {
         throw new Error('There was an issue with cached data');
       } else if (keys.length > 18) {
         console.log(`Cache size is ${keys.length} items`);
-        return this.getCacheDataAsync(keys.slice(0, 18));
+        return dataStore.getCacheDataAsync(keys.slice(0, 18));
       } else {
-        return this.getCacheDataAsync(keys);
+        return dataStore.getCacheDataAsync(keys);
       }
     });
   },
 
   serveCacheItemAsync: (prodId) => {
     let result;
-    return this.getCacheDataAsync(prodId).then((item) => {
-      item.cached_views = item.cached_views + 1;
-      result = item;
-      return this.setProdInCache(item);
+    return dataStore.getCacheDataAsync(prodId).then((item) => {
+      let product = item[0];
+      product.cached_views = product.cached_views + 1;
+      result = product;
+      return dataStore.setProdInCache(product);
     }).then((item) => {
-      if (item._id === this.minViewedCacheItem._id) {
-        return this.getCacheKeysAsync().then((keys) => {
-          return this.getCacheDataAsync(keys);
+      if (item._id === dataStore.minViewedCacheItem._id) {
+        return dataStore.getCacheKeysAsync().then((keys) => {
+          return dataStore.getCacheDataAsync(keys);
         }).then((data) => {
-          return this.findMinViewedCacheItem(data);
+          return dataStore.findMinViewedCacheItem(data);
         });
       } else {
         return;
@@ -167,7 +187,57 @@ const data = {
     }).then(() => {
       return result;
     }).catch((err) => console.log(`There was an issue serving the item from cache: ${err}`));
+  },
+
+  checkIfCachedAsync: (prodId) => {
+    return new Promise((resolve, reject) => {
+      cache.exists(prodId, (err, result) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(result);
+        }
+      });
+    });
+  },
+
+  getLooks: (product) => {
+    return {
+      pant_name: product.completeLook[0].name1,
+      pant_url: product.completeLook[0].img_url1,
+      pant_price: product.completeLook[0].price1,
+      shirt_name: product.completeLook[0].name2,
+      shirt_url: product.completeLook[0].img_url2,
+      shirt_price: product.completeLook[0].price2,
+      jacket_name: product.completeLook[0].name3,
+      jacket_url: product.completeLook[0].img_url3,
+      jacket_price: product.completeLook[0].price3
+    };
+  },
+
+  getSharesAsync: () => {
+    // need to adjust max back to 100 : 2499990 once database fully seeded
+    const randomProdNum = () => {
+      let max = process.env.NODE_ENV === 'test' ? 100 : 24990;
+      return Math.floor(Math.random() * max) + 1;
+    };
+    let startId = randomProdNum() * 4;
+    return Share.find().where('_id').in([startId, startId + 1, startId + 2, startId + 3, startId + 4]).lean().exec().then((share) => {
+      return {
+        user1: share[0].user,
+        img1: share[0].img,
+        user2: share[1].user,
+        img2: share[1].img,
+        user3: share[2].user,
+        img3: share[2].img,
+        user4: share[3].user,
+        img4: share[3].img,
+        user5: share[4].user,
+        img5: share[4].img
+      };
+    });
   }
 
 };
 
+export default dataStore;

@@ -37,7 +37,7 @@ const seedNoSql = (remaining, position, callback = () => console.log('MongoDB se
 };
 
 if (process.env.NODE_ENV !== 'test') {
-  seedNoSql(1000000, 1750001, () => {
+  seedNoSql(10000000, 1, () => {
     db.close(() => console.log('database seeded and closed!'));
   });
 }

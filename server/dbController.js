@@ -67,7 +67,6 @@ const dataStore = {
   },
 
   findMinViewedCacheItem: (cacheData) => {
-    console.log(`cache data: ${cacheData}, ${JSON.stringify(cacheData)}`);
     if (dataStore.minViewedCacheItem.view_count) {
       console.log(`current min viewed cache item to be replaced: ${JSON.stringify(dataStore.minViewedCacheItem)}`);
       let currMinViews = dataStore.minViewedCacheItem.view_count + dataStore.minViewedCacheItem.cached_views;
@@ -101,10 +100,16 @@ const dataStore = {
         }
       });
     });
+    const deleteProduct = (prodToDelete) => {
+      if (prodToDelete === dataStore.minViewedCacheItem._id) {
+        dataStore.minViewedCacheItem = {};
+      }
+      return cache.del(prodToReplace);
+    };
     if (!prodToReplace) {
       return setProduct;
     } else {
-      return Promise.all([setProduct, Promise.resolve(cache.del(prodToReplace))]);
+      return Promise.all([setProduct, Promise.resolve(deleteProduct(prodToReplace))]);
     }
   },
 

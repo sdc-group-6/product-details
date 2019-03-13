@@ -44,6 +44,7 @@ const dataStore = {
     return Product.findOneAndUpdate({ _id: prodId }, { $inc: { view_count: increment } }, { new: true }).lean().exec().then((product) => {
       foundProduct = product;
       if (product.view_count > dataStore.minViewedCacheItem.view_count + dataStore.minViewedCacheItem.cached_views) {
+        console.log(`${dataStore.minViewedCacheItem._id} being replaced with ${product._id}`);
         return dataStore.replaceProdInCache(dataStore.minViewedCacheItem._id, product);
       } else {
         return;

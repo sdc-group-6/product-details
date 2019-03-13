@@ -72,11 +72,11 @@ app.get('/:shoeId', (req, res) => {
 
 app.get('/shoes/:shoeId', (req, res) => {
   let id = req.params.shoeId;
-  return dataStore.checkIfCachedAsync(prodId).then((cached) => {
+  return dataStore.checkIfCachedAsync(id).then((cached) => {
     if (cached) {
-      return dataStore.serveCacheItemAsync(prodId);
+      return dataStore.serveCacheItemAsync(id);
     } else {
-      return dataStore.findProductAndIncrementAsync(prodId, 1);
+      return dataStore.findProductAndIncrementAsync(id, 1);
     }
   }).then((product) => {
     if (!product) {

@@ -159,7 +159,7 @@ const dataStore = {
     }).then((keys) => {
       return dataStore.getCacheDataAsync(keys);
     }).then((data) => {
-      console.log(`Redis cache updated with ${data}`);
+      console.log(`Redis cache updated with ${data.length} items`);
       return;
     }).catch((err) => console.log(`There was an issue building cache: ${err}`));
   },
@@ -171,6 +171,9 @@ const dataStore = {
         throw new Error('There was an issue with cached data');
       } else if (keys.length > 18) {
         console.log(`Cache size is ${keys.length} items`);
+        for (let i = 18; i < keys.length; i++) {
+          cache.del(keys[i]);
+        }
         return dataStore.getCacheDataAsync(keys.slice(0, 18));
       } else {
         return dataStore.getCacheDataAsync(keys);

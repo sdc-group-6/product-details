@@ -8,6 +8,7 @@ import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import PageApp from '../client/src/components/App';
 import Layout from './layout';
+app.use('/', express.static(path.join(__dirname, '/../public')));
 import bodyParser from 'body-parser';
 import dataStore from './dbController';
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
@@ -19,7 +20,6 @@ const renderToHTML = (props) => {
   return Layout(JSON.stringify(props), ReactDOMServer.renderToString(component));
 };
 
-app.use('/', express.static(path.join(__dirname, '/../public')));
 app.use('/assets', express.static(path.join(__dirname, '/../public')));
 app.use(cors({
   'origin': '*',

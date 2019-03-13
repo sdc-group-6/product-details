@@ -67,8 +67,9 @@ const dataStore = {
   },
 
   findMinViewedCacheItem: (cacheData) => {
+    console.log(`cache data: ${cacheData}, ${JSON.stringify(cacheData)}`);
     if (dataStore.minViewedCacheItem.view_count) {
-      console.log(`current min viewed cache item to be replaced: ${dataStore.minViewedCacheItem}`);
+      console.log(`current min viewed cache item to be replaced: ${JSON.stringify(dataStore.minViewedCacheItem)}`);
       let currMinViews = dataStore.minViewedCacheItem.view_count + dataStore.minViewedCacheItem.cached_views;
       for (let i = 0; i < cacheData.length; i++) {
         if (cacheData[i].view_count + cacheData[i].cached_views < currMinViews) {

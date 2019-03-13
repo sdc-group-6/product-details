@@ -63,6 +63,9 @@ const server = {
     path: SERVER_DIR
   },
   target: 'node',
+  node: {
+    __dirname: false
+  },
   externals: [nodeExternals(), {PageApp: 'PageApp'}],
   module: {
     rules: [

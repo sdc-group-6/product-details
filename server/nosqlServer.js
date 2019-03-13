@@ -5,6 +5,7 @@ import path from 'path';
 import db from '../database/indexNoSql.js';
 import cache from '../database/indexRedis.js';
 import { Product, Share } from '../database/modelNoSql';
+import dataStorre from './dbController';
 import React from 'react';
 // import ReactDOM from 'react-dom';
 import ReactDOMServer from 'react-dom/server';

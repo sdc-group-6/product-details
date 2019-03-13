@@ -85,11 +85,11 @@ const dataStore = {
     }
   },
 
-  setProdInCache: (product) => {
+  setProdInCache: (product, prodToReplace) => {
     if (!product.cached_views) {
       product.cached_views = 0;
     }
-    return new Promise((resolve, reject) => {
+    const setProduct = new Promise((resolve, reject) => {
       cache.set(product._id, JSON.stringify(product), (err, product) => {
         if (err) {
           reject(err);
@@ -98,13 +98,16 @@ const dataStore = {
         }
       });
     });
+    if (!prodToReplace) {
+      return setProduct;
+    } else {
+      return Promise.all([setProduct, Promise.resolve(cache.del(prodToReplace))]);
+    }
   },
 
   replaceProdInCache: (removeProdId, addProd) => {
-    return dataStore.setProdInCache(addProd).then(() => {
-      cache.del(removeProdId);
-      return;
-    }).then(() => {
+    return dataStore.setProdInCache(addProd, removeProdId).then((result) => {
+      if (!result[1]) { console.log('item to be deleted was not in cache'); }
       return dataStore.getCacheKeysAsync();
     }).then((keys) => {
       return dataStore.getCacheDataAsync(keys);

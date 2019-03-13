@@ -24,10 +24,10 @@ app.use(cors({
   'origin': '*',
 }));
 
-app.use('/', express.static(path.join(__dirname, '/../public')));
-app.use(cors({
-  'origin': '*',
-}));
+// app.use('/', express.static(path.join(__dirname, '/../public')));
+// app.use(cors({
+//   'origin': '*',
+// }));
 
 app.get('/shoes', (req, res) => {
   return dataStore.serveCacheAsync().then((shoes) => {

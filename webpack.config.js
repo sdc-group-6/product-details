@@ -11,7 +11,7 @@ const client = {
   output: {
     filename: 'bundle.js',
     path: DIST_DIR,
-    publicPath: DIST_DIR
+    publicPath: DIST_DIR //
   },
   module: {
     rules: [
@@ -62,12 +62,12 @@ const server = {
   output: {
     filename: 'serverbundle.js',
     path: SERVER_DIR,
-    publicPath: DIST_DIR
+    publicPath: DIST_DIR //
   },
   target: 'node',
-  node: {
-    __dirname: false
-  },
+  node: { //
+    __dirname: false //
+  }, //
   externals: [nodeExternals(), {PageApp: 'PageApp'}],
   module: {
     rules: [

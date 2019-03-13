@@ -19,7 +19,10 @@ const renderToHTML = (props) => {
   return Layout(JSON.stringify(props), ReactDOMServer.renderToString(component));
 };
 
-app.use(express.static(path.join(__dirname, '/../public')));
+// app.use(express.static(path.join(__dirname, '/../public')));
+app.get('/loaderio-68aa1390a20a25fe7d36d7e5f8dfa743.txt', (req, res) => {
+  res.sendFile(__dirname + '/../public/loaderio-68aa1390a20a25fe7d36d7e5f8dfa743.txt');
+});
 app.use('/assets', express.static(path.join(__dirname, '/../public')));
 app.use(cors({
   'origin': '*',

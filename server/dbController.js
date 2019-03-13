@@ -42,7 +42,6 @@ const dataStore = {
   findProductAndIncrementAsync: (prodId, increment) => {
     let foundProduct;
     return Product.findOneAndUpdate({ _id: prodId }, { $inc: { view_count: increment } }, { new: true }).lean().exec().then((product) => {
-      console.log('got something from mongodb');
       foundProduct = product;
       if (product.view_count > dataStore.minViewedCacheItem.view_count + dataStore.minViewedCacheItem.cached_views) {
         console.log(`${dataStore.minViewedCacheItem._id} being replaced with ${product._id}`);

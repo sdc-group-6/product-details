@@ -81,7 +81,7 @@ const dataStore = {
       for (let i = 0; i < cacheData.length; i++) {
         if (cacheData[i].view_count + cacheData[i].cached_views < currMinViews) {
           dataStore.minViewedCacheItem = cacheData[i];
-          currMinViewes = cacheData[i].view_count + cacheData[i].cached_views;
+          currMinViews = cacheData[i].view_count + cacheData[i].cached_views;
         }
       }
     }

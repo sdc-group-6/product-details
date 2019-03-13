@@ -60,7 +60,8 @@ const server = {
   entry: `${SERVER_DIR}/index.js`,
   output: {
     filename: 'serverbundle.js',
-    path: SERVER_DIR
+    path: SERVER_DIR,
+    publicPath: DIST_DIR
   },
   target: 'node',
   node: {

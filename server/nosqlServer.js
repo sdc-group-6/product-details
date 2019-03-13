@@ -19,8 +19,8 @@ const renderToHTML = (props) => {
   return Layout(JSON.stringify(props), ReactDOMServer.renderToString(component));
 };
 
-app.use('/assets', express.static(path.join(__dirname, '/../public')));
 app.use('/', express.static(path.join(__dirname, '/../public')));
+app.use('/assets', express.static(path.join(__dirname, '/../public')));
 app.use(cors({
   'origin': '*',
 }));

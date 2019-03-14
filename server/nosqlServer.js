@@ -33,7 +33,6 @@ app.get('/shoes', (req, res) => {
   return dataStore.serveCacheAsync().then((shoes) => {
     res.status(200).send(shoes);
   }).catch((err) => {
-    console.log(err);
     res.status(503).send(err);
   });
 });
@@ -86,7 +85,6 @@ app.get('/shoes/:shoeId', (req, res) => {
       res.status(200).send(product);
     }
   }).catch((err) => {
-    console.log(err);
     res.status(503).send(err);
   });
 });

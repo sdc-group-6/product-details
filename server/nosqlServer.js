@@ -19,8 +19,8 @@ const renderToHTML = (props) => {
   return Layout(JSON.stringify(props), ReactDOMServer.renderToString(component));
 };
 
-app.get('/loaderio-68aa1390a20a25fe7d36d7e5f8dfa743.txt', (req, res) => {
-  res.sendFile(path.resolve('./public/loaderio-68aa1390a20a25fe7d36d7e5f8dfa743.txt'));
+app.get('/loaderio-2d03c335afa6fe772a40eb885d18110c.txt', (req, res) => {
+  res.sendFile(path.resolve('./public/loaderio-2d03c335afa6fe772a40eb885d18110c.txt'));
 });
 
 app.use('/assets', express.static(path.join(__dirname, '/../public')));

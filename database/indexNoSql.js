@@ -15,7 +15,3 @@ const db = mongoose.connection;
 // May need to toggle while seeding:
 module.exports = db;
 // export default db;
-
-// NOTE FOR EVENTUAL CLEANUP
-// OLD EC2 DB instance:
-// mongoose.connect(`mongodb://${dbUser}:${dbPw}@35.171.171.107:27017,18.205.153.240:27017,54.158.60.49:27017/${databaseName}`, { useNewUrlParser: true });

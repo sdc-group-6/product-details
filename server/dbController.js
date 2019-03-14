@@ -4,7 +4,7 @@ import { Product, Share } from '../database/modelNoSql';
 
 const dataStore = {
   
-  minViewedCacheItem: {},
+  minViewsInCache: Infinity,
   
   // Returns all keys (s/b 18) from redis database; returns with array of productIds
   getCacheKeysAsync: () => {
@@ -42,9 +42,16 @@ const dataStore = {
   findProductAndIncrementAsync: (prodId, increment) => {
     let foundProduct;
     return Product.findOneAndUpdate({ _id: prodId }, { $inc: { view_count: increment } }, { new: true }).lean().exec().then((product) => {
-      foundProduct = product;
-      if (product.view_count > dataStore.minViewedCacheItem.view_count + dataStore.minViewedCacheItem.cached_views && dataStore.minViewedCacheItem._id !== product._id) {
-        return dataStore.replaceProdInCache(dataStore.minViewedCacheItem._id, product);
+      foundProduct = product; // This approach isn't ideal
+      if (product.view_count > dataStore.minViewsInCache) {
+        return dataStore.findMinViewedItemInCache().then((minViewedItem) => {
+          if (minViewedItem._id === product._id) {
+            console.log('Getting duplicates where I shouldn\'t');
+            return;
+          } else {
+            return dataStore.replaceProdInCache(minViewedItem._id, product);
+          }
+        });
       } else {
         return;
       }
@@ -65,23 +72,27 @@ const dataStore = {
     return Promise.all(updates);
   },
 
-  findMinViewedCacheItem: (cacheData) => {
-    if (dataStore.minViewedCacheItem.view_count) {
-      let currMinViews = dataStore.minViewedCacheItem.view_count + dataStore.minViewedCacheItem.cached_views;
-      for (let i = 0; i < cacheData.length; i++) {
-        if (cacheData[i].view_count + cacheData[i].cached_views < currMinViews) {
-          dataStore.minViewedCacheItem = cacheData[i];
-          return;
+  findMinViewedItemInCache: (cacheData) => {
+    const findMin = (data) => {
+      let minCount = Infinity;
+      let result;
+      data.forEach((item) => {
+        let views = item.view_count + item.cached_views;
+        if (views < minCount) {
+          minCount = views;
+          result = item;
         }
-      }
+      });
+      return item;
+    };
+    if (!cacheData) {
+      return dataStore.getCacheKeysAsync().then((keys) => {
+        return dataStore.getCacheDataAsync(keys);
+      }).then((data) => {
+        return findMin(data);
+      });
     } else {
-      let currMinViews = Infinity;
-      for (let i = 0; i < cacheData.length; i++) {
-        if (cacheData[i].view_count + cacheData[i].cached_views < currMinViews) {
-          dataStore.minViewedCacheItem = cacheData[i];
-          currMinViews = cacheData[i].view_count + cacheData[i].cached_views;
-        }
-      }
+      return Promise.resolve(findMin(cacheData));
     }
   },
 
@@ -98,17 +109,11 @@ const dataStore = {
         }
       });
     });
-    const deleteProduct = (prodToDelete) => {
-      if (prodToDelete === dataStore.minViewedCacheItem._id) {
-        dataStore.minViewedCacheItem = product;
-      }
-      return cache.del(prodToReplace);
-    };
     if (!prodToReplace) {
       return setProduct;
     } else {
       if (product._id === prodToReplace) { console.log('DUPLICATED PRODUCTS AT SETPRODINCACHE'); }
-      return Promise.all([setProduct, Promise.resolve(deleteProduct(prodToReplace))]);
+      return Promise.all([setProduct, Promise.resolve(cache.del(prodToReplace))]);
     }
   },
 
@@ -117,11 +122,10 @@ const dataStore = {
     if (removeProdId === addProd._id) { console.log('PRODUCTS DUPLICATED AT REPLACEPRODINCACHE'); }
     return dataStore.setProdInCache(addProd, removeProdId).then((result) => {
       if (!result[1]) { console.log('item to be deleted was not in cache'); }
-      return dataStore.getCacheKeysAsync();
-    }).then((keys) => {
-      return dataStore.getCacheDataAsync(keys);
-    }).then((cacheData) => {
-      return dataStore.findMinViewedCacheItem(cacheData);
+      return dataStore.findMinViewedItemInCache();
+    }).then((minViewedItem) => {
+      dataStore.minViewsInCache = minViewedItem.view_count + minViewedItem.cached_views;
+      return;
     }).catch((err) => console.log(`There was an issue replacing a product in the cache: ${err}`));
   },
 
@@ -145,7 +149,7 @@ const dataStore = {
       return Product.find({}).sort({ 'view_count': -1 }).limit(18).lean().exec();
     }).then((topProducts) => {
       console.log(`found ${topProducts.length} top products`);
-      dataStore.minViewedCacheItem = topProducts[17];
+      dataStore.minViewsInCache = topProducts[17].view_count;
       let updates = [];
       topProducts.forEach((product) => {
         let update = new Promise((resolve, reject) => {
@@ -187,14 +191,13 @@ const dataStore = {
     return dataStore.getCacheDataAsync(prodId).then((item) => {
       let product = item[0];
       product.cached_views = product.cached_views + 1;
-      result = product;
+      result = product; // here is another structure that isn't ideal and may be problematic at high volumes
       return dataStore.setProdInCache(product);
     }).then((item) => {
-      if (item._id === dataStore.minViewedCacheItem._id) {
-        return dataStore.getCacheKeysAsync().then((keys) => {
-          return dataStore.getCacheDataAsync(keys);
-        }).then((data) => {
-          return dataStore.findMinViewedCacheItem(data);
+      if (item.view_count + item.cached_views - 1 === dataStore.minViewsInCache) {
+        return dataStore.findMinViewedItemInCache().then((minViewedItem) => {
+          dataStore.minViewsInCache = minViewedItem.view_count + minViewedItem.cached_views;
+          return;
         });
       } else {
         return;

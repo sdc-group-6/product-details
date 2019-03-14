@@ -33,6 +33,7 @@ app.get('/shoes', (req, res) => {
   return dataStore.serveCacheAsync().then((shoes) => {
     res.status(200).send(shoes);
   }).catch((err) => {
+    console.log(`Error in shoes API: ${err}`);
     res.status(503).send(err);
   });
 });
@@ -85,6 +86,7 @@ app.get('/shoes/:shoeId', (req, res) => {
       res.status(200).send(product);
     }
   }).catch((err) => {
+    console.log(`Error in shoe API: ${err}`);
     res.status(503).send(err);
   });
 });
@@ -93,6 +95,7 @@ app.get('/shares/:id', (req, res) => {
   return dataStore.getSharesAsync().then((shares) => {
     res.status(200).send(shares);
   }).catch((err) => {
+    console.log(`Error in shares API: ${err}`);
     res.status(503).send(err);
   });
 });

@@ -2,25 +2,25 @@ config:
   target: 'http://localhost:8001'
   processor: './loadtestFunc.js'
   phases:
-    - duration: 60
+    - duration: 30
       arrivalCount: 5
       name: 'Warm up the application'
     - duration: 60
-      arrivalCount: 1
-      name: 'ready for ramp'
-    - duration: 1200
       arrivalRate: 1
-      rampTo: 25
+      name: 'ready for ramp'
+    - duration: 190
+      arrivalRate: 1
+      rampTo: 35
       name: 'ramp up phase'
     - duration: 120
-      arrivalRate: 25
-      ranpTo: 30
+      arrivalRate: 35
+      ranpTo: 45
       name: 'sustained heavy load'
 scenarios:
   - flow:
     - function: 'generateRandomProduct'
-    - get:
-        url: "/{{ product }}"
+    # - get:
+    #     url: "/{{ product }}"
     # - get:
     #     url: "https://d23lkqa0hnre2j.cloudfront.net/bootstrap.css"
     # - get:

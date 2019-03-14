@@ -9,8 +9,9 @@
   },
   "scripts": {
     "start:dev": "nodemon server/serverbundle.js",
-    "start": "node server/serverbundle.js",
+    "start": "node --require newrelic server/serverbundle.js",
     "react:dev": "webpack -d --watch",
+    "build": "webpack",
     "db:setup": "node database/seedNoSql.js",
     "redis:local": "redis-server /usr/local/etc/redis.conf",
     "test": "jest --forceExit",

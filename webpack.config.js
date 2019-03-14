@@ -13,6 +13,7 @@ const client = {
     path: DIST_DIR,
     publicPath: DIST_DIR //
   },
+  mode: 'production',
   module: {
     rules: [
       {
@@ -65,6 +66,7 @@ const server = {
     publicPath: DIST_DIR //
   },
   target: 'node',
+  mode: 'production',
   node: { //
     __dirname: false //
   }, //

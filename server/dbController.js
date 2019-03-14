@@ -109,11 +109,10 @@ const dataStore = {
         }
       });
     });
-    if (!prodToReplace) {
+    if (!prodToReplace || product._id === prodToReplace) {
       return setProduct;
     } else {
-      if (product._id === prodToReplace) { console.log('DUPLICATED PRODUCTS AT SETPRODINCACHE'); }
-      return Promise.all([setProduct, Promise.resolve(cache.del(prodToReplace))]);
+      return setProduct.then(() => cache.del(prodToReplace));
     }
   },
 
@@ -121,7 +120,7 @@ const dataStore = {
   replaceProdInCache: (removeProdId, addProd) => {
     if (removeProdId === addProd._id) { console.log('PRODUCTS DUPLICATED AT REPLACEPRODINCACHE'); }
     return dataStore.setProdInCache(addProd, removeProdId).then((result) => {
-      if (!result[1]) { console.log('item to be deleted was not in cache'); }
+      if (!result) { console.log('item to be deleted was not in cache'); }
       return dataStore.findMinViewedItemInCache();
     }).then((minViewedItem) => {
       dataStore.minViewsInCache = minViewedItem.view_count + minViewedItem.cached_views;

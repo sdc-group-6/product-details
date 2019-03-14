@@ -43,8 +43,7 @@ const dataStore = {
     let foundProduct;
     return Product.findOneAndUpdate({ _id: prodId }, { $inc: { view_count: increment } }, { new: true }).lean().exec().then((product) => {
       foundProduct = product;
-      if (product.view_count > dataStore.minViewedCacheItem.view_count + dataStore.minViewedCacheItem.cached_views) {
-        if (dataStore.minViewedCacheItem._id === product._id) { console.log('ITEMS DUPLICATED FINDPRODUCTANDINCREMENTASYNC'); }
+      if (product.view_count > dataStore.minViewedCacheItem.view_count + dataStore.minViewedCacheItem.cached_views && dataStore.minViewedCacheItem._id !== product._id) {
         return dataStore.replaceProdInCache(dataStore.minViewedCacheItem._id, product);
       } else {
         return;

@@ -38,13 +38,13 @@ const dataStore = {
     return Promise.all(promiseList);
   },
   
-  // Increments view-count in mongoDB and returns promise with details on product from mongoDB (including updated viewcount)
+  // Increments view-count in mongoDB and returns promise with details on product from mongoDB (including updated viewcount)*********
   findProductAndIncrementAsync: (prodId, increment) => {
     let foundProduct;
     return Product.findOneAndUpdate({ _id: prodId }, { $inc: { view_count: increment } }, { new: true }).lean().exec().then((product) => {
       foundProduct = product;
       if (product.view_count > dataStore.minViewedCacheItem.view_count + dataStore.minViewedCacheItem.cached_views) {
-        console.log(`${dataStore.minViewedCacheItem._id} being replaced with ${product._id}`);
+        if (dataStore.minViewedCacheItem._id === product._id) { console.log('ITEMS DUPLICATED FINDPRODUCTANDINCREMENTASYNC'); }
         return dataStore.replaceProdInCache(dataStore.minViewedCacheItem._id, product);
       } else {
         return;
@@ -108,11 +108,14 @@ const dataStore = {
     if (!prodToReplace) {
       return setProduct;
     } else {
+      if (product._id === prodToReplace) { console.log('DUPLICATED PRODUCTS AT SETPRODINCACHE'); }
       return Promise.all([setProduct, Promise.resolve(deleteProduct(prodToReplace))]);
     }
   },
 
+  // Need to make 100% sure that the removeProdId could never be the addProd
   replaceProdInCache: (removeProdId, addProd) => {
+    if (removePodId === addProd._id) { console.log('PRODUCTS DUPLICATED AT REPLACEPRODINCACHE'); }
     return dataStore.setProdInCache(addProd, removeProdId).then((result) => {
       if (!result[1]) { console.log('item to be deleted was not in cache'); }
       return dataStore.getCacheKeysAsync();
@@ -131,7 +134,7 @@ const dataStore = {
     });
   },
   
-  // Get top 18 most-viewed from mongoDB
+  // Get top 18 most-viewed from mongoDB  ****************************************************************
   buildCacheAsync: () => {
     return dataStore.getCacheKeysAsync().then((keys) => {
       return dataStore.getCacheDataAsync(keys);
@@ -163,7 +166,7 @@ const dataStore = {
     }).catch((err) => console.log(`There was an issue building cache: ${err}`));
   },
 
-  // Get all 18 cached items for 'Also Likes' request
+  // Get all 18 cached items for 'Also Likes' request *****************************************************
   serveCacheAsync: () => {
     return dataStore.getCacheKeysAsync().then((keys) => {
       if (keys.length < 18) {
@@ -179,7 +182,7 @@ const dataStore = {
       }
     });
   },
-
+  // ******************************************************************************************************
   serveCacheItemAsync: (prodId) => {
     let result;
     return dataStore.getCacheDataAsync(prodId).then((item) => {
@@ -201,7 +204,7 @@ const dataStore = {
       return result;
     }).catch((err) => console.log(`There was an issue serving the item from cache: ${err}`));
   },
-
+  // **************************************************************************************************
   checkIfCachedAsync: (prodId) => {
     return new Promise((resolve, reject) => {
       cache.exists(prodId, (err, result) => {
@@ -213,7 +216,7 @@ const dataStore = {
       });
     });
   },
-
+  // ***************************************************************************************************
   getLooks: (product) => {
     return {
       pant_name: product.completeLook[0].name1,
@@ -227,11 +230,11 @@ const dataStore = {
       jacket_price: product.completeLook[0].price3
     };
   },
-
+  // ****************************************************************************************************
   getSharesAsync: () => {
     // need to adjust max back to 100 : 2499990 once database fully seeded
     const randomProdNum = () => {
-      let max = process.env.NODE_ENV === 'test' ? 100 : 24990;
+      let max = process.env.NODE_ENV === 'test' ? 100 : 2499990;
       return Math.floor(Math.random() * max) + 1;
     };
     let startId = randomProdNum() * 4;

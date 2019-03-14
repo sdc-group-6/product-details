@@ -83,7 +83,7 @@ const dataStore = {
           result = item;
         }
       });
-      return item;
+      return result;
     };
     if (!cacheData) {
       return dataStore.getCacheKeysAsync().then((keys) => {

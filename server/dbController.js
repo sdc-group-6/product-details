@@ -115,7 +115,7 @@ const dataStore = {
 
   // Need to make 100% sure that the removeProdId could never be the addProd
   replaceProdInCache: (removeProdId, addProd) => {
-    if (removePodId === addProd._id) { console.log('PRODUCTS DUPLICATED AT REPLACEPRODINCACHE'); }
+    if (removeProdId === addProd._id) { console.log('PRODUCTS DUPLICATED AT REPLACEPRODINCACHE'); }
     return dataStore.setProdInCache(addProd, removeProdId).then((result) => {
       if (!result[1]) { console.log('item to be deleted was not in cache'); }
       return dataStore.getCacheKeysAsync();

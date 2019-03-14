@@ -33,6 +33,7 @@ app.get('/shoes', (req, res) => {
   return dataStore.serveCacheAsync().then((shoes) => {
     res.status(200).send(shoes);
   }).catch((err) => {
+    // change this to pull 18 random products from mongoDB (and maybe add a product to the cache)
     console.log(`Error in shoes API: ${err}`);
     res.status(503).send(err);
   });

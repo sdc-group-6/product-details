@@ -109,6 +109,9 @@ const dataStore = {
         }
       });
     });
+    if (!product) {
+      return Promise.resolve(null);
+    }
     if (!prodToReplace || product._id === prodToReplace) {
       return setProduct;
     } else {

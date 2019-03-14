@@ -101,7 +101,7 @@ const dataStore = {
     });
     const deleteProduct = (prodToDelete) => {
       if (prodToDelete === dataStore.minViewedCacheItem._id) {
-        dataStore.minViewedCacheItem = {};
+        dataStore.minViewedCacheItem = product;
       }
       return cache.del(prodToReplace);
     };

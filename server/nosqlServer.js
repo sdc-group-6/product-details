@@ -12,7 +12,7 @@ import bodyParser from 'body-parser';
 import dataStore from './dbController';
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
-dataStore.buildCacheAsync();
+dataStore.updateTopProdList();
 
 const renderToHTML = (props) => {
   let component = React.createElement(PageApp, props);
@@ -30,10 +30,9 @@ app.use(cors({
 
 
 app.get('/shoes', (req, res) => {
-  return dataStore.serveCacheAsync().then((shoes) => {
-    res.status(200).send(shoes);
+  return dataStore.getTopProdListAsync().then((products) => {
+    res.status(200).send(products.result);
   }).catch((err) => {
-    // change this to pull 18 random products from mongoDB (and maybe add a product to the cache)
     console.log(`Error in shoes API: ${err}`);
     res.status(503).send(err);
   });
@@ -41,50 +40,41 @@ app.get('/shoes', (req, res) => {
 
 app.get('/:shoeId', (req, res) => {
   let prodId = req.params.shoeId;
-  let props = {
-    product: null,
-    shares: null,
-    products: null,
-    looks: null
-  };
-  return dataStore.checkIfCachedAsync(prodId).then((cached) => {
-    if (cached) {
-      return dataStore.serveCacheItemAsync(prodId);
+  return dataStore.checkIfCachedAsync(prodId, prodId).then((cached) => {
+    if (cached.result) {
+      return dataStore.getCachedProductAsync(cached.optionalPassThrough, {});
     } else {
-      return dataStore.findProductAndIncrementAsync(prodId, 1);
+      return dataStore.getStoredProductAsync(cached.optionalPassThrough, {});
     }
   }).then((product) => {
-    props.product = product;
-    return dataStore.getLooks(product);
+    return dataStore.getLooks(product.result, Object.assign({ product: product.result }, product.optionalPassThrough));
   }).then((looks) => {
-    props.looks = looks;
-    return dataStore.getSharesAsync();
+    return dataStore.getSharesAsync(Object.assign({ looks: looks.result }, looks.optionalPassThrough));
   }).then((shares) => {
-    props.shares = shares;
-    return dataStore.serveCacheAsync();
+    return dataStore.getTopProdListAsync(Object.assign({ shares: shares.result }, shares.optionalPassThrough));
   }).then((products) => {
-    props.products = products;
-    return renderToHTML(props);
+    return renderToHTML(Object.assign({ products: products.result }, products.optionalPassThrough));
   }).then((html) => {
     res.status(200).send(html);
   }).catch((err) => {
+    console.log(`Error in main API ${err}`);
     res.status(503).send(err);
   });
 });
 
 app.get('/shoes/:shoeId', (req, res) => {
-  let id = req.params.shoeId;
-  return dataStore.checkIfCachedAsync(id).then((cached) => {
-    if (cached) {
-      return dataStore.serveCacheItemAsync(id);
+  let prodId = req.params.shoeId;
+  return dataStore.checkIfCachedAsync(prodId, prodId).then((cached) => {
+    if (cached.result) {
+      return dataStore.getCachedProductAsync(cached.optionalPassThrough);
     } else {
-      return dataStore.findProductAndIncrementAsync(id, 1);
+      return dataStore.getStoredProductAsync(cached.optionalPassThrough);
     }
   }).then((product) => {
-    if (!product) {
+    if (!product.result) {
       res.status(404).send();
     } else {
-      res.status(200).send(product);
+      res.status(200).send(product.result);
     }
   }).catch((err) => {
     console.log(`Error in shoe API: ${err}`);
@@ -94,7 +84,7 @@ app.get('/shoes/:shoeId', (req, res) => {
 
 app.get('/shares/:id', (req, res) => {
   return dataStore.getSharesAsync().then((shares) => {
-    res.status(200).send(shares);
+    res.status(200).send(shares.result);
   }).catch((err) => {
     console.log(`Error in shares API: ${err}`);
     res.status(503).send(err);

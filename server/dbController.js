@@ -1,228 +1,79 @@
 import cache from '../database/indexRedis.js';
 import { Product, Share } from '../database/modelNoSql';
 
+// all async methods of dataStore (plus dataStore.getLooks) will return a promise fulfilled by an object structured as { result: <some result } or { result: <some result>, optionalPassThrough: <some data passed through> } if a 'pass through' object was provided
 
 const dataStore = {
   
-  minViewsInCache: Infinity,
-  
-  // Returns all keys (s/b 18) from redis database; returns with array of productIds
-  getCacheKeysAsync: () => {
-    return new Promise((resolve, reject) => {
-      cache.keys('*', (err, keys) => {
-        if (err) {
-          reject(err);
-        } else {
-          resolve(keys);
-        }
-      });
-    });
-  },
-  
-  // returns promise that resolves with array of parsed objects from redis
-  getCacheDataAsync: (itemOrArray) => {
-    let data = Array.isArray(itemOrArray) ? itemOrArray : [itemOrArray];
-    let promiseList = [];
-    data.forEach((key) => {
-      let promise = new Promise((resolve, reject) => {
-        cache.get(key, (err, reply) => {
-          if (err) {
-            reject(err);
-          } else {
-            resolve(JSON.parse(reply));
-          }
-        });
-      });
-      promiseList.push(promise);
-    });
-    return Promise.all(promiseList);
-  },
-  
-  // Increments view-count in mongoDB and returns promise with details on product from mongoDB (including updated viewcount)*********
-  findProductAndIncrementAsync: (prodId, increment) => {
-    let foundProduct;
-    return Product.findOneAndUpdate({ _id: prodId }, { $inc: { view_count: increment } }, { new: true }).lean().exec().then((product) => {
-      foundProduct = product; // This approach isn't ideal
-      if (product.view_count > dataStore.minViewsInCache) {
-        return dataStore.findMinViewedItemInCache().then((minViewedItem) => {
-          if (minViewedItem._id === product._id) {
-            console.log('Getting duplicates where I shouldn\'t');
-            return;
-          } else {
-            return dataStore.replaceProdInCache(minViewedItem._id, product);
-          }
-        });
-      } else {
-        return;
-      }
-    }).then(() => {
-      return foundProduct;
-    });
-  },
-
-  // Updates mongoDB with incremental cache views for all items in the cache.  Used prior to cache update.
-  updateMongoWithCacheItems: (itemOrArray) => {
-    const items = Array.isArray(itemOrArray) ? itemOrArray : [itemOrArray];
-    let updates = [];
-    items.forEach((item) => {
-      if (item.cached_views) {
-        updates.push(dataStore.findProductAndIncrementAsync(item._id, item.cached_views));
-      }
-    });
-    return Promise.all(updates);
-  },
-
-  findMinViewedItemInCache: (cacheData) => {
-    const findMin = (data) => {
-      let minCount = Infinity;
-      let result;
-      data.forEach((item) => {
-        let views = item.view_count + item.cached_views;
-        if (views < minCount) {
-          minCount = views;
-          result = item;
-        }
-      });
-      return result;
-    };
-    if (!cacheData) {
-      return dataStore.getCacheKeysAsync().then((keys) => {
-        return dataStore.getCacheDataAsync(keys);
-      }).then((data) => {
-        return findMin(data);
-      });
-    } else {
-      return Promise.resolve(findMin(cacheData));
-    }
-  },
-
-  setProdInCache: (product, prodToReplace) => {
-    if (!product.cached_views) {
-      product.cached_views = 0;
-    }
-    const setProduct = new Promise((resolve, reject) => {
-      cache.set(product._id, JSON.stringify(product), (err, product) => {
-        if (err) {
-          reject(err);
-        } else {
-          resolve(product);
-        }
-      });
-    });
-    if (!product) {
-      return Promise.resolve(null);
-    }
-    if (!prodToReplace || product._id === prodToReplace) {
-      return setProduct;
-    } else {
-      return setProduct.then(() => cache.del(prodToReplace));
-    }
-  },
-
-  // Need to make 100% sure that the removeProdId could never be the addProd
-  replaceProdInCache: (removeProdId, addProd) => {
-    if (removeProdId === addProd._id) { console.log('PRODUCTS DUPLICATED AT REPLACEPRODINCACHE'); }
-    return dataStore.setProdInCache(addProd, removeProdId).then((result) => {
-      if (!result) { console.log('item to be deleted was not in cache'); }
-      return dataStore.findMinViewedItemInCache();
-    }).then((minViewedItem) => {
-      dataStore.minViewsInCache = minViewedItem.view_count + minViewedItem.cached_views;
-      return;
-    }).catch((err) => console.log(`There was an issue replacing a product in the cache: ${err}`));
-  },
-
-  flushCacheAsync: () => {
-    return new Promise((resolve, reject) => {
-      cache.flushdb(() => {
-        resolve();
-      });
-    });
-  },
-  
-  // Get top 18 most-viewed from mongoDB  ****************************************************************
-  buildCacheAsync: () => {
-    return dataStore.getCacheKeysAsync().then((keys) => {
-      return dataStore.getCacheDataAsync(keys);
-    }).then((cacheData) => {
-      return dataStore.updateMongoWithCacheItems(cacheData);
-    }).then(() => {
-      return dataStore.flushCacheAsync();
-    }).then(() => {
-      return Product.find({}).sort({ 'view_count': -1 }).limit(18).lean().exec();
-    }).then((topProducts) => {
-      console.log(`found ${topProducts.length} top products`);
-      dataStore.minViewsInCache = topProducts[17].view_count;
-      let updates = [];
-      topProducts.forEach((product) => {
-        let update = new Promise((resolve, reject) => {
-          product.cached_views = 0;
-          cache.set(product._id, JSON.stringify(product), () => resolve());
-        });
-        updates.push(update);
-      });
-      return Promise.all(updates);
-    }).then(() => {
-      return dataStore.getCacheKeysAsync();
-    }).then((keys) => {
-      return dataStore.getCacheDataAsync(keys);
-    }).then((data) => {
-      console.log(`Redis cache updated with ${data.length} items`);
-      return;
-    }).catch((err) => console.log(`There was an issue building cache: ${err}`));
-  },
-
-  // Get all 18 cached items for 'Also Likes' request *****************************************************
-  serveCacheAsync: () => {
-    return dataStore.getCacheKeysAsync().then((keys) => {
-      if (keys.length < 18) {
-        throw new Error('There was an issue with cached data');
-      } else if (keys.length > 18) {
-        console.log(`Cache size is ${keys.length} items`);
-        for (let i = 18; i < keys.length; i++) {
-          cache.del(keys[i]);
-        }
-        return dataStore.getCacheDataAsync(keys.slice(0, 18));
-      } else {
-        return dataStore.getCacheDataAsync(keys);
-      }
-    });
-  },
-  // ******************************************************************************************************
-  serveCacheItemAsync: (prodId) => {
-    let result;
-    return dataStore.getCacheDataAsync(prodId).then((item) => {
-      let product = item[0];
-      product.cached_views = product.cached_views + 1;
-      result = product; // here is another structure that isn't ideal and may be problematic at high volumes
-      return dataStore.setProdInCache(product);
-    }).then((item) => {
-      if (item.view_count + item.cached_views - 1 === dataStore.minViewsInCache) {
-        return dataStore.findMinViewedItemInCache().then((minViewedItem) => {
-          dataStore.minViewsInCache = minViewedItem.view_count + minViewedItem.cached_views;
-          return;
-        });
-      } else {
-        return;
-      }
-    }).then(() => {
-      return result;
-    }).catch((err) => console.log(`There was an issue serving the item from cache: ${err}`));
-  },
-  // **************************************************************************************************
-  checkIfCachedAsync: (prodId) => {
+  checkIfCachedAsync: (prodId, optionalPassThrough) => {
     return new Promise((resolve, reject) => {
       cache.exists(prodId, (err, result) => {
         if (err) {
           reject(err);
         } else {
-          resolve(result);
+          if (optionalPassThrough) {
+            resolve({ result, optionalPassThrough });
+          } else {
+            resolve({ result });
+          }
         }
       });
     });
   },
-  // ***************************************************************************************************
-  getLooks: (product) => {
-    return {
+  
+  updateTopProdList: () => {
+    return Product.find({}).sort({ 'view_count': -1 }).limit(18).lean().exec().then((topProducts) => {
+      cache.set('top_products', JSON.stringify(topProducts), () => console.log('Top Products Updated'));
+    });
+  },
+
+  getTopProdListAsync: (optionalPassThrough) => {
+    return new Promise((resolve, reject) => {
+      cache.get('top_products', (err, reply) => {
+        if (err) {
+          reject(err);
+        } else {
+          let result = JSON.parse(reply);
+          if (optionalPassThrough) {
+            resolve({ result, optionalPassThrough });
+          } else {
+            resolve({ result });
+          }
+        }
+      });
+    });
+  },
+
+  getCachedProductAsync: (prodId, optionalPassThrough) => {
+    Product.findOneAndUpdate({ _id: prodId }, { $inc: { view_count: 1 } }, { new: true }).lean();
+    return new Promise((resolve, reject) => {
+      cache.get(prodId, (err, reply) => {
+        if (err) {
+          reject(err);
+        } else {
+          let result = JSON.parse(reply);
+          if (optionalPassThrough) {
+            resolve({ result, optionalPassThrough });
+          } else {
+            resolve({ result });
+          }
+        }
+      });
+    });
+  },
+
+  getStoredProductAsync: (prodId, optionalPassThrough) => {
+    return Product.findOneAndUpdate({ _id: prodId }, { $inc: { view_count: 1 } }, { new: true }).lean().exec().then((result) => {
+      cache.set(result._id, JSON.stringify(result));
+      if (optionalPassThrough) {
+        return { result, optionalPassThrough };
+      }
+      return { result };
+    });
+  },
+  
+  getLooks: (product, optionalPassThrough) => {
+    let result = {
       pant_name: product.completeLook[0].name1,
       pant_url: product.completeLook[0].img_url1,
       pant_price: product.completeLook[0].price1,
@@ -233,17 +84,21 @@ const dataStore = {
       jacket_url: product.completeLook[0].img_url3,
       jacket_price: product.completeLook[0].price3
     };
+    if (optionalPassThrough) {
+      return { result, optionalPassThrough };
+    } else {
+      return { result };
+    }
   },
-  // ****************************************************************************************************
-  getSharesAsync: () => {
-    // need to adjust max back to 100 : 2499990 once database fully seeded
+
+  getSharesAsync: (optionalPassThrough) => {
     const randomProdNum = () => {
       let max = process.env.NODE_ENV === 'test' ? 100 : 2499990;
       return Math.floor(Math.random() * max) + 1;
     };
     let startId = randomProdNum() * 4;
     return Share.find().where('_id').in([startId, startId + 1, startId + 2, startId + 3, startId + 4]).lean().exec().then((share) => {
-      return {
+      let result = {
         user1: share[0].user,
         img1: share[0].img,
         user2: share[1].user,
@@ -255,6 +110,11 @@ const dataStore = {
         user5: share[4].user,
         img5: share[4].img
       };
+      if (optionalPassThrough) {
+        return { result, optionalPassThrough };
+      } else {
+        return { result };
+      }
     });
   }
 

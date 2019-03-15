@@ -10,6 +10,7 @@
   "scripts": {
     "start:dev": "nodemon server/serverbundle.js",
     "start": "forever start server/serverbundle.js",
+    "forever:stop": "forever stop server/serverbundle.js",
     "start:console": "node server/serverbundle.js",
     "react:dev": "webpack -d --watch",
     "build": "webpack",

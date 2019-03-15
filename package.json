@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start:dev": "nodemon server/serverbundle.js",
-    "start": "node server/serverbundle.js",
+    "start": "forever start server/serverbundle.js",
     "react:dev": "webpack -d --watch",
     "build": "webpack",
     "db:setup": "node database/seedNoSql.js",
